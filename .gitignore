@@ -26,3 +26,5 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
+_screenshots/
+_scripts/

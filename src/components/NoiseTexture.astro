@@ -1,0 +1,42 @@
+---
+// Textura de ruído sutil em SVG inline (filter: turbulence).
+// Usado em Hero e CTA Final pra dar warmth analógica.
+interface Props {
+  opacity?: number;
+  baseFrequency?: number;
+}
+const { opacity = 0.04, baseFrequency = 0.9 } = Astro.props;
+---
+
+<div class="noise-overlay" style={`--noise-opacity: ${opacity};`} aria-hidden="true">
+  <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <filter id="praca-noise">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency={baseFrequency}
+        numOctaves="2"
+        stitchTiles="stitch"
+      />
+      <feColorMatrix
+        type="matrix"
+        values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.7 0"
+      />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#praca-noise)" />
+  </svg>
+</div>
+
+<style>
+  .noise-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: var(--noise-opacity);
+    mix-blend-mode: multiply;
+  }
+  .noise-overlay svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>

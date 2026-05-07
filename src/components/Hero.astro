@@ -1,0 +1,206 @@
+---
+import Logo from "./Logo.astro";
+import NoiseTexture from "./NoiseTexture.astro";
+import { whatsappUrl } from "../lib/whatsapp.ts";
+
+const heroHref = whatsappUrl("hero");
+---
+
+<section class="hero" aria-labelledby="hero-title">
+  <NoiseTexture opacity={0.05} baseFrequency={0.85} />
+
+  <header class="hero__nav praca-container">
+    <Logo href="#topo" />
+    <a
+      class="hero__nav-cta"
+      href={heroHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M20.5 3.5A11.4 11.4 0 0 0 3 18.6L1.5 24l5.6-1.5a11.4 11.4 0 0 0 5.4 1.4h.1A11.4 11.4 0 0 0 20.5 3.5zm-7.9 18.1c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3a9.4 9.4 0 1 1 17.5-4.7c0 5.2-4.2 8.6-9.5 8.6h-.6zm5.2-7c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9 0 1.7 1.2 3.3 1.4 3.5.2.2 2.4 3.7 5.9 5.2 2.2.9 3 .9 4 .8.6 0 1.7-.7 2-1.4.3-.7.3-1.2.2-1.4 0-.2-.3-.2-.6-.4z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+  </header>
+
+  <div class="hero__inner praca-container">
+    <h1 id="hero-title" class="hero__title tracking-display">
+      <span class="hero__line" data-hero-line>
+        Cardápio em PDF<span class="dot-clay">.</span>
+      </span>
+      <span class="hero__line" data-hero-line>
+        Site de 2018<span class="dot-clay">.</span>
+      </span>
+      <span class="hero__line hero__line--last" data-hero-line>
+        Seu vizinho já resolveu<span class="dot-clay">.</span>
+      </span>
+    </h1>
+
+    <p class="hero__subtitle" data-hero-line>
+      A gente arruma sua presença digital em <strong>5 dias</strong>.
+      Cardápio QR por <span class="font-mono-praca">R$&nbsp;247</span>.
+      Site profissional por <span class="font-mono-praca">R$&nbsp;397</span>.
+    </p>
+
+    <div class="hero__ctas" data-hero-line>
+      <a
+        href={heroHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary cursor-clay"
+      >
+        Falar no WhatsApp
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M2 7h10M8 3l4 4-4 4" />
+        </svg>
+      </a>
+      <a href="#galeria" class="hero__secondary praca-link">
+        ou ver alguns trabalhos
+      </a>
+    </div>
+  </div>
+
+  <p class="hero__footnote praca-container" data-hero-line>
+    Atendemos cidades pequenas em Minas Gerais.
+  </p>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    background-color: var(--color-paper);
+    padding-top: 1.5rem;
+    padding-bottom: 4.5rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+
+  /* Topbar */
+  .hero__nav {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+  }
+  .hero__nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.95rem;
+    border: 1px solid var(--color-line-strong);
+    border-radius: 999px;
+    color: var(--color-ink);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition:
+      background-color 0.4s var(--ease-praca),
+      color 0.4s var(--ease-praca),
+      border-color 0.4s var(--ease-praca);
+  }
+  .hero__nav-cta:hover {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    border-color: var(--color-ink);
+  }
+  .hero__nav-cta svg { color: #25D366; transition: color 0.3s var(--ease-praca); }
+  .hero__nav-cta:hover svg { color: #25D366; }
+
+  /* Inner */
+  .hero__inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  /* H1 */
+  .hero__title {
+    margin: 0;
+    font-size: clamp(2.5rem, 9vw + 0.5rem, 5.5rem);
+    font-weight: 600;
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    color: var(--color-ink);
+    font-variation-settings: "opsz" 144;
+    max-width: 18ch;
+  }
+  .hero__line {
+    display: block;
+  }
+  .hero__line--last {
+    color: var(--color-ink);
+  }
+  .dot-clay {
+    color: var(--color-clay);
+  }
+
+  /* Subtitle */
+  .hero__subtitle {
+    margin-top: 2rem;
+    font-family: var(--font-sans);
+    font-weight: 400;
+    color: var(--color-ink-soft);
+    font-size: clamp(1rem, 1.6vw + 0.6rem, 1.3rem);
+    line-height: 1.55;
+    max-width: 52ch;
+  }
+  .hero__subtitle strong {
+    font-weight: 600;
+    color: var(--color-ink);
+  }
+
+  /* CTAs */
+  .hero__ctas {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .hero__secondary {
+    color: var(--color-ink-soft);
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+
+  /* Footnote */
+  .hero__footnote {
+    position: relative;
+    z-index: 1;
+    margin-top: 5rem;
+    color: var(--color-ink-soft);
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  /* Pre-animação: linhas escondidas até motion entrar.
+     Se motion falhar (no-JS), :where(html.no-js) revela. */
+  html.has-motion [data-hero-line] {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  @media (min-width: 768px) {
+    .hero { padding-bottom: 6rem; }
+    .hero__inner { padding-top: 5rem; }
+    .hero__title { line-height: 0.96; }
+  }
+  @media (min-width: 1024px) {
+    .hero__inner { padding-top: 7rem; padding-bottom: 5rem; }
+  }
+</style>
+
+<script>
+  import { animateHeroLines } from "../lib/motion.ts";
+  // Marca que JS carregou — só esconde linhas se vamos animar.
+  document.documentElement.classList.add("has-motion");
+  // requestAnimationFrame pra esperar o paint inicial e fontes
+  requestAnimationFrame(() => animateHeroLines());
+</script>

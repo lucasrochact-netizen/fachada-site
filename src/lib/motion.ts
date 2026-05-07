@@ -1,16 +1,19 @@
-// Helpers Motion One — animações sob demanda, lazy.
-// Carregamos motion como ES module no client para manter <head> leve.
-import { animate, stagger, inView } from "motion";
+// Animações usando IntersectionObserver + CSS transitions + rAF.
+// Substitui Motion One pra economizar ~60KB no bundle.
 
-export const easePraca: [number, number, number, number] = [0.22, 1, 0.36, 1];
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /**
- * Reveal-on-scroll baseado em IntersectionObserver puro (CSS faz a transição).
- * Procura por .reveal e adiciona .is-visible quando entram no viewport.
+ * Reveal-on-scroll: adiciona .is-visible em .reveal quando entram no viewport.
+ * O CSS faz o easing.
  */
 export function initReveal(root: ParentNode = document) {
   const els = Array.from(root.querySelectorAll<HTMLElement>(".reveal"));
   if (els.length === 0) return;
+  if (REDUCED) {
+    els.forEach((el) => el.classList.add("is-visible"));
+    return;
+  }
   const io = new IntersectionObserver(
     (entries) => {
       for (const e of entries) {
@@ -26,52 +29,89 @@ export function initReveal(root: ParentNode = document) {
 }
 
 /**
- * Stagger animado de linhas do hero usando Motion One.
- * Cada elemento começa com opacity 0 e translateY(40px).
+ * Stagger animado de linhas do hero. Cada elemento entra com fade + translate-y.
+ * Implementado com Web Animations API (zero deps).
  */
 export function animateHeroLines(selector = "[data-hero-line]") {
-  const els = document.querySelectorAll<HTMLElement>(selector);
+  const els = Array.from(document.querySelectorAll<HTMLElement>(selector));
   if (els.length === 0) return;
-  // Estado inicial via JS (evita FOUC se JS desativado a CSS leva)
-  els.forEach((el) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(40px)";
+  if (REDUCED) {
+    els.forEach((el) => {
+      el.style.opacity = "1";
+      el.style.transform = "none";
+    });
+    return;
+  }
+  els.forEach((el, i) => {
+    el.animate(
+      [
+        { opacity: 0, transform: "translateY(40px)" },
+        { opacity: 1, transform: "translateY(0)" }
+      ],
+      {
+        duration: 950,
+        delay: i * 80,
+        easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+        fill: "both"
+      }
+    );
   });
-  animate(
-    els,
-    { opacity: [0, 1], transform: ["translateY(40px)", "translateY(0px)"] },
-    { duration: 0.95, delay: stagger(0.08), ease: easePraca }
-  );
 }
 
 /**
  * Conta um número de 0 até `to` quando o elemento entra no viewport.
+ * Usa requestAnimationFrame.
  */
-export function countUpInView(selector: string, to: number, duration = 1.2) {
-  const els = document.querySelectorAll<HTMLElement>(selector);
-  els.forEach((el) => {
-    inView(el, () => {
-      const start = { value: 0 };
-      animate(start, { value: to }, {
-        duration,
-        ease: easePraca,
-        onUpdate: (latest) => {
-          const v = typeof latest === "number" ? latest : start.value;
-          el.textContent = Math.round(v).toString();
+export function countUpInView(selector: string, to: number, durationMs = 1100) {
+  const els = Array.from(document.querySelectorAll<HTMLElement>(selector));
+  if (els.length === 0) return;
+  if (REDUCED) {
+    els.forEach((el) => (el.textContent = String(to)));
+    return;
+  }
+  const ease = (t: number) => 1 - Math.pow(1 - t, 5); // out-quint
+  const animate = (el: HTMLElement) => {
+    const start = performance.now();
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - start) / durationMs);
+      el.textContent = String(Math.round(to * ease(t)));
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          animate(e.target as HTMLElement);
+          io.unobserve(e.target);
         }
-      });
-      return () => {};
-    });
-  });
+      }
+    },
+    { threshold: 0.5 }
+  );
+  els.forEach((el) => io.observe(el));
 }
 
 /**
- * Spring entry para o WhatsApp flutuante (scale 0 -> 1).
+ * Spring entry para botões flutuantes (scale 0 -> 1 com leve overshoot).
  */
 export function springIn(el: HTMLElement) {
-  animate(
-    el,
-    { transform: ["scale(0)", "scale(1)"], opacity: [0, 1] },
-    { type: "spring", stiffness: 220, damping: 18 }
+  if (REDUCED) {
+    el.style.opacity = "1";
+    el.style.transform = "scale(1)";
+    return;
+  }
+  el.animate(
+    [
+      { transform: "scale(0)", opacity: 0 },
+      { transform: "scale(1.08)", opacity: 1, offset: 0.7 },
+      { transform: "scale(1)", opacity: 1 }
+    ],
+    {
+      duration: 480,
+      easing: "cubic-bezier(0.22, 1, 0.36, 1)",
+      fill: "both"
+    }
   );
 }

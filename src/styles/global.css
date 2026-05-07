@@ -1,0 +1,319 @@
+@import "tailwindcss";
+
+@import "@fontsource-variable/fraunces";
+@import "@fontsource-variable/manrope";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+/* ==========================================================================
+   Praça — design tokens
+   Identidade: terracota + creme + tinta. Cidade pequena, premium discreto.
+   ========================================================================== */
+
+@theme {
+  /* Paleta */
+  --color-clay: #B5563A;
+  --color-clay-deep: #8B3E29;
+  --color-clay-light: #D9A89A;
+
+  --color-ink: #1A1614;
+  --color-ink-soft: #4A4340;
+
+  --color-cream: #F4EFE6;
+  --color-cream-deep: #E8E0D2;
+  --color-paper: #FBF8F2;
+
+  --color-moss: #5A6B4F;
+  --color-gold: #C9A961;
+
+  --color-line: rgba(26, 22, 20, 0.08);
+  --color-line-strong: rgba(26, 22, 20, 0.15);
+
+  /* Tipografia */
+  --font-display: "Fraunces Variable", "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  /* Escala de tamanhos (mobile-first) */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 4rem;
+  --text-5xl: 5.5rem;
+
+  /* Easing custom — out-quint, "premium" */
+  --ease-praca: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Container */
+  --container-prose: 65ch;
+}
+
+/* ==========================================================================
+   Reset / base
+   ========================================================================== */
+
+@layer base {
+  :root {
+    color-scheme: light only;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  html {
+    background-color: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.65;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream);
+    min-height: 100vh;
+    font-feature-settings: "kern", "liga", "calt";
+  }
+
+  /* Heading defaults */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  /* Optical sizing real do Fraunces (variable axis "opsz") */
+  h1 { font-variation-settings: "opsz" 144; }
+  h2 { font-variation-settings: "opsz" 96; }
+  h3 { font-variation-settings: "opsz" 48; }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background-color: var(--color-clay);
+    color: var(--color-paper);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  img, svg, video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-clay);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+/* ==========================================================================
+   Utilidades específicas Praça
+   ========================================================================== */
+
+@layer utilities {
+  .font-mono-praca {
+    font-family: var(--font-mono);
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+
+  .tracking-display {
+    letter-spacing: -0.03em;
+  }
+
+  /* Container central */
+  .praca-container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+    max-width: 72rem;
+  }
+  @media (min-width: 768px) {
+    .praca-container { padding-inline: 2.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .praca-container { padding-inline: 3rem; }
+  }
+
+  /* Reveal on scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.9s var(--ease-praca),
+      transform 0.9s var(--ease-praca);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
+  .reveal-stagger > .reveal:nth-child(2) { transition-delay: 80ms; }
+  .reveal-stagger > .reveal:nth-child(3) { transition-delay: 160ms; }
+  .reveal-stagger > .reveal:nth-child(4) { transition-delay: 240ms; }
+  .reveal-stagger > .reveal:nth-child(5) { transition-delay: 320ms; }
+  .reveal-stagger > .reveal:nth-child(6) { transition-delay: 400ms; }
+
+  /* Underline animado */
+  .praca-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+  }
+  .praca-link::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.5s var(--ease-praca);
+  }
+  .praca-link:hover::after,
+  .praca-link:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* Botões */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.75rem;
+    background-color: var(--color-clay);
+    color: var(--color-paper);
+    font-weight: 600;
+    font-family: var(--font-sans);
+    border-radius: 2px;
+    transition:
+      background-color 0.4s var(--ease-praca),
+      transform 0.4s var(--ease-praca),
+      box-shadow 0.4s var(--ease-praca);
+    box-shadow: 0 1px 2px rgba(26, 22, 20, 0.08);
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: var(--color-clay-deep);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 24px -8px rgba(139, 62, 41, 0.45);
+  }
+  .btn-primary:active { transform: translateY(0); }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.75rem;
+    background-color: transparent;
+    color: var(--color-ink);
+    font-weight: 600;
+    font-family: var(--font-sans);
+    border: 1.5px solid var(--color-ink);
+    border-radius: 2px;
+    transition:
+      background-color 0.4s var(--ease-praca),
+      color 0.4s var(--ease-praca),
+      transform 0.4s var(--ease-praca);
+    cursor: pointer;
+  }
+  .btn-outline:hover {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline-light {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.75rem;
+    background-color: transparent;
+    color: var(--color-paper);
+    font-weight: 600;
+    font-family: var(--font-sans);
+    border: 1.5px solid var(--color-paper);
+    border-radius: 2px;
+    transition:
+      background-color 0.4s var(--ease-praca),
+      color 0.4s var(--ease-praca),
+      transform 0.4s var(--ease-praca);
+    cursor: pointer;
+  }
+  .btn-outline-light:hover {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    transform: translateY(-1px);
+  }
+
+  /* Cursor custom (apenas hover real) */
+  @media (hover: hover) and (pointer: fine) {
+    .cursor-clay {
+      cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><circle cx='12' cy='12' r='6' fill='%23B5563A'/></svg>") 12 12, pointer;
+    }
+  }
+
+  /* Galeria — moldura */
+  .moldura {
+    background-color: var(--color-paper);
+    border: 1px solid var(--color-line-strong);
+    padding: 8px;
+    border-radius: 4px;
+    transition: transform 0.5s var(--ease-praca), box-shadow 0.5s var(--ease-praca);
+  }
+  .moldura:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px -12px rgba(26, 22, 20, 0.18);
+  }
+
+  /* Selo dourado */
+  .selo-gold {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.65rem;
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 999px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .praca-link::after { transition: none; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}

@@ -3,6 +3,7 @@
 // 6 mockups fictícios, modal nativo <dialog>, CTA "Quero algo assim".
 import MockupCardapio from "./MockupCardapio.astro";
 import MockupSite from "./MockupSite.astro";
+import MockupBefore from "./MockupBefore.astro";
 import { whatsappUrl } from "../lib/whatsapp.ts";
 
 const trabalhos = [
@@ -103,23 +104,41 @@ const galeriaHref = whatsappUrl("galeria_quero");
           type="button"
         >
           <div class="galeria__thumb">
-            {t.tipo === "Cardápio QR" ? (
-              <MockupCardapio
+            <!-- ANTES (faixa superior, ~28%) -->
+            <div class="galeria__before">
+              <span class="galeria__label galeria__label--before">Antes</span>
+              <MockupBefore
+                tipo={t.tipo === "Cardápio QR" ? "cardapio" : "site"}
                 nome={t.nome}
-                cidade={t.cidade}
-                paleta={t.paleta}
-                tipo={t.subtipo as "italiana" | "burger" | "padaria"}
-                itens={t.itens}
               />
-            ) : (
-              <MockupSite
-                nome={t.nome}
-                cidade={t.cidade}
-                paleta={t.paleta}
-                tagline={t.tagline}
-                tipo={t.subtipo as "fitness" | "imobiliaria" | "saude"}
-              />
-            )}
+            </div>
+            <!-- DIVIDER com seta -->
+            <div class="galeria__divider" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 2v10M3 8l4 4 4-4"/>
+              </svg>
+            </div>
+            <!-- DEPOIS (faixa inferior, ~72%) -->
+            <div class="galeria__after">
+              <span class="galeria__label galeria__label--after">Depois</span>
+              {t.tipo === "Cardápio QR" ? (
+                <MockupCardapio
+                  nome={t.nome}
+                  cidade={t.cidade}
+                  paleta={t.paleta}
+                  tipo={t.subtipo as "italiana" | "burger" | "padaria"}
+                  itens={t.itens}
+                />
+              ) : (
+                <MockupSite
+                  nome={t.nome}
+                  cidade={t.cidade}
+                  paleta={t.paleta}
+                  tagline={t.tagline}
+                  tipo={t.subtipo as "fitness" | "imobiliaria" | "saude"}
+                />
+              )}
+            </div>
           </div>
           <div class="galeria__meta">
             <div class="galeria__name">{t.nome}</div>
@@ -144,23 +163,38 @@ const galeriaHref = whatsappUrl("galeria_quero");
           </svg>
         </button>
         <div class="modal__media">
-          {t.tipo === "Cardápio QR" ? (
-            <MockupCardapio
+          <div class="modal__media-before">
+            <span class="galeria__label galeria__label--before">Antes</span>
+            <MockupBefore
+              tipo={t.tipo === "Cardápio QR" ? "cardapio" : "site"}
               nome={t.nome}
-              cidade={t.cidade}
-              paleta={t.paleta}
-              tipo={t.subtipo as "italiana" | "burger" | "padaria"}
-              itens={t.itens}
             />
-          ) : (
-            <MockupSite
-              nome={t.nome}
-              cidade={t.cidade}
-              paleta={t.paleta}
-              tagline={t.tagline}
-              tipo={t.subtipo as "fitness" | "imobiliaria" | "saude"}
-            />
-          )}
+          </div>
+          <div class="modal__media-divider" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 2v10M3 8l4 4 4-4"/>
+            </svg>
+          </div>
+          <div class="modal__media-after">
+            <span class="galeria__label galeria__label--after">Depois</span>
+            {t.tipo === "Cardápio QR" ? (
+              <MockupCardapio
+                nome={t.nome}
+                cidade={t.cidade}
+                paleta={t.paleta}
+                tipo={t.subtipo as "italiana" | "burger" | "padaria"}
+                itens={t.itens}
+              />
+            ) : (
+              <MockupSite
+                nome={t.nome}
+                cidade={t.cidade}
+                paleta={t.paleta}
+                tagline={t.tagline}
+                tipo={t.subtipo as "fitness" | "imobiliaria" | "saude"}
+              />
+            )}
+          </div>
         </div>
         <div class="modal__body">
           <p class="modal__kicker">{t.tipo} · {t.cidade}</p>
@@ -239,13 +273,82 @@ const galeriaHref = whatsappUrl("galeria_quero");
   }
 
   .galeria__thumb {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
     overflow: hidden;
     border-radius: 3px;
     background-color: var(--color-cream-deep);
+    display: grid;
+    grid-template-rows: 28% auto 1fr;
+    position: relative;
   }
-  @media (min-width: 768px) {
-    .galeria__thumb { aspect-ratio: 3 / 4; }
+
+  /* Antes (faixa superior) */
+  .galeria__before {
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-line-strong);
+  }
+  .galeria__before :global(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Divider com seta entre antes e depois */
+  .galeria__divider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    background-color: var(--color-clay);
+    color: var(--color-paper);
+    z-index: 1;
+  }
+  .galeria__divider::before,
+  .galeria__divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: rgba(251, 248, 242, 0.3);
+  }
+  .galeria__divider svg {
+    margin: 0 0.5rem;
+    flex-shrink: 0;
+  }
+
+  /* Depois (faixa inferior) */
+  .galeria__after {
+    position: relative;
+    overflow: hidden;
+  }
+  .galeria__after :global(svg) {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /* Labels antes/depois */
+  .galeria__label {
+    position: absolute;
+    top: 0.4rem;
+    left: 0.4rem;
+    z-index: 2;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.45rem;
+    border-radius: 2px;
+  }
+  .galeria__label--before {
+    background-color: rgba(26, 22, 20, 0.78);
+    color: var(--color-paper);
+  }
+  .galeria__label--after {
+    background-color: var(--color-clay);
+    color: var(--color-paper);
   }
 
   .galeria__meta {
@@ -304,14 +407,54 @@ const galeriaHref = whatsappUrl("galeria_quero");
   }
   .modal__media {
     background-color: var(--color-cream-deep);
-    padding: 1.5rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0.5rem;
+    align-content: center;
+  }
+  .modal__media-before {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--color-line-strong);
+    background-color: var(--color-cream);
+  }
+  .modal__media-before :global(svg) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .modal__media-divider {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--color-clay);
+    padding: 0.25rem 0;
   }
-  .modal__media :global(svg) {
-    max-width: 280px;
+  .modal__media-divider::before,
+  .modal__media-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: var(--color-clay);
+    opacity: 0.3;
+  }
+  .modal__media-divider svg {
+    margin: 0 0.6rem;
+    flex-shrink: 0;
+  }
+  .modal__media-after {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--color-paper);
+  }
+  .modal__media-after :global(svg) {
     width: 100%;
+    max-height: 320px;
+    height: auto;
+    display: block;
   }
   .modal__body {
     padding: 1.75rem;

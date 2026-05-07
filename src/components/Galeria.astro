@@ -13,10 +13,11 @@ const trabalhos = [
     tipo: "Cardápio QR",
     preco: "R$ 247",
     paleta: "clay" as const,
+    subtipo: "italiana" as const,
     itens: [
-      { nome: "Margherita", preco: "58,00" },
-      { nome: "Funghi Trufa", preco: "72,00" },
-      { nome: "Calabresa Premium", preco: "62,00" }
+      { nome: "Margherita Búfala", preco: "58,00", desc: "Manjericão fresco · molho San Marzano" },
+      { nome: "Tortelli Trufa Negra", preco: "92,00", desc: "Massa fresca · ricota di búfala" },
+      { nome: "Lasanha Bolonhesa", preco: "72,00", desc: "Massa fresca · ragú 8 horas" }
     ],
     desc: "Cardápio QR com 28 pratos, vinhos da casa e sugestão do chef. Atualização semanal."
   },
@@ -27,6 +28,7 @@ const trabalhos = [
     tipo: "Site profissional",
     preco: "R$ 397",
     paleta: "moss" as const,
+    subtipo: "fitness" as const,
     tagline: "Pilates com método",
     desc: "Site com agenda integrada por WhatsApp, planos mensais e conteúdo de vídeo embedado."
   },
@@ -37,7 +39,8 @@ const trabalhos = [
     tipo: "Site profissional",
     preco: "R$ 397",
     paleta: "ink" as const,
-    tagline: "Imóveis de qualidade",
+    subtipo: "imobiliaria" as const,
+    tagline: "Imóveis selecionados",
     desc: "Site institucional com formulário de captação, listagem manual e SEO local."
   },
   {
@@ -47,10 +50,11 @@ const trabalhos = [
     tipo: "Cardápio QR",
     preco: "R$ 247",
     paleta: "ink" as const,
+    subtipo: "burger" as const,
     itens: [
-      { nome: "Smash Duplo", preco: "38,00" },
-      { nome: "Cheddar Bacon", preco: "34,00" },
-      { nome: "Veggie Cogumelo", preco: "32,00" }
+      { nome: "Smash Duplo Cheddar", preco: "38,00", desc: "Pão brioche · maionese da casa" },
+      { nome: "Trinta Bacon", preco: "42,00", desc: "Bacon caramelizado · cheddar inglês" },
+      { nome: "Veggie Cogumelo", preco: "32,00", desc: "Hambúrguer de shimeji · molho tahine" }
     ],
     desc: "Cardápio escuro premium com 18 lanches autorais e combos."
   },
@@ -61,6 +65,7 @@ const trabalhos = [
     tipo: "Site profissional",
     preco: "R$ 397",
     paleta: "clay" as const,
+    subtipo: "saude" as const,
     tagline: "Sorriso com confiança",
     desc: "Site com convênios aceitos, agenda online por WhatsApp e selo de garantia."
   },
@@ -71,10 +76,11 @@ const trabalhos = [
     tipo: "Cardápio QR",
     preco: "R$ 247",
     paleta: "moss" as const,
+    subtipo: "padaria" as const,
     itens: [
-      { nome: "Pão de Queijo", preco: "4,50" },
-      { nome: "Croissant Manteiga", preco: "12,00" },
-      { nome: "Café Especial", preco: "8,00" }
+      { nome: "Croissant de Manteiga", preco: "12,00", desc: "Manteiga francesa · 72h de fermentação" },
+      { nome: "Pão de Queijo Premium", preco: "4,50", desc: "Queijo canastra · feito na hora" },
+      { nome: "Bolo Cenoura Chocolate", preco: "8,00", desc: "Chocolate belga · receita da casa" }
     ],
     desc: "Cardápio rápido pra cafeteria de bairro, com horário, fotos e encomendas."
   }
@@ -102,6 +108,7 @@ const galeriaHref = whatsappUrl("galeria_quero");
                 nome={t.nome}
                 cidade={t.cidade}
                 paleta={t.paleta}
+                tipo={t.subtipo as "italiana" | "burger" | "padaria"}
                 itens={t.itens}
               />
             ) : (
@@ -110,6 +117,7 @@ const galeriaHref = whatsappUrl("galeria_quero");
                 cidade={t.cidade}
                 paleta={t.paleta}
                 tagline={t.tagline}
+                tipo={t.subtipo as "fitness" | "imobiliaria" | "saude"}
               />
             )}
           </div>
@@ -141,6 +149,7 @@ const galeriaHref = whatsappUrl("galeria_quero");
               nome={t.nome}
               cidade={t.cidade}
               paleta={t.paleta}
+              tipo={t.subtipo as "italiana" | "burger" | "padaria"}
               itens={t.itens}
             />
           ) : (
@@ -149,6 +158,7 @@ const galeriaHref = whatsappUrl("galeria_quero");
               cidade={t.cidade}
               paleta={t.paleta}
               tagline={t.tagline}
+              tipo={t.subtipo as "fitness" | "imobiliaria" | "saude"}
             />
           )}
         </div>

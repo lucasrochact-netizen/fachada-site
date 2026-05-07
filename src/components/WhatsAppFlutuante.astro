@@ -1,0 +1,151 @@
+---
+// Componente fixo (sticky) — WhatsApp e Voltar ao topo. (§5 do TASK)
+import { whatsappUrl } from "../lib/whatsapp.ts";
+const stickyHref = whatsappUrl("whatsapp_sticky");
+---
+
+<div class="floaters" data-floaters>
+  <a
+    class="floater floater--whatsapp"
+    href={stickyHref}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+    data-floater-whatsapp
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A11.4 11.4 0 0 0 3 18.6L1.5 24l5.6-1.5a11.4 11.4 0 0 0 5.4 1.4h.1A11.4 11.4 0 0 0 20.5 3.5zm-7.9 18.1c-1.6 0-3.2-.4-4.5-1.2l-.3-.2-3.3.9.9-3.2-.2-.3a9.4 9.4 0 1 1 17.5-4.7c0 5.2-4.2 8.6-9.5 8.6h-.6zm5.2-7c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.6-1.4-3.7-3.2-.3-.5.3-.5.8-1.5.1-.2 0-.3 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9 0 1.7 1.2 3.3 1.4 3.5.2.2 2.4 3.7 5.9 5.2 2.2.9 3 .9 4 .8.6 0 1.7-.7 2-1.4.3-.7.3-1.2.2-1.4 0-.2-.3-.2-.6-.4z"/>
+    </svg>
+  </a>
+
+  <button
+    class="floater floater--top"
+    type="button"
+    aria-label="Voltar ao topo"
+    data-floater-top
+  >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M10 16V4M4 10l6-6 6 6"/>
+    </svg>
+  </button>
+</div>
+
+<style>
+  .floaters {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 50;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.85rem;
+    pointer-events: none;
+  }
+  @media (min-width: 768px) {
+    .floaters {
+      right: 1.5rem;
+      bottom: 1.5rem;
+    }
+  }
+
+  .floater {
+    pointer-events: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    box-shadow: 0 8px 24px -8px rgba(26, 22, 20, 0.35);
+    transition:
+      transform 0.45s var(--ease-praca),
+      box-shadow 0.45s var(--ease-praca),
+      opacity 0.4s var(--ease-praca),
+      background-color 0.4s var(--ease-praca);
+    opacity: 0;
+    transform: scale(0.6);
+    pointer-events: none;
+  }
+  .floater.is-visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+  .floater:hover {
+    transform: scale(1.06);
+    box-shadow: 0 12px 32px -8px rgba(26, 22, 20, 0.45);
+  }
+
+  /* WhatsApp */
+  .floater--whatsapp {
+    width: 56px;
+    height: 56px;
+    background-color: #25D366;
+    color: #FBF8F2;
+    border: 0;
+    text-decoration: none;
+  }
+  .floater--whatsapp:hover { background-color: #20bd5b; }
+
+  /* Voltar ao topo */
+  .floater--top {
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    border: 1px solid var(--color-line-strong);
+    cursor: pointer;
+  }
+  .floater--top:hover {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    border-color: var(--color-ink);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .floater { transition: opacity 0.2s; transform: none; }
+  }
+</style>
+
+<script>
+  import { springIn } from "../lib/motion.ts";
+
+  const wa = document.querySelector<HTMLAnchorElement>("[data-floater-whatsapp]");
+  const top = document.querySelector<HTMLButtonElement>("[data-floater-top]");
+
+  let waShown = false;
+  let topShown = false;
+
+  function update() {
+    const y = window.scrollY;
+    if (!waShown && y > 600 && wa) {
+      waShown = true;
+      wa.classList.add("is-visible");
+      try { springIn(wa); } catch { /* fallback CSS handles it */ }
+    }
+    if (!topShown && y > 1500 && top) {
+      topShown = true;
+      top.classList.add("is-visible");
+      try { springIn(top); } catch { /* */ }
+    }
+    // Esconde voltar-ao-topo se voltar pra perto do topo
+    if (top) {
+      if (y < 800) top.classList.remove("is-visible");
+      else if (y >= 1500) top.classList.add("is-visible");
+    }
+  }
+
+  top?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // Observa scroll com throttle leve
+  let raf = 0;
+  window.addEventListener("scroll", () => {
+    if (raf) return;
+    raf = requestAnimationFrame(() => {
+      raf = 0;
+      update();
+    });
+  }, { passive: true });
+  update();
+</script>

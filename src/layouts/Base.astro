@@ -56,6 +56,13 @@ const url = Astro.site ?? "https://praca.example.com/";
     <meta name="twitter:image" content="/og-image.svg" />
 
     <title>{title}</title>
+
+    <!--
+      Progressive enhancement: marca o html com .has-motion antes do paint, só
+      se JS estiver ativo. CSS usa essa classe pra esconder .reveal e .data-hero-line
+      antes da animação. Sem JS, conteúdo aparece visível por default.
+    -->
+    <script is:inline>document.documentElement.classList.add("has-motion");</script>
   </head>
   <body>
     <main>

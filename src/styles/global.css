@@ -191,8 +191,8 @@
     .praca-container { padding-inline: 3rem; }
   }
 
-  /* Reveal on scroll */
-  .reveal {
+  /* Reveal on scroll — só esconde se JS estiver ativo (progressive enhancement) */
+  html.has-motion .reveal {
     opacity: 0;
     transform: translateY(24px);
     transition:
@@ -200,7 +200,7 @@
       transform 0.9s var(--ease-praca);
     will-change: opacity, transform;
   }
-  .reveal.is-visible {
+  html.has-motion .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
   }

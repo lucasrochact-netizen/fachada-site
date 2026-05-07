@@ -199,8 +199,6 @@ const heroHref = whatsappUrl("hero");
 
 <script>
   import { animateHeroLines } from "../lib/motion.ts";
-  // Marca que JS carregou — só esconde linhas se vamos animar.
-  document.documentElement.classList.add("has-motion");
-  // requestAnimationFrame pra esperar o paint inicial e fontes
+  // .has-motion já foi aplicado pelo inline script do Base.astro (antes do paint).
   requestAnimationFrame(() => animateHeroLines());
 </script>

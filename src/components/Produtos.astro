@@ -1,0 +1,283 @@
+---
+// Seção 3 — Produtos. (§4.3 do TASK)
+// Apenas 2 cards. Sem confusão. Preço grande IBM Plex Mono. Checkmarks SVG clay.
+import { whatsappUrl } from "../lib/whatsapp.ts";
+
+const cardapioHref = whatsappUrl("cardapio_card");
+const siteHref = whatsappUrl("site_card");
+---
+
+<section id="produtos" class="produtos" aria-labelledby="produtos-title">
+  <div class="praca-container">
+    <p class="produtos__eyebrow reveal">Dois produtos. Sem mensalidade.</p>
+    <h2 id="produtos-title" class="produtos__title reveal">Escolhe o que te encaixa.</h2>
+
+    <div class="produtos__grid reveal-stagger">
+      <!-- Card 1 — Cardápio QR -->
+      <article class="prod-card reveal" aria-labelledby="prod-cardapio-title">
+        <header class="prod-card__head">
+          <p class="prod-card__kicker">Para restaurantes, lanchonetes, bares</p>
+          <h3 id="prod-cardapio-title" class="prod-card__name">Cardápio QR</h3>
+          <div class="prod-card__price">
+            <span class="prod-card__currency">R$</span>
+            <span class="prod-card__amount">247</span>
+          </div>
+          <p class="prod-card__price-note">fechado, sem mensalidade</p>
+        </header>
+
+        <p class="prod-card__pitch">
+          Cliente escaneia o QR, abre no celular dele, escolhe o que quer.
+          Sem app, sem cadastro.
+        </p>
+
+        <ul class="prod-card__features">
+          <li>QR code impresso pronto pra mesa</li>
+          <li>Atualização ilimitada por 30 dias</li>
+          <li>Suas fotos, sua marca, sua identidade</li>
+          <li>Funciona offline depois de carregado</li>
+          <li>Garantia de 7 dias</li>
+        </ul>
+
+        <p class="prod-card__delivery">
+          <span class="font-mono-praca">Pronto em 5 dias úteis.</span>
+        </p>
+
+        <a
+          class="btn-primary cursor-clay prod-card__cta"
+          href={cardapioHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Quero o cardápio
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" />
+          </svg>
+        </a>
+      </article>
+
+      <!-- Card 2 — Site one-page -->
+      <article class="prod-card prod-card--featured reveal" aria-labelledby="prod-site-title">
+        <header class="prod-card__head">
+          <p class="prod-card__kicker">Para qualquer negócio</p>
+          <h3 id="prod-site-title" class="prod-card__name">Site profissional</h3>
+          <div class="prod-card__price">
+            <span class="prod-card__currency">R$</span>
+            <span class="prod-card__amount">397</span>
+          </div>
+          <p class="prod-card__price-note">fechado, sem mensalidade</p>
+        </header>
+
+        <p class="prod-card__pitch">
+          Pra qualquer negócio que precisa aparecer no Google e converter
+          quem visita.
+        </p>
+
+        <ul class="prod-card__features">
+          <li>1 página, mas feita com cuidado</li>
+          <li>Carrega em menos de 2 segundos</li>
+          <li>Botão direto pro seu WhatsApp</li>
+          <li>Otimizado pro Google encontrar</li>
+          <li>Garantia de 7 dias</li>
+        </ul>
+
+        <p class="prod-card__delivery">
+          <span class="font-mono-praca">Pronto em 7 dias úteis.</span>
+        </p>
+
+        <a
+          class="btn-primary cursor-clay prod-card__cta"
+          href={siteHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Quero o site
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" />
+          </svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .produtos {
+    background-color: var(--color-cream-deep);
+    padding-block: 5rem;
+    position: relative;
+  }
+  @media (min-width: 768px) { .produtos { padding-block: 7rem; } }
+
+  .produtos__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay);
+    margin: 0 0 0.85rem 0;
+  }
+  .produtos__title {
+    font-size: clamp(2rem, 5vw + 0.5rem, 3.5rem);
+    margin: 0 0 3rem 0;
+    max-width: 18ch;
+    letter-spacing: -0.02em;
+  }
+
+  .produtos__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .produtos__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: stretch;
+    }
+  }
+
+  /* Card */
+  .prod-card {
+    background-color: var(--color-paper);
+    border: 1px solid var(--color-line-strong);
+    border-radius: 6px;
+    padding: 2.25rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: transform 0.5s var(--ease-praca), box-shadow 0.5s var(--ease-praca);
+  }
+  @media (min-width: 768px) {
+    .prod-card { padding: 3rem 2.5rem; }
+  }
+  .prod-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px -16px rgba(26, 22, 20, 0.18);
+  }
+
+  /* Card destacado (Site profissional) — borda clay sutil */
+  .prod-card--featured {
+    border-color: rgba(181, 86, 58, 0.4);
+    position: relative;
+  }
+  .prod-card--featured::before {
+    content: "Mais procurado";
+    position: absolute;
+    top: -10px;
+    left: 1.75rem;
+    background: var(--color-clay);
+    color: var(--color-paper);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 3px;
+  }
+  @media (min-width: 768px) {
+    .prod-card--featured::before { left: 2.5rem; }
+  }
+
+  /* Head */
+  .prod-card__head {
+    border-bottom: 1px solid var(--color-line);
+    padding-bottom: 1.5rem;
+  }
+  .prod-card__kicker {
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--color-ink-soft);
+    margin: 0 0 0.5rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .prod-card__name {
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.25rem);
+    margin: 0 0 1.25rem 0;
+    color: var(--color-ink);
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 60;
+  }
+  .prod-card__price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    color: var(--color-ink);
+    font-family: var(--font-mono);
+    line-height: 1;
+  }
+  .prod-card__currency {
+    font-size: 1.25rem;
+    color: var(--color-ink-soft);
+    font-weight: 500;
+  }
+  .prod-card__amount {
+    font-size: clamp(2.5rem, 6vw + 0.5rem, 3.75rem);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .prod-card__price-note {
+    margin: 0.4rem 0 0 0;
+    font-size: 0.85rem;
+    color: var(--color-ink-soft);
+  }
+
+  /* Pitch */
+  .prod-card__pitch {
+    margin: 0;
+    color: var(--color-ink-soft);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Features */
+  .prod-card__features {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .prod-card__features li {
+    position: relative;
+    padding-left: 1.85rem;
+    color: var(--color-ink);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .prod-card__features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.15em;
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23B5563A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='4 11 8 15 16 6'/></svg>");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  /* Delivery */
+  .prod-card__delivery {
+    margin: 0;
+    padding: 0.85rem 1rem;
+    background-color: var(--color-cream-deep);
+    border-radius: 4px;
+    color: var(--color-ink);
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  /* CTA */
+  .prod-card__cta {
+    margin-top: auto;
+    width: 100%;
+    padding: 1.1rem 1.5rem;
+  }
+</style>
+
+<script>
+  import { initReveal } from "../lib/motion.ts";
+  initReveal();
+</script>

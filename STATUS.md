@@ -58,6 +58,21 @@ Todas em `src/lib/whatsapp.ts`. Telefone via `PUBLIC_WHATSAPP_NUMBER` no `.env`.
 
 ---
 
+## Suíte de testes (em `_scripts/`, não versionada — exploratória)
+
+Total: **65/65 verde** rodando contra build de produção (`npm run build && npm run preview`).
+
+| Suíte | Cobertura | Resultado |
+|-------|-----------|:--:|
+| `test-cta` | 14 links WhatsApp do site, número correto + mensagem pré-preenchida correta + UTF-8 encoding | 14/14 |
+| `test-interaction` | modal abre/fecha (X/ESC/backdrop), sticky aparece após scroll, voltar-ao-topo, âncoras, reveals, count-up | 11/11 |
+| `test-edge-cases` | iPhone SE 375px, Galaxy Fold 320px, desktop 1920px, R$/ç/[___] encoding, modal aria-labelledby, fontes carregam, OG meta tags | 19/19 |
+| `test-reduced-motion` | prefers-reduced-motion respeitado: hero visível imediato, reveals visíveis | 2/2 |
+| `test-no-js` | progressive enhancement: H1 visível, 14 CTAs, 5 seções, 12 SVGs renderizam sem JS | 5/5 |
+| `test-keyboard` | Tab sequence, focus visível, Enter em link, Enter em card abre modal, ESC fecha, sem botões sem label | 8/8 |
+| `test-network` | Slow 3G + 4× CPU throttle: DOM em 2s, Hero em 0ms, total 103KB | 3/3 |
+| `test-env-override` | `PUBLIC_WHATSAPP_NUMBER=5511987654321` substitui placeholder em todos os CTAs | 3/3 |
+
 ## Pendências NÃO bloqueadoras (futuro)
 
 - Substituir os mockups SVG fictícios da galeria por screenshots reais quando os primeiros clientes fecharem.

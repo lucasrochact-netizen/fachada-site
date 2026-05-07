@@ -1,0 +1,184 @@
+---
+// Seção 6 — CTA Final. (§4.6 do TASK)
+// Background --ink, texto --paper, 2 botões grandes.
+import Logo from "./Logo.astro";
+import NoiseTexture from "./NoiseTexture.astro";
+import { whatsappUrl, whatsappNumber } from "../lib/whatsapp.ts";
+
+const cardapioHref = whatsappUrl("cta_final_cardapio");
+const siteHref = whatsappUrl("cta_final_site");
+const number = whatsappNumber();
+const numberPretty = (() => {
+  // 5534999999999 -> +55 (34) 99999-9999
+  const n = number.replace(/^55/, "");
+  if (n.length === 11) return `+55 (${n.slice(0, 2)}) ${n.slice(2, 7)}-${n.slice(7)}`;
+  if (n.length === 10) return `+55 (${n.slice(0, 2)}) ${n.slice(2, 6)}-${n.slice(6)}`;
+  return `+${number}`;
+})();
+
+const ano = new Date().getFullYear();
+---
+
+<section id="contato" class="cta-final" aria-labelledby="cta-final-title">
+  <NoiseTexture opacity={0.08} baseFrequency={0.7} />
+
+  <div class="praca-container cta-final__inner">
+    <p class="cta-final__eyebrow reveal">Última parada</p>
+    <h2 id="cta-final-title" class="cta-final__title reveal">
+      Pronto pra resolver?
+    </h2>
+    <p class="cta-final__sub reveal">
+      Manda WhatsApp dizendo qual produto te interessa.
+      A gente responde em até <strong>30 minutos</strong> durante horário comercial.
+    </p>
+
+    <div class="cta-final__ctas reveal">
+      <a
+        href={cardapioHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary cursor-clay"
+      >
+        Quero o cardápio (R$ 247)
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M2 7h10M8 3l4 4-4 4" />
+        </svg>
+      </a>
+      <a
+        href={siteHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-outline-light cursor-clay"
+      >
+        Quero o site (R$ 397)
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M2 7h10M8 3l4 4-4 4" />
+        </svg>
+      </a>
+    </div>
+
+    <footer class="cta-final__footer reveal">
+      <div class="cta-final__brand">
+        <Logo tone="paper" size="md" />
+        <p class="cta-final__tag">presença digital pra cidade pequena</p>
+      </div>
+      <div class="cta-final__contact">
+        <a href={cardapioHref} target="_blank" rel="noopener noreferrer" class="praca-link cta-final__phone">
+          WhatsApp: {numberPretty}
+        </a>
+        <p class="cta-final__copy">© {ano} · feito em Minas Gerais</p>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<style>
+  .cta-final {
+    position: relative;
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+    padding-block: 5rem;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  @media (min-width: 768px) { .cta-final { padding-block: 8rem; } }
+
+  .cta-final__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-final__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay-light);
+    margin: 0 0 0.85rem 0;
+  }
+  .cta-final__title {
+    font-size: clamp(2.25rem, 6vw + 0.5rem, 4.5rem);
+    color: var(--color-paper);
+    letter-spacing: -0.03em;
+    margin: 0 0 1.5rem 0;
+    max-width: 16ch;
+    font-variation-settings: "opsz" 144;
+  }
+  .cta-final__sub {
+    color: rgba(251, 248, 242, 0.75);
+    font-size: clamp(1rem, 1.4vw + 0.6rem, 1.2rem);
+    max-width: 50ch;
+    margin: 0 0 3rem 0;
+    line-height: 1.55;
+  }
+  .cta-final__sub strong {
+    color: var(--color-paper);
+    font-weight: 600;
+  }
+
+  .cta-final__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 6rem;
+  }
+  .cta-final__ctas .btn-primary,
+  .cta-final__ctas .btn-outline-light {
+    flex: 1 1 240px;
+  }
+
+  /* Footer */
+  .cta-final__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(251, 248, 242, 0.15);
+  }
+  @media (min-width: 768px) {
+    .cta-final__footer {
+      flex-direction: row;
+      align-items: end;
+      justify-content: space-between;
+    }
+  }
+
+  .cta-final__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .cta-final__tag {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: rgba(251, 248, 242, 0.55);
+    margin: 0;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+  }
+
+  .cta-final__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: rgba(251, 248, 242, 0.75);
+    font-size: 0.85rem;
+  }
+  @media (min-width: 768px) { .cta-final__contact { text-align: right; } }
+  .cta-final__phone {
+    color: var(--color-paper);
+    font-weight: 500;
+  }
+  .cta-final__copy {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: rgba(251, 248, 242, 0.5);
+    letter-spacing: 0.05em;
+  }
+</style>
+
+<script>
+  import { initReveal } from "../lib/motion.ts";
+  initReveal();
+</script>

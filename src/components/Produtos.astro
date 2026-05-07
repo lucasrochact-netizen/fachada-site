@@ -39,7 +39,7 @@ const siteHref = whatsappUrl("site_card");
         </ul>
 
         <p class="prod-card__delivery">
-          <span class="font-mono-praca">Pronto em 5 dias úteis.</span>
+          <span class="font-mono-praca">Pronto em <span data-count-up data-count-target="5">5</span> dias úteis.</span>
         </p>
 
         <a
@@ -81,7 +81,7 @@ const siteHref = whatsappUrl("site_card");
         </ul>
 
         <p class="prod-card__delivery">
-          <span class="font-mono-praca">Pronto em 7 dias úteis.</span>
+          <span class="font-mono-praca">Pronto em <span data-count-up data-count-target="7">7</span> dias úteis.</span>
         </p>
 
         <a
@@ -278,6 +278,13 @@ const siteHref = whatsappUrl("site_card");
 </style>
 
 <script>
-  import { initReveal } from "../lib/motion.ts";
+  import { initReveal, countUpInView } from "../lib/motion.ts";
   initReveal();
+  // Anima cada [data-count-up] de 0 até seu data-count-target quando entra na viewport.
+  document.querySelectorAll<HTMLElement>("[data-count-up]").forEach((el) => {
+    const target = Number(el.dataset.countTarget ?? el.textContent ?? "0");
+    if (!Number.isFinite(target)) return;
+    el.textContent = "0";
+    countUpInView(`[data-count-target="${target}"][data-count-up]`, target, 1.0);
+  });
 </script>

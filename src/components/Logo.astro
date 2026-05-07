@@ -1,5 +1,5 @@
 ---
-// Logo Praça — wordmark Fraunces + pin SVG estilizado.
+// Logo Fachada — wordmark Fraunces + glifo de "moldura" (sua frente, agora online).
 // Variantes: tone="ink" (escuro sobre claro) | tone="paper" (claro sobre escuro)
 interface Props {
   tone?: "ink" | "paper";
@@ -12,54 +12,50 @@ const { tone = "ink", size = "md", href = null, class: className = "" } = Astro.
 const color = tone === "ink" ? "var(--color-ink)" : "var(--color-paper)";
 const accent = tone === "ink" ? "var(--color-clay)" : "var(--color-clay-light)";
 const fontSize = size === "sm" ? "1.05rem" : "1.25rem";
-const pinSize = size === "sm" ? 18 : 22;
-
-const Tag = href ? "a" : "div";
+const glifoSize = size === "sm" ? 18 : 22;
 ---
 
-<Tag
-  href={href ?? undefined}
-  class={`praca-logo ${className}`}
-  aria-label="Praça"
-  style={`color: ${color};`}
->
-  <span class="praca-logo__pin" aria-hidden="true">
-    <svg
-      width={pinSize}
-      height={pinSize}
-      viewBox="0 0 22 22"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M11 1.6c-3.6 0-6.6 2.9-6.6 6.5 0 4.9 6.6 12.3 6.6 12.3s6.6-7.4 6.6-12.3c0-3.6-3-6.5-6.6-6.5z"
-        stroke={color}
-        stroke-width="1.4"
-        stroke-linejoin="round"
-        fill="none"
-      ></path>
-      <circle cx="11" cy="8" r="2.2" fill={accent}></circle>
-    </svg>
-  </span>
-  <span class="praca-logo__word" style={`font-size: ${fontSize};`}>
-    Praça
-    <span class="praca-logo__dot" style={`background-color: ${accent};`}></span>
-  </span>
-</Tag>
+<Fragment>
+  {href ? (
+    <a href={href} class={`fachada-logo ${className}`} aria-label="Fachada" style={`color: ${color};`}>
+      <span class="fachada-logo__glifo" aria-hidden="true">
+        <svg width={glifoSize} height={glifoSize} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.5" y="2.5" width="17" height="17" rx="1.5" stroke={color} stroke-width="1.4" />
+          <rect x="6" y="6" width="10" height="6" fill={accent} />
+        </svg>
+      </span>
+      <span class="fachada-logo__word" style={`font-size: ${fontSize};`}>
+        Fachada<span class="fachada-logo__dot" style={`background-color: ${accent};`}></span>
+      </span>
+    </a>
+  ) : (
+    <div class={`fachada-logo ${className}`} aria-label="Fachada" style={`color: ${color};`}>
+      <span class="fachada-logo__glifo" aria-hidden="true">
+        <svg width={glifoSize} height={glifoSize} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.5" y="2.5" width="17" height="17" rx="1.5" stroke={color} stroke-width="1.4" />
+          <rect x="6" y="6" width="10" height="6" fill={accent} />
+        </svg>
+      </span>
+      <span class="fachada-logo__word" style={`font-size: ${fontSize};`}>
+        Fachada<span class="fachada-logo__dot" style={`background-color: ${accent};`}></span>
+      </span>
+    </div>
+  )}
+</Fragment>
 
 <style>
-  .praca-logo {
+  .fachada-logo {
     display: inline-flex;
     align-items: center;
     gap: 0.55rem;
     text-decoration: none;
     line-height: 1;
   }
-  .praca-logo__pin {
+  .fachada-logo__glifo {
     display: inline-flex;
     transform: translateY(-1px);
   }
-  .praca-logo__word {
+  .fachada-logo__word {
     font-family: var(--font-display);
     font-weight: 600;
     letter-spacing: -0.025em;
@@ -67,7 +63,7 @@ const Tag = href ? "a" : "div";
     position: relative;
     padding-right: 0.35rem;
   }
-  .praca-logo__dot {
+  .fachada-logo__dot {
     position: absolute;
     right: 0;
     bottom: 0.25em;

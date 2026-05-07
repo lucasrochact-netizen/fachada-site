@@ -1,20 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
   <rect width="1200" height="630" fill="#FBF8F2"/>
   <g transform="translate(80, 70)">
-    <path d="M30 0c-13 0-22 10-22 22 0 16 22 44 22 44s22-28 22-44c0-12-9-22-22-22z"
-      stroke="#1A1614" stroke-width="3" fill="none"/>
-    <circle cx="30" cy="22" r="8" fill="#B5563A"/>
-    <text x="80" y="50" font-family="Georgia, serif" font-size="44" font-weight="600" fill="#1A1614" letter-spacing="-1">Praça</text>
-    <text x="170" y="50" font-family="Georgia, serif" font-size="44" font-weight="600" fill="#B5563A">.</text>
+    <rect x="2" y="2" width="56" height="56" rx="3" stroke="#1A1614" stroke-width="3" fill="none"/>
+    <rect x="14" y="16" width="32" height="20" fill="#B5563A"/>
+    <text x="80" y="50" font-family="Georgia, serif" font-size="44" font-weight="600" fill="#1A1614" letter-spacing="-1">Fachada</text>
+    <text x="246" y="50" font-family="Georgia, serif" font-size="44" font-weight="600" fill="#B5563A">.</text>
   </g>
   <g transform="translate(80, 230)">
     <text font-family="Georgia, serif" font-size="86" font-weight="700" fill="#1A1614" letter-spacing="-3">
       <tspan x="0" dy="0">Cardápio em PDF.</tspan>
       <tspan x="0" dy="100">Site de 2018.</tspan>
-      <tspan x="0" dy="100">Seu vizinho já <tspan fill="#1A1614">resolveu<tspan fill="#B5563A">.</tspan></tspan></tspan>
+      <tspan x="0" dy="100">Seu concorrente já <tspan fill="#1A1614">resolveu<tspan fill="#B5563A">.</tspan></tspan></tspan>
     </text>
   </g>
   <text x="80" y="580" font-family="ui-sans-serif, system-ui" font-size="22" fill="#4A4340">
-    A gente arruma sua presença digital em 5 dias. Cardápio QR R$ 247 · Site R$ 397.
+    Sua frente digital em 5–7 dias. Cardápio QR R$ 247 · Site R$ 397.
   </text>
 </svg>

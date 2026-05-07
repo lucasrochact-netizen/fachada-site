@@ -7,71 +7,76 @@ import { whatsappUrl } from "../lib/whatsapp.ts";
 
 const trabalhos = [
   {
-    slug: "pizzaria-tonho",
-    nome: "Pizzaria do Tonho",
-    cidade: "Uberaba",
+    slug: "trattoria-buongiorno",
+    nome: "Trattoria Buongiorno",
+    cidade: "São Paulo",
     tipo: "Cardápio QR",
     preco: "R$ 247",
     paleta: "clay" as const,
-    desc: "Cardápio QR com 28 sabores e ajuste pra delivery WhatsApp."
+    itens: [
+      { nome: "Margherita", preco: "58,00" },
+      { nome: "Funghi Trufa", preco: "72,00" },
+      { nome: "Calabresa Premium", preco: "62,00" }
+    ],
+    desc: "Cardápio QR com 28 pratos, vinhos da casa e sugestão do chef. Atualização semanal."
   },
   {
-    slug: "salao-bianca",
-    nome: "Salão Bianca",
-    cidade: "Patos de Minas",
-    tipo: "Site profissional",
-    preco: "R$ 397",
-    paleta: "ink" as const,
-    tagline: "Beleza com calma",
-    desc: "Site one-page com agendamento via WhatsApp e showcase de trabalhos."
-  },
-  {
-    slug: "pousada-recanto",
-    nome: "Pousada Recanto",
-    cidade: "Araxá",
+    slug: "studio-forma",
+    nome: "Studio Forma",
+    cidade: "Curitiba",
     tipo: "Site profissional",
     preco: "R$ 397",
     paleta: "moss" as const,
-    tagline: "Descanso de verdade",
-    desc: "Site institucional com galeria de chalés e reserva direta no WhatsApp."
+    tagline: "Pilates com método",
+    desc: "Site com agenda integrada por WhatsApp, planos mensais e conteúdo de vídeo embedado."
   },
   {
-    slug: "burger-do-ze",
-    nome: "Burger do Zé",
-    cidade: "Frutal",
+    slug: "imoveis-alianca",
+    nome: "Imóveis Aliança",
+    cidade: "Belo Horizonte",
+    tipo: "Site profissional",
+    preco: "R$ 397",
+    paleta: "ink" as const,
+    tagline: "Imóveis de qualidade",
+    desc: "Site institucional com formulário de captação, listagem manual e SEO local."
+  },
+  {
+    slug: "hamburgueria-trinta",
+    nome: "Hamburgueria Trinta",
+    cidade: "Florianópolis",
     tipo: "Cardápio QR",
     preco: "R$ 247",
     paleta: "ink" as const,
     itens: [
-      { nome: "Smash Duplo", preco: "32,00" },
-      { nome: "Cheddar Bacon", preco: "29,00" },
-      { nome: "Veggie Cogumelo", preco: "28,00" }
+      { nome: "Smash Duplo", preco: "38,00" },
+      { nome: "Cheddar Bacon", preco: "34,00" },
+      { nome: "Veggie Cogumelo", preco: "32,00" }
     ],
-    desc: "Cardápio QR escuro com fotos suculentas e atualização semanal."
+    desc: "Cardápio escuro premium com 18 lanches autorais e combos."
   },
   {
-    slug: "clinica-sorrir",
-    nome: "Clínica Sorrir",
-    cidade: "Ituiutaba",
+    slug: "clinica-odonto-saude",
+    nome: "Clínica Odonto Saúde",
+    cidade: "Ribeirão Preto",
     tipo: "Site profissional",
     preco: "R$ 397",
     paleta: "clay" as const,
-    tagline: "Cuidado dental humanizado",
-    desc: "Site com convênios aceitos, formulário de avaliação e WhatsApp direto."
+    tagline: "Sorriso com confiança",
+    desc: "Site com convênios aceitos, agenda online por WhatsApp e selo de garantia."
   },
   {
-    slug: "padaria-estrela",
-    nome: "Padaria Estrela",
-    cidade: "Sacramento",
+    slug: "padaria-carolina",
+    nome: "Padaria Carolina",
+    cidade: "Campinas",
     tipo: "Cardápio QR",
     preco: "R$ 247",
     paleta: "moss" as const,
     itens: [
-      { nome: "Pão de Queijo", preco: "3,50" },
-      { nome: "Bolo de Fubá", preco: "8,00" },
-      { nome: "Café Coado", preco: "4,00" }
+      { nome: "Pão de Queijo", preco: "4,50" },
+      { nome: "Croissant Manteiga", preco: "12,00" },
+      { nome: "Café Especial", preco: "8,00" }
     ],
-    desc: "Cardápio rápido pra padaria de bairro, com horário e localização."
+    desc: "Cardápio rápido pra cafeteria de bairro, com horário, fotos e encomendas."
   }
 ];
 

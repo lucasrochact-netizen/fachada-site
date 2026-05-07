@@ -1,0 +1,159 @@
+---
+// Seção 5b — Quem está por trás. (Fundadores)
+// Dois sócios com perfis complementares: estratégia (Lucas) e tecnologia (Paulo).
+
+const fundadores = [
+  {
+    iniciais: "LC",
+    nome: "Lucas Conti",
+    papel: "Co-fundador · estratégia & operações",
+    bio: "Italiano, veio fazer Administração de Empresas no Brasil pela FGV-SP e ficou. 15 anos liderando crescimento, marketing e operações em empresas de tecnologia e varejo na América Latina. Acredita que negócio bom não vira negócio grande sem método.",
+    fato: "FGV-SP · 15 anos em PME e scale-up"
+  },
+  {
+    iniciais: "PA",
+    nome: "Paulo Andrade",
+    papel: "Co-fundador · tecnologia & produto",
+    bio: "Engenheiro de software há 20 anos. Construiu plataformas que servem milhões de usuários em scale-ups brasileiras de e-commerce e fintech. Aplica o mesmo rigor de big tech a sites de pequena empresa — sem cobrar de big tech.",
+    fato: "20 anos em engenharia · ex-CTO"
+  }
+];
+---
+
+<section id="fundadores" class="fundadores" aria-labelledby="fundadores-title">
+  <div class="praca-container">
+    <p class="fundadores__eyebrow reveal">Quem está por trás</p>
+    <h2 id="fundadores-title" class="fundadores__title reveal">Por trás da Fachada.</h2>
+    <p class="fundadores__sub reveal">
+      Dois sócios. Sem time terceirizado, sem freelancer escondido.
+      Quem fala com você é quem entrega.
+    </p>
+
+    <div class="fundadores__grid reveal-stagger">
+      {fundadores.map((f) => (
+        <article class="fund-card reveal">
+          <div class="fund-card__avatar" aria-hidden="true">
+            <span>{f.iniciais}</span>
+          </div>
+          <p class="fund-card__papel">{f.papel}</p>
+          <h3 class="fund-card__nome">{f.nome}</h3>
+          <p class="fund-card__bio">{f.bio}</p>
+          <p class="fund-card__fato"><span class="font-mono-praca">{f.fato}</span></p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .fundadores {
+    background-color: var(--color-cream-deep);
+    padding-block: 5rem;
+  }
+  @media (min-width: 768px) { .fundadores { padding-block: 7rem; } }
+
+  .fundadores__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay);
+    margin: 0 0 0.85rem 0;
+  }
+  .fundadores__title {
+    font-size: clamp(2rem, 5vw + 0.5rem, 3.5rem);
+    margin: 0 0 1.25rem 0;
+    letter-spacing: -0.02em;
+  }
+  .fundadores__sub {
+    color: var(--color-ink-soft);
+    font-size: clamp(1rem, 1.4vw + 0.6rem, 1.15rem);
+    max-width: 56ch;
+    margin: 0 0 3rem 0;
+    line-height: 1.55;
+  }
+
+  .fundadores__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .fundadores__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  /* Card */
+  .fund-card {
+    background-color: var(--color-paper);
+    border: 1px solid var(--color-line-strong);
+    border-radius: 6px;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    transition: transform 0.5s var(--ease-praca), box-shadow 0.5s var(--ease-praca);
+  }
+  @media (min-width: 768px) {
+    .fund-card { padding: 2.5rem; }
+  }
+  .fund-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px -16px rgba(26, 22, 20, 0.18);
+  }
+
+  /* Avatar com monograma */
+  .fund-card__avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    background-color: var(--color-cream-deep);
+    border: 1px solid var(--color-line-strong);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--color-clay-deep);
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 48;
+    margin-bottom: 0.5rem;
+  }
+
+  .fund-card__papel {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-ink-soft);
+  }
+  .fund-card__nome {
+    font-size: clamp(1.4rem, 2.5vw + 0.5rem, 1.85rem);
+    margin: 0 0 0.5rem 0;
+    color: var(--color-ink);
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 60;
+  }
+  .fund-card__bio {
+    margin: 0;
+    color: var(--color-ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+  .fund-card__fato {
+    margin: 0.5rem 0 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid var(--color-line);
+    color: var(--color-ink);
+    font-size: 0.85rem;
+  }
+</style>
+
+<script>
+  import { initReveal } from "../lib/motion.ts";
+  initReveal();
+</script>

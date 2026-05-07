@@ -1,0 +1,384 @@
+---
+// Seção 4 — Galeria. (§4.4 do TASK)
+// 6 mockups fictícios, modal nativo <dialog>, CTA "Quero algo assim".
+import MockupCardapio from "./MockupCardapio.astro";
+import MockupSite from "./MockupSite.astro";
+import { whatsappUrl } from "../lib/whatsapp.ts";
+
+const trabalhos = [
+  {
+    slug: "pizzaria-tonho",
+    nome: "Pizzaria do Tonho",
+    cidade: "Uberaba",
+    tipo: "Cardápio QR",
+    preco: "R$ 247",
+    paleta: "clay" as const,
+    desc: "Cardápio QR com 28 sabores e ajuste pra delivery WhatsApp."
+  },
+  {
+    slug: "salao-bianca",
+    nome: "Salão Bianca",
+    cidade: "Patos de Minas",
+    tipo: "Site profissional",
+    preco: "R$ 397",
+    paleta: "ink" as const,
+    tagline: "Beleza com calma",
+    desc: "Site one-page com agendamento via WhatsApp e showcase de trabalhos."
+  },
+  {
+    slug: "pousada-recanto",
+    nome: "Pousada Recanto",
+    cidade: "Araxá",
+    tipo: "Site profissional",
+    preco: "R$ 397",
+    paleta: "moss" as const,
+    tagline: "Descanso de verdade",
+    desc: "Site institucional com galeria de chalés e reserva direta no WhatsApp."
+  },
+  {
+    slug: "burger-do-ze",
+    nome: "Burger do Zé",
+    cidade: "Frutal",
+    tipo: "Cardápio QR",
+    preco: "R$ 247",
+    paleta: "ink" as const,
+    itens: [
+      { nome: "Smash Duplo", preco: "32,00" },
+      { nome: "Cheddar Bacon", preco: "29,00" },
+      { nome: "Veggie Cogumelo", preco: "28,00" }
+    ],
+    desc: "Cardápio QR escuro com fotos suculentas e atualização semanal."
+  },
+  {
+    slug: "clinica-sorrir",
+    nome: "Clínica Sorrir",
+    cidade: "Ituiutaba",
+    tipo: "Site profissional",
+    preco: "R$ 397",
+    paleta: "clay" as const,
+    tagline: "Cuidado dental humanizado",
+    desc: "Site com convênios aceitos, formulário de avaliação e WhatsApp direto."
+  },
+  {
+    slug: "padaria-estrela",
+    nome: "Padaria Estrela",
+    cidade: "Sacramento",
+    tipo: "Cardápio QR",
+    preco: "R$ 247",
+    paleta: "moss" as const,
+    itens: [
+      { nome: "Pão de Queijo", preco: "3,50" },
+      { nome: "Bolo de Fubá", preco: "8,00" },
+      { nome: "Café Coado", preco: "4,00" }
+    ],
+    desc: "Cardápio rápido pra padaria de bairro, com horário e localização."
+  }
+];
+
+const galeriaHref = whatsappUrl("galeria_quero");
+---
+
+<section id="galeria" class="galeria" aria-labelledby="galeria-title">
+  <div class="praca-container">
+    <p class="galeria__eyebrow reveal">Trabalhos recentes</p>
+    <h2 id="galeria-title" class="galeria__title reveal">Alguns trabalhos.</h2>
+
+    <div class="galeria__grid reveal-stagger">
+      {trabalhos.map((t) => (
+        <button
+          class="moldura galeria__card reveal cursor-clay"
+          data-modal-trigger={t.slug}
+          aria-label={`Ver ${t.nome}, ${t.cidade}`}
+          type="button"
+        >
+          <div class="galeria__thumb">
+            {t.tipo === "Cardápio QR" ? (
+              <MockupCardapio
+                nome={t.nome}
+                cidade={t.cidade}
+                paleta={t.paleta}
+                itens={t.itens}
+              />
+            ) : (
+              <MockupSite
+                nome={t.nome}
+                cidade={t.cidade}
+                paleta={t.paleta}
+                tagline={t.tagline}
+              />
+            )}
+          </div>
+          <div class="galeria__meta">
+            <div class="galeria__name">{t.nome}</div>
+            <div class="galeria__city">{t.cidade}</div>
+            <div class="galeria__type">
+              <span>{t.tipo}</span>
+              <span class="galeria__price">· {t.preco}</span>
+            </div>
+          </div>
+        </button>
+      ))}
+    </div>
+  </div>
+
+  <!-- Modais -->
+  {trabalhos.map((t) => (
+    <dialog class="modal" id={`modal-${t.slug}`} aria-labelledby={`modal-${t.slug}-title`}>
+      <div class="modal__inner">
+        <button class="modal__close" data-modal-close aria-label="Fechar">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M5 5l10 10M15 5L5 15"/>
+          </svg>
+        </button>
+        <div class="modal__media">
+          {t.tipo === "Cardápio QR" ? (
+            <MockupCardapio
+              nome={t.nome}
+              cidade={t.cidade}
+              paleta={t.paleta}
+              itens={t.itens}
+            />
+          ) : (
+            <MockupSite
+              nome={t.nome}
+              cidade={t.cidade}
+              paleta={t.paleta}
+              tagline={t.tagline}
+            />
+          )}
+        </div>
+        <div class="modal__body">
+          <p class="modal__kicker">{t.tipo} · {t.cidade}</p>
+          <h3 id={`modal-${t.slug}-title`} class="modal__title">{t.nome}</h3>
+          <p class="modal__desc">{t.desc}</p>
+          <p class="modal__price">
+            Entregue por <span class="font-mono-praca">{t.preco}</span>
+          </p>
+          <a
+            href={galeriaHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-primary cursor-clay modal__cta"
+          >
+            Quero algo assim
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </dialog>
+  ))}
+</section>
+
+<style>
+  .galeria {
+    background-color: var(--color-cream);
+    padding-block: 5rem;
+  }
+  @media (min-width: 768px) { .galeria { padding-block: 7rem; } }
+
+  .galeria__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay);
+    margin: 0 0 0.85rem 0;
+  }
+  .galeria__title {
+    font-size: clamp(2rem, 5vw + 0.5rem, 3.5rem);
+    margin: 0 0 3rem 0;
+    letter-spacing: -0.02em;
+  }
+
+  .galeria__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .galeria__grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .galeria__grid { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  }
+
+  .galeria__card {
+    text-align: left;
+    background-color: var(--color-paper);
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color-line-strong);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    font-family: var(--font-sans);
+    transition: transform 0.5s var(--ease-praca), box-shadow 0.5s var(--ease-praca);
+  }
+  .galeria__card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 32px -12px rgba(26, 22, 20, 0.18);
+  }
+
+  .galeria__thumb {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    border-radius: 3px;
+    background-color: var(--color-cream-deep);
+  }
+  @media (min-width: 768px) {
+    .galeria__thumb { aspect-ratio: 3 / 4; }
+  }
+
+  .galeria__meta {
+    padding: 0.5rem 0.65rem 0.65rem;
+  }
+  .galeria__name {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-ink);
+    letter-spacing: -0.015em;
+    font-variation-settings: "opsz" 24;
+  }
+  .galeria__city {
+    font-size: 0.8rem;
+    color: var(--color-ink-soft);
+    margin-top: 0.1rem;
+  }
+  .galeria__type {
+    margin-top: 0.45rem;
+    padding-top: 0.45rem;
+    border-top: 1px solid var(--color-line);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-clay-deep);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .galeria__price { color: var(--color-ink-soft); }
+
+  /* Modal */
+  .modal {
+    border: 0;
+    padding: 0;
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    border-radius: 8px;
+    max-width: min(90vw, 720px);
+    max-height: 92vh;
+    overflow: hidden;
+    box-shadow: 0 24px 80px -24px rgba(26, 22, 20, 0.4);
+  }
+  .modal::backdrop {
+    background: rgba(26, 22, 20, 0.7);
+    backdrop-filter: blur(4px);
+  }
+  .modal__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) {
+    .modal__inner { grid-template-columns: 1fr 1fr; }
+  }
+  .modal__media {
+    background-color: var(--color-cream-deep);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal__media :global(svg) {
+    max-width: 280px;
+    width: 100%;
+  }
+  .modal__body {
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .modal__close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    background: var(--color-paper);
+    border: 1px solid var(--color-line-strong);
+    border-radius: 999px;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-ink);
+    cursor: pointer;
+    z-index: 1;
+    transition: background 0.3s var(--ease-praca);
+  }
+  .modal__close:hover { background: var(--color-cream-deep); }
+
+  .modal__kicker {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay);
+    margin: 0;
+  }
+  .modal__title {
+    font-size: 1.5rem;
+    margin: 0;
+    letter-spacing: -0.02em;
+    font-variation-settings: "opsz" 48;
+  }
+  .modal__desc {
+    margin: 0;
+    color: var(--color-ink-soft);
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .modal__price {
+    margin: 0;
+    color: var(--color-ink);
+    font-size: 0.9rem;
+  }
+  .modal__cta {
+    margin-top: 0.5rem;
+    align-self: flex-start;
+  }
+</style>
+
+<script>
+  import { initReveal } from "../lib/motion.ts";
+  initReveal();
+
+  // Bind dos triggers e closes
+  document.querySelectorAll<HTMLButtonElement>("[data-modal-trigger]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const slug = btn.dataset.modalTrigger;
+      if (!slug) return;
+      const dialog = document.getElementById(`modal-${slug}`) as HTMLDialogElement | null;
+      dialog?.showModal();
+    });
+  });
+
+  document.querySelectorAll<HTMLDialogElement>("dialog.modal").forEach((d) => {
+    // Fechar via botão
+    d.querySelector("[data-modal-close]")?.addEventListener("click", () => d.close());
+    // Fechar clicando no backdrop (clique fora do .modal__inner)
+    d.addEventListener("click", (e) => {
+      const rect = (d.querySelector(".modal__inner") as HTMLElement | null)?.getBoundingClientRect();
+      if (!rect) return;
+      const inDialog =
+        e.clientX >= rect.left && e.clientX <= rect.right &&
+        e.clientY >= rect.top && e.clientY <= rect.bottom;
+      if (!inDialog) d.close();
+    });
+  });
+</script>

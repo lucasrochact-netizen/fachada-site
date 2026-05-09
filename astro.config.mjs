@@ -3,6 +3,8 @@ import { defineConfig } from 'astro/config';
 
 import tailwindcss from '@tailwindcss/vite';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
   vite: {
@@ -12,5 +14,7 @@ export default defineConfig({
       // OK pra dev local — não é exposto em prod (build é estático).
       allowedHosts: true
     }
-  }
+  },
+
+  adapter: cloudflare()
 });

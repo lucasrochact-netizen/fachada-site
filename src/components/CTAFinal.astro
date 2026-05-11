@@ -9,7 +9,7 @@ const cardapioHref = whatsappUrl("cta_final_cardapio");
 const siteHref = whatsappUrl("cta_final_site");
 const number = whatsappNumber();
 const numberPretty = (() => {
-  // 5534999999999 -> +55 (34) 99999-9999
+  // 5511916200459 -> +55 (11) 91620-0459
   const n = number.replace(/^55/, "");
   if (n.length === 11) return `+55 (${n.slice(0, 2)}) ${n.slice(2, 7)}-${n.slice(7)}`;
   if (n.length === 10) return `+55 (${n.slice(0, 2)}) ${n.slice(2, 6)}-${n.slice(6)}`;

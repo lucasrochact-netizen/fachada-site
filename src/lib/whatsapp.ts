@@ -17,8 +17,7 @@ export const ctaMessages = {
 export type CtaKey = keyof typeof ctaMessages;
 
 // Lê o número de WhatsApp do .env (PUBLIC_WHATSAPP_NUMBER, formato 55DDDXXXXXXXX).
-// Fallback explicitado no spec: 5534999999999.
-const RAW_NUMBER = import.meta.env.PUBLIC_WHATSAPP_NUMBER ?? "5534999999999";
+const RAW_NUMBER = import.meta.env.PUBLIC_WHATSAPP_NUMBER ?? "5511916200459";
 
 // Sanitiza qualquer formatação acidental (espaços, traços, parênteses, +).
 const NUMBER = String(RAW_NUMBER).replace(/[^0-9]/g, "");

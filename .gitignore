@@ -29,8 +29,3 @@ pnpm-debug.log*
 _screenshots/
 _scripts/
 .claude/
-
-# wrangler files
-.wrangler
-.dev.vars*
-!.dev.vars.example

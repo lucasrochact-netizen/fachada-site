@@ -1,0 +1,346 @@
+---
+// Seção legal — Termos de Serviço + Política de Privacidade
+// Aparece depois do CTAFinal, colapsável pra não inflar visualmente.
+
+const vigencia = "15 de maio de 2026";
+const contato = "contato@fachada.com.br";
+---
+
+<section id="legal" class="legal" aria-labelledby="legal-title">
+  <div class="praca-container">
+    <p class="legal__eyebrow">Documentos</p>
+    <h2 id="legal-title" class="legal__title">Termos &amp; privacidade</h2>
+    <p class="legal__sub">
+      Vigência: {vigencia}. Dúvidas: <a class="praca-link" href={`mailto:${contato}`}>{contato}</a>.
+    </p>
+
+    <div class="legal__docs">
+      <details class="legal__doc">
+        <summary class="legal__doc-title">
+          <span>Termos de Serviço</span>
+          <svg class="legal__doc-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M3 5l4 4 4-4" />
+          </svg>
+        </summary>
+        <div class="legal__doc-body">
+          <h3>1. Quem somos</h3>
+          <p>
+            Fachada é um serviço de criação de presença digital para pequenas e médias
+            empresas no Brasil, operado por seus fundadores diretamente, sem intermediários.
+            O contato comercial e o atendimento ocorrem via WhatsApp e e-mail
+            ({contato}).
+          </p>
+
+          <h3>2. Produtos oferecidos</h3>
+          <ul>
+            <li>
+              <strong>Cardápio QR:</strong> R$ 247 (PIX único), prazo de 5 dias úteis
+              a partir do envio dos materiais pelo cliente (logo, fotos, lista de itens).
+            </li>
+            <li>
+              <strong>Site one-page:</strong> R$ 397 (PIX único), prazo de 7 dias úteis
+              a partir do envio dos materiais pelo cliente (logo, fotos, textos).
+            </li>
+          </ul>
+          <p>
+            Os valores são fechados, sem mensalidade, sem taxa adicional, sem desconto e
+            sem parcelamento.
+          </p>
+
+          <h3>3. Como funciona o contrato</h3>
+          <p>
+            Antes do pagamento, enviamos um contrato simples de uma página por e-mail,
+            com o escopo, prazo e valor confirmados. O trabalho só começa após o aceite
+            do contrato e a confirmação do PIX.
+          </p>
+
+          <h3>4. Pagamento e nota fiscal</h3>
+          <p>
+            Pagamento via PIX único, integral, antes do início do trabalho. Emitimos
+            Nota Fiscal de Serviço na entrega. Não trabalhamos com boleto, cartão,
+            assinatura recorrente ou pagamento dividido.
+          </p>
+
+          <h3>5. Materiais do cliente</h3>
+          <p>
+            Cabe ao cliente fornecer, por e-mail, os materiais necessários para a entrega
+            (logo, fotos, textos, itens do cardápio). O prazo de entrega só começa a contar
+            após o recebimento dos materiais. Caso o cliente atrase em mais de 30 dias o
+            envio dos materiais, podemos suspender o contrato e devolver 50% do valor pago.
+          </p>
+
+          <h3>6. Revisões</h3>
+          <p>
+            Inclusas duas rodadas de revisão dentro do prazo do projeto. Alterações após
+            a entrega final são cobradas separadamente.
+          </p>
+
+          <h3>7. Hospedagem e domínio</h3>
+          <p>
+            O site one-page pode ser publicado em domínio do próprio cliente
+            (registro e renovação por conta dele) ou em um subdomínio gratuito disponibilizado
+            no momento da entrega. A Fachada não responde por renovações de domínio do
+            cliente.
+          </p>
+
+          <h3>8. Limite de responsabilidade</h3>
+          <p>
+            Entregamos exatamente o escopo contratado, no prazo combinado. Não garantimos
+            posicionamento em buscadores, número de visitas, conversão de vendas, retorno
+            financeiro ou exclusividade regional. Qualquer promessa fora deste documento
+            não tem validade.
+          </p>
+
+          <h3>9. Cancelamento</h3>
+          <p>
+            O cliente pode cancelar a contratação em até 7 dias do pagamento, antes do início
+            do trabalho, com devolução integral. Após o início (definido como envio do primeiro
+            preview), não há devolução, apenas a possibilidade de pausar o projeto por até 60
+            dias.
+          </p>
+
+          <h3>10. Alterações destes termos</h3>
+          <p>
+            Estes termos podem ser atualizados. A versão vigente sempre estará nesta página,
+            com a data de vigência no topo. Contratos já fechados seguem os termos da data
+            da contratação.
+          </p>
+
+          <h3>11. Foro</h3>
+          <p>
+            Eventuais conflitos serão resolvidos prioritariamente por negociação direta.
+            Persistindo, fica eleito o foro da comarca de São Paulo/SP.
+          </p>
+        </div>
+      </details>
+
+      <details class="legal__doc">
+        <summary class="legal__doc-title">
+          <span>Política de Privacidade</span>
+          <svg class="legal__doc-icon" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M3 5l4 4 4-4" />
+          </svg>
+        </summary>
+        <div class="legal__doc-body">
+          <p class="legal__intro">
+            Esta política descreve como a Fachada coleta, usa e protege dados pessoais,
+            em conformidade com a Lei Geral de Proteção de Dados (Lei 13.709/2018, LGPD).
+          </p>
+
+          <h3>1. Quais dados coletamos</h3>
+          <ul>
+            <li><strong>Contato:</strong> nome, telefone (WhatsApp), e-mail.</li>
+            <li>
+              <strong>Sobre seu negócio:</strong> nome da empresa, cidade, segmento, materiais
+              que você nos envia (logo, fotos, textos, cardápio).
+            </li>
+            <li>
+              <strong>Conversa:</strong> mensagens trocadas via WhatsApp ou e-mail, para
+              registro do atendimento e do escopo contratado.
+            </li>
+            <li>
+              <strong>Pagamento:</strong> comprovante de PIX (mantemos pelo prazo fiscal),
+              dados de Nota Fiscal exigidos por lei.
+            </li>
+          </ul>
+          <p>
+            <strong>Não coletamos:</strong> senha, cartão de crédito, geolocalização precisa,
+            navegação fora deste site, cookies de rastreamento de terceiros.
+          </p>
+
+          <h3>2. Por que coletamos</h3>
+          <ul>
+            <li>Para entrar em contato e responder dúvidas comerciais.</li>
+            <li>Para preparar e entregar o serviço contratado.</li>
+            <li>Para cumprir obrigações fiscais (emissão de NF e arquivo contábil).</li>
+            <li>Para defender direitos em eventual processo administrativo ou judicial.</li>
+          </ul>
+
+          <h3>3. Por quanto tempo guardamos</h3>
+          <ul>
+            <li>
+              <strong>Dados de quem não fechou:</strong> até 12 meses após o último contato,
+              ou antes se você pedir exclusão.
+            </li>
+            <li>
+              <strong>Dados de clientes ativos:</strong> durante toda a vigência do contrato.
+            </li>
+            <li>
+              <strong>Dados fiscais (NF, comprovantes):</strong> 5 anos, conforme exigência legal.
+            </li>
+          </ul>
+
+          <h3>4. Com quem compartilhamos</h3>
+          <p>
+            Não vendemos, alugamos ou compartilhamos seus dados para fins de marketing
+            terceirizado. Os únicos compartilhamentos possíveis são:
+          </p>
+          <ul>
+            <li>
+              <strong>Provedores de infraestrutura:</strong> hospedagem do site e e-mail
+              (Cloudflare, Google), apenas no estritamente necessário pra operação.
+            </li>
+            <li>
+              <strong>Autoridade fiscal ou judicial:</strong> quando exigido por lei.
+            </li>
+          </ul>
+
+          <h3>5. Seus direitos (LGPD, art. 18)</h3>
+          <p>Você pode, a qualquer momento, solicitar:</p>
+          <ul>
+            <li>Confirmação de que tratamos seus dados.</li>
+            <li>Acesso ao que temos sobre você.</li>
+            <li>Correção de dados incompletos ou incorretos.</li>
+            <li>Anonimização ou exclusão de dados desnecessários.</li>
+            <li>Portabilidade dos dados para outro fornecedor.</li>
+            <li>Informação sobre com quem compartilhamos.</li>
+            <li>Revogação de consentimento.</li>
+          </ul>
+          <p>
+            Para exercer qualquer um destes direitos, mande e-mail para
+            <a class="praca-link" href={`mailto:${contato}`}>{contato}</a> com o assunto
+            "LGPD". Respondemos em até 15 dias.
+          </p>
+
+          <h3>6. Segurança</h3>
+          <p>
+            Usamos HTTPS no site, autenticação em duas etapas nas contas administrativas
+            e acesso restrito aos materiais dos clientes. Não armazenamos senhas de terceiros
+            nem dados sensíveis (saúde, biometria, opinião política).
+          </p>
+
+          <h3>7. Cookies</h3>
+          <p>
+            Este site não usa cookies de rastreamento, ferramentas de analytics
+            invasivas, nem pixels de redes sociais. Os únicos dados de navegação que
+            ficam registrados são logs técnicos do servidor (IP, user-agent, horário)
+            por até 30 dias, para detecção de abuso e desempenho.
+          </p>
+
+          <h3>8. Crianças e adolescentes</h3>
+          <p>
+            O serviço é destinado a maiores de 18 anos, responsáveis por empresa.
+            Não coletamos conscientemente dados de menores.
+          </p>
+
+          <h3>9. Alterações desta política</h3>
+          <p>
+            Atualizações desta política são publicadas nesta página, com a data
+            de vigência no topo. Mudanças relevantes serão comunicadas por e-mail aos
+            clientes ativos.
+          </p>
+
+          <h3>10. Encarregado de dados</h3>
+          <p>
+            O ponto focal de privacidade da Fachada é o próprio fundador Lucas Rocha.
+            Contato: <a class="praca-link" href={`mailto:${contato}`}>{contato}</a>.
+          </p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<style>
+  .legal {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    padding-block: 4rem;
+    border-top: 1px solid rgba(26, 22, 20, 0.12);
+  }
+  @media (min-width: 768px) {
+    .legal { padding-block: 6rem; }
+  }
+
+  .legal__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay);
+    margin: 0 0 0.75rem 0;
+  }
+  .legal__title {
+    font-size: clamp(1.75rem, 4vw + 0.5rem, 2.75rem);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.75rem 0;
+    font-variation-settings: "opsz" 144;
+  }
+  .legal__sub {
+    color: rgba(26, 22, 20, 0.65);
+    margin: 0 0 2.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  .legal__docs {
+    display: grid;
+    gap: 1rem;
+    max-width: 70ch;
+  }
+
+  .legal__doc {
+    border: 1px solid rgba(26, 22, 20, 0.15);
+    border-radius: 6px;
+    background: rgba(251, 248, 242, 0.6);
+  }
+  .legal__doc[open] {
+    background: var(--color-paper);
+  }
+
+  .legal__doc-title {
+    cursor: pointer;
+    list-style: none;
+    padding: 1.1rem 1.4rem;
+    font-family: var(--font-serif, Georgia, serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    user-select: none;
+  }
+  .legal__doc-title::-webkit-details-marker { display: none; }
+  .legal__doc-title:hover { color: var(--color-clay); }
+
+  .legal__doc-icon {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+    color: rgba(26, 22, 20, 0.55);
+  }
+  .legal__doc[open] .legal__doc-icon {
+    transform: rotate(180deg);
+  }
+
+  .legal__doc-body {
+    padding: 0 1.4rem 1.6rem;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: rgba(26, 22, 20, 0.85);
+  }
+  .legal__doc-body h3 {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay);
+    margin: 1.5rem 0 0.5rem 0;
+    font-weight: 600;
+  }
+  .legal__doc-body h3:first-child { margin-top: 0.5rem; }
+  .legal__doc-body p {
+    margin: 0 0 0.85rem 0;
+  }
+  .legal__doc-body ul {
+    margin: 0 0 0.85rem 0;
+    padding-left: 1.2rem;
+  }
+  .legal__doc-body li {
+    margin-bottom: 0.35rem;
+  }
+  .legal__doc-body .legal__intro {
+    font-style: italic;
+    color: rgba(26, 22, 20, 0.7);
+    margin-bottom: 1.5rem;
+  }
+</style>

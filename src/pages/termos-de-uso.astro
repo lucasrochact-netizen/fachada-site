@@ -1,0 +1,225 @@
+---
+import Base from "../layouts/Base.astro";
+
+const vigencia = "15 de maio de 2026";
+const contato = "contato@fachada.com.br";
+
+const title = "Termos de Uso — Fachada";
+const description = "Termos de Uso da Fachada. Escopo dos serviços, prazos, formas de pagamento, contrato, revisões e cancelamento.";
+---
+
+<Base title={title} description={description}>
+  <article class="legal-page">
+    <div class="praca-container">
+      <a href="/" class="legal-page__back">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 7H2M6 3L2 7l4 4" />
+        </svg>
+        <span>Voltar pra Fachada</span>
+      </a>
+
+      <header class="legal-page__header">
+        <p class="legal-page__eyebrow">Documentos legais</p>
+        <h1 class="legal-page__title">Termos de Uso</h1>
+        <p class="legal-page__meta">
+          Vigência: {vigencia} · Dúvidas: <a class="praca-link" href={`mailto:${contato}`}>{contato}</a>
+        </p>
+      </header>
+
+      <section class="legal-page__body">
+        <h2>1. Quem somos</h2>
+        <p>
+          Fachada é um serviço de criação de presença digital para pequenas e médias
+          empresas no Brasil, operado por seus fundadores diretamente, sem intermediários.
+          O contato comercial e o atendimento ocorrem via WhatsApp e e-mail
+          (<a class="praca-link" href={`mailto:${contato}`}>{contato}</a>).
+        </p>
+
+        <h2>2. Produtos oferecidos</h2>
+        <ul>
+          <li>
+            <strong>Cardápio QR:</strong> R$ 247 (PIX único), prazo de 5 dias úteis
+            a partir do envio dos materiais pelo cliente (logo, fotos, lista de itens).
+          </li>
+          <li>
+            <strong>Site one-page:</strong> R$ 397 (PIX único), prazo de 7 dias úteis
+            a partir do envio dos materiais pelo cliente (logo, fotos, textos).
+          </li>
+        </ul>
+        <p>
+          Os valores são fechados, sem mensalidade, sem taxa adicional, sem desconto e
+          sem parcelamento.
+        </p>
+
+        <h2>3. Como funciona o contrato</h2>
+        <p>
+          Antes do pagamento, enviamos um contrato simples de uma página por e-mail,
+          com o escopo, prazo e valor confirmados. O trabalho só começa após o aceite
+          do contrato e a confirmação do PIX.
+        </p>
+
+        <h2>4. Pagamento e nota fiscal</h2>
+        <p>
+          Pagamento via PIX único, integral, antes do início do trabalho. Emitimos
+          Nota Fiscal de Serviço na entrega. Não trabalhamos com boleto, cartão,
+          assinatura recorrente ou pagamento dividido.
+        </p>
+
+        <h2>5. Materiais do cliente</h2>
+        <p>
+          Cabe ao cliente fornecer, por e-mail, os materiais necessários para a entrega
+          (logo, fotos, textos, itens do cardápio). O prazo de entrega só começa a contar
+          após o recebimento dos materiais. Caso o cliente atrase em mais de 30 dias o
+          envio dos materiais, podemos suspender o contrato e devolver 50% do valor pago.
+        </p>
+
+        <h2>6. Revisões</h2>
+        <p>
+          Inclusas duas rodadas de revisão dentro do prazo do projeto. Alterações após
+          a entrega final são cobradas separadamente.
+        </p>
+
+        <h2>7. Hospedagem e domínio</h2>
+        <p>
+          O site one-page pode ser publicado em domínio do próprio cliente
+          (registro e renovação por conta dele) ou em um subdomínio gratuito disponibilizado
+          no momento da entrega. A Fachada não responde por renovações de domínio do
+          cliente.
+        </p>
+
+        <h2>8. Limite de responsabilidade</h2>
+        <p>
+          Entregamos exatamente o escopo contratado, no prazo combinado. Não garantimos
+          posicionamento em buscadores, número de visitas, conversão de vendas, retorno
+          financeiro ou exclusividade regional. Qualquer promessa fora deste documento
+          não tem validade.
+        </p>
+
+        <h2>9. Cancelamento</h2>
+        <p>
+          O cliente pode cancelar a contratação em até 7 dias do pagamento, antes do início
+          do trabalho, com devolução integral. Após o início (definido como envio do primeiro
+          preview), não há devolução, apenas a possibilidade de pausar o projeto por até 60
+          dias.
+        </p>
+
+        <h2>10. Alterações destes termos</h2>
+        <p>
+          Estes termos podem ser atualizados. A versão vigente sempre estará nesta página,
+          com a data de vigência no topo. Contratos já fechados seguem os termos da data
+          da contratação.
+        </p>
+
+        <h2>11. Foro</h2>
+        <p>
+          Eventuais conflitos serão resolvidos prioritariamente por negociação direta.
+          Persistindo, fica eleito o foro da comarca de São Paulo/SP.
+        </p>
+      </section>
+
+      <footer class="legal-page__footer">
+        <p>
+          Veja também: <a class="praca-link" href="/politica-de-privacidade/">Política de Privacidade</a>.
+        </p>
+        <p class="legal-page__copy">© 2026 · Fachada</p>
+      </footer>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .legal-page {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    padding-block: 3rem 6rem;
+    min-height: 100vh;
+  }
+
+  .legal-page__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-clay);
+    text-decoration: none;
+    margin-bottom: 3rem;
+    transition: color 0.2s ease;
+  }
+  .legal-page__back:hover { color: var(--color-ink); }
+  .legal-page__back svg {
+    transition: transform 0.2s ease;
+  }
+  .legal-page__back:hover svg { transform: translateX(-2px); }
+
+  .legal-page__header {
+    border-bottom: 1px solid rgba(26, 22, 20, 0.12);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    max-width: 65ch;
+  }
+  .legal-page__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-clay);
+    margin: 0 0 0.75rem 0;
+  }
+  .legal-page__title {
+    font-size: clamp(2.25rem, 5vw + 0.5rem, 3.5rem);
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem 0;
+    font-variation-settings: "opsz" 144;
+    line-height: 1.05;
+  }
+  .legal-page__meta {
+    color: rgba(26, 22, 20, 0.65);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .legal-page__body {
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(26, 22, 20, 0.88);
+  }
+  .legal-page__body h2 {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay);
+    margin: 2.5rem 0 0.85rem 0;
+    font-weight: 600;
+  }
+  .legal-page__body h2:first-child { margin-top: 0; }
+  .legal-page__body p {
+    margin: 0 0 1.2rem 0;
+  }
+  .legal-page__body ul {
+    margin: 0 0 1.2rem 0;
+    padding-left: 1.4rem;
+  }
+  .legal-page__body li {
+    margin-bottom: 0.5rem;
+  }
+
+  .legal-page__footer {
+    max-width: 65ch;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(26, 22, 20, 0.12);
+    color: rgba(26, 22, 20, 0.55);
+    font-size: 0.9rem;
+  }
+  .legal-page__footer p { margin: 0 0 0.4rem 0; }
+  .legal-page__copy {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+</style>

@@ -1,0 +1,248 @@
+---
+import Base from "../layouts/Base.astro";
+
+const vigencia = "15 de maio de 2026";
+const contato = "contato@fachada.com.br";
+
+const title = "Política de Privacidade — Fachada";
+const description = "Política de Privacidade da Fachada em conformidade com a LGPD. Quais dados coletamos, por que, por quanto tempo, e seus direitos.";
+---
+
+<Base title={title} description={description}>
+  <article class="legal-page">
+    <div class="praca-container">
+      <a href="/" class="legal-page__back">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 7H2M6 3L2 7l4 4" />
+        </svg>
+        <span>Voltar pra Fachada</span>
+      </a>
+
+      <header class="legal-page__header">
+        <p class="legal-page__eyebrow">Documentos legais</p>
+        <h1 class="legal-page__title">Política de Privacidade</h1>
+        <p class="legal-page__meta">
+          Vigência: {vigencia} · Encarregado: <a class="praca-link" href={`mailto:${contato}`}>{contato}</a>
+        </p>
+      </header>
+
+      <section class="legal-page__body">
+        <p class="legal-page__intro">
+          Esta política descreve como a Fachada coleta, usa e protege dados pessoais,
+          em conformidade com a Lei Geral de Proteção de Dados (Lei 13.709/2018, LGPD).
+        </p>
+
+        <h2>1. Quais dados coletamos</h2>
+        <ul>
+          <li><strong>Contato:</strong> nome, telefone (WhatsApp), e-mail.</li>
+          <li>
+            <strong>Sobre seu negócio:</strong> nome da empresa, cidade, segmento, materiais
+            que você nos envia (logo, fotos, textos, cardápio).
+          </li>
+          <li>
+            <strong>Conversa:</strong> mensagens trocadas via WhatsApp ou e-mail, para
+            registro do atendimento e do escopo contratado.
+          </li>
+          <li>
+            <strong>Pagamento:</strong> comprovante de PIX (mantemos pelo prazo fiscal),
+            dados de Nota Fiscal exigidos por lei.
+          </li>
+        </ul>
+        <p>
+          <strong>Não coletamos:</strong> senha, cartão de crédito, geolocalização precisa,
+          navegação fora deste site, cookies de rastreamento de terceiros.
+        </p>
+
+        <h2>2. Por que coletamos</h2>
+        <ul>
+          <li>Para entrar em contato e responder dúvidas comerciais.</li>
+          <li>Para preparar e entregar o serviço contratado.</li>
+          <li>Para cumprir obrigações fiscais (emissão de NF e arquivo contábil).</li>
+          <li>Para defender direitos em eventual processo administrativo ou judicial.</li>
+        </ul>
+
+        <h2>3. Por quanto tempo guardamos</h2>
+        <ul>
+          <li>
+            <strong>Dados de quem não fechou:</strong> até 12 meses após o último contato,
+            ou antes se você pedir exclusão.
+          </li>
+          <li>
+            <strong>Dados de clientes ativos:</strong> durante toda a vigência do contrato.
+          </li>
+          <li>
+            <strong>Dados fiscais (NF, comprovantes):</strong> 5 anos, conforme exigência legal.
+          </li>
+        </ul>
+
+        <h2>4. Com quem compartilhamos</h2>
+        <p>
+          Não vendemos, alugamos ou compartilhamos seus dados para fins de marketing
+          terceirizado. Os únicos compartilhamentos possíveis são:
+        </p>
+        <ul>
+          <li>
+            <strong>Provedores de infraestrutura:</strong> hospedagem do site e e-mail
+            (Cloudflare, Google), apenas no estritamente necessário pra operação.
+          </li>
+          <li>
+            <strong>Autoridade fiscal ou judicial:</strong> quando exigido por lei.
+          </li>
+        </ul>
+
+        <h2>5. Seus direitos (LGPD, art. 18)</h2>
+        <p>Você pode, a qualquer momento, solicitar:</p>
+        <ul>
+          <li>Confirmação de que tratamos seus dados.</li>
+          <li>Acesso ao que temos sobre você.</li>
+          <li>Correção de dados incompletos ou incorretos.</li>
+          <li>Anonimização ou exclusão de dados desnecessários.</li>
+          <li>Portabilidade dos dados para outro fornecedor.</li>
+          <li>Informação sobre com quem compartilhamos.</li>
+          <li>Revogação de consentimento.</li>
+        </ul>
+        <p>
+          Para exercer qualquer um destes direitos, mande e-mail para
+          <a class="praca-link" href={`mailto:${contato}`}>{contato}</a> com o assunto
+          "LGPD". Respondemos em até 15 dias.
+        </p>
+
+        <h2>6. Segurança</h2>
+        <p>
+          Usamos HTTPS no site, autenticação em duas etapas nas contas administrativas
+          e acesso restrito aos materiais dos clientes. Não armazenamos senhas de terceiros
+          nem dados sensíveis (saúde, biometria, opinião política).
+        </p>
+
+        <h2>7. Cookies</h2>
+        <p>
+          Este site não usa cookies de rastreamento, ferramentas de analytics
+          invasivas, nem pixels de redes sociais. Os únicos dados de navegação que
+          ficam registrados são logs técnicos do servidor (IP, user-agent, horário)
+          por até 30 dias, para detecção de abuso e desempenho.
+        </p>
+
+        <h2>8. Crianças e adolescentes</h2>
+        <p>
+          O serviço é destinado a maiores de 18 anos, responsáveis por empresa.
+          Não coletamos conscientemente dados de menores.
+        </p>
+
+        <h2>9. Alterações desta política</h2>
+        <p>
+          Atualizações desta política são publicadas nesta página, com a data
+          de vigência no topo. Mudanças relevantes serão comunicadas por e-mail aos
+          clientes ativos.
+        </p>
+
+        <h2>10. Encarregado de dados</h2>
+        <p>
+          O ponto focal de privacidade da Fachada é o próprio fundador Lucas Rocha.
+          Contato: <a class="praca-link" href={`mailto:${contato}`}>{contato}</a>.
+        </p>
+      </section>
+
+      <footer class="legal-page__footer">
+        <p>
+          Veja também: <a class="praca-link" href="/termos-de-uso/">Termos de Uso</a>.
+        </p>
+        <p class="legal-page__copy">© 2026 · Fachada</p>
+      </footer>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .legal-page {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    padding-block: 3rem 6rem;
+    min-height: 100vh;
+  }
+
+  .legal-page__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-clay);
+    text-decoration: none;
+    margin-bottom: 3rem;
+    transition: color 0.2s ease;
+  }
+  .legal-page__back:hover { color: var(--color-ink); }
+  .legal-page__back svg { transition: transform 0.2s ease; }
+  .legal-page__back:hover svg { transform: translateX(-2px); }
+
+  .legal-page__header {
+    border-bottom: 1px solid rgba(26, 22, 20, 0.12);
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    max-width: 65ch;
+  }
+  .legal-page__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-clay);
+    margin: 0 0 0.75rem 0;
+  }
+  .legal-page__title {
+    font-size: clamp(2.25rem, 5vw + 0.5rem, 3.5rem);
+    letter-spacing: -0.02em;
+    margin: 0 0 1rem 0;
+    font-variation-settings: "opsz" 144;
+    line-height: 1.05;
+  }
+  .legal-page__meta {
+    color: rgba(26, 22, 20, 0.65);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .legal-page__body {
+    max-width: 65ch;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(26, 22, 20, 0.88);
+  }
+  .legal-page__intro {
+    font-style: italic;
+    color: rgba(26, 22, 20, 0.7);
+    margin-bottom: 2rem;
+  }
+  .legal-page__body h2 {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-clay);
+    margin: 2.5rem 0 0.85rem 0;
+    font-weight: 600;
+  }
+  .legal-page__body p { margin: 0 0 1.2rem 0; }
+  .legal-page__body ul {
+    margin: 0 0 1.2rem 0;
+    padding-left: 1.4rem;
+  }
+  .legal-page__body li { margin-bottom: 0.5rem; }
+
+  .legal-page__footer {
+    max-width: 65ch;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(26, 22, 20, 0.12);
+    color: rgba(26, 22, 20, 0.55);
+    font-size: 0.9rem;
+  }
+  .legal-page__footer p { margin: 0 0 0.4rem 0; }
+  .legal-page__copy {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+</style>

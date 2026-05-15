@@ -1,0 +1,1612 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas. — Uberlândia</title>
+<meta name="description" content="Sou o Marcos, corto cabelo há 18 anos. A gente atende um de cada vez, no maior carinho.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fachada">
+<meta property="og:title" content="D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas. — Uberlândia, MG">
+<meta property="og:description" content="Sou o Marcos, corto cabelo há 18 anos. A gente atende um de cada vez, no maior carinho.">
+<meta property="og:image" content="https://lh3.googleusercontent.com/gps-cs-s/APNQkAF6-8WxlluBZ0Ju_sxzfEe2he41FXmi0WsrLMWP-nmxy_xljw5me-WUuNDPfe9RUymU6fwV08Dt7mV_oyQEMqb9y20FhJ5DXlsrCPAJ2Imeks4CBZT6mlxtnFnO_7wGn4ba492R=w1200-h630-c-rj">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas.">
+<meta property="og:url" content="https://mockup.afachada.com.br/m/d-buenas-barbearia-ter-estilo-e-ficar-d-buenas-uberlandia/">
+<meta property="og:locale" content="pt_BR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas. — Uberlândia, MG">
+<meta name="twitter:description" content="Sou o Marcos, corto cabelo há 18 anos. A gente atende um de cada vez, no maior carinho.">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/gps-cs-s/APNQkAF6-8WxlluBZ0Ju_sxzfEe2he41FXmi0WsrLMWP-nmxy_xljw5me-WUuNDPfe9RUymU6fwV08Dt7mV_oyQEMqb9y20FhJ5DXlsrCPAJ2Imeks4CBZT6mlxtnFnO_7wGn4ba492R=w1200-h630-c-rj">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F2EBE1;
+  --surface: #FAF7F2;
+  --surface2: #FFFFFF;
+  --ink: #1F1A14;
+  --ink2: #6B5A48;
+  --line: #E2D5C2;
+  --accent: #A57F60;
+  --accent-ink: #FFFFFF;
+  --trust: #6B5A48;
+  --font-display: &#39;Fraunces&#39;, Georgia, serif;
+  --font-body: &#39;Manrope&#39;, system-ui, sans-serif;
+  --display-weight: 400;
+  --display-letter: -0.0130em;
+  --radius: 14px;
+  --radius-card: 18px;
+  --space-section: clamp(56px, 10vw, 112px);
+  --container-max: 640px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px; line-height: 1.55;
+  color: var(--ink); background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 22px; }
+
+/* ----- Hero ----- */
+.hero {
+  position: relative; height: 72svh; min-height: 460px; max-height: 640px;
+  overflow: clip; background: var(--accent);
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  /* vinheta interior — esconde bordas amadoras e dá profundidade visual */
+  box-shadow: inset 0 0 80px 0 rgba(0,0,0,0.35);
+  z-index: 2;
+}
+.hero__bg {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  /* Filtros sutis pra unificar fotos amadoras — saturate+contraste leve,
+     ligeira queda de brilho. Não destrói detalhe, dá uniformidade. */
+  filter: saturate(1.08) contrast(1.06) brightness(0.97);
+}
+.hero__veil {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 25%, transparent 42%),
+    linear-gradient(180deg, transparent 25%, rgba(0,0,0,0.55) 65%, rgba(0,0,0,0.92) 100%);
+}
+.hero__inner {
+  position: absolute; left: 22px; right: 22px; bottom: 32px; z-index: 1;
+  color: #fff;
+}
+.hero__kicker {
+  display: inline-block; font-family: var(--font-body);
+  font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+  background: rgba(255,255,255,0.14); backdrop-filter: blur(8px);
+  padding: 6px 12px; border-radius: 999px; margin-bottom: 18px;
+  font-weight: 500;
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-letter);
+  font-size: clamp(40px, 11vw, 64px);
+  line-height: 0.98;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.55), 0 4px 24px rgba(0,0,0,0.5);
+}
+.hero__subtitle {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.55);
+}
+.hero__kicker {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+.hero__subtitle {
+  margin-top: 14px; font-size: 15px; opacity: 0.92; max-width: 480px;
+  font-weight: 400;
+}
+
+/* ----- Trust strip ----- */
+.trust {
+  background: var(--surface); border-bottom: 1px solid var(--line);
+  padding: 16px 22px; color: var(--trust);
+  font-size: 13.5px;
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 6px 18px; justify-content: center;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+.trust__item { display: inline-flex; align-items: center; gap: 6px; }
+.trust__stars { color: #f5b400; font-size: 13px; letter-spacing: 1px; }
+.trust__strong { color: var(--ink); font-weight: 600; }
+.trust__sep { opacity: 0.4; }
+
+/* ----- Section primitives ----- */
+.section { padding: var(--space-section) 0; background: var(--bg); }
+.section--surface { background: var(--surface); }
+.section__head { margin-bottom: 32px; max-width: 540px; }
+.section__head--centered { text-align: center; margin-left: auto; margin-right: auto; }
+.section__eyebrow {
+  font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600;
+  font-family: var(--font-body);
+}
+.section__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-letter);
+  font-size: clamp(28px, 7vw, 40px);
+  line-height: 1.05; margin-top: 10px;
+}
+.section__lead { color: var(--ink2); margin-top: 12px; font-size: 15px; line-height: 1.55; }
+
+/* ----- Galeria ----- */
+.galeria {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+.galeria img {
+  width: 100%; aspect-ratio: 1; object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--line);
+  filter: saturate(1.10) contrast(1.06) brightness(1.02);
+  image-rendering: -webkit-optimize-contrast;
+}
+/* LUT editorial unificador — calor pra food, frio pra service.
+   Faz fotos heterogêneas parecerem da mesma "câmera". */
+body.lut-warm .galeria { position: relative; }
+body.lut-warm .galeria::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: linear-gradient(180deg, rgba(255,188,120,0.08) 0%, rgba(255,140,90,0.04) 50%, rgba(120,60,30,0.10) 100%);
+  mix-blend-mode: soft-light;
+  border-radius: var(--radius);
+}
+body.lut-cool .galeria { position: relative; }
+body.lut-cool .galeria::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: linear-gradient(180deg, rgba(180,200,220,0.08) 0%, rgba(70,100,130,0.06) 100%);
+  mix-blend-mode: soft-light;
+  border-radius: var(--radius);
+}
+body.lut-warm .hero__bg { filter: saturate(1.12) contrast(1.08) brightness(1.00) hue-rotate(-2deg); }
+body.lut-cool .hero__bg { filter: saturate(1.04) contrast(1.06) brightness(0.98) hue-rotate(2deg); }
+.galeria img:nth-child(4n+1) { aspect-ratio: 4/5; }
+@media (min-width: 600px) {
+  .galeria { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+}
+
+/* Mobile: galeria vira carrossel scroll-snap horizontal.
+   Dots nativos via ::scroll-marker quando suportado (Chrome 135+);
+   fallback gracioso: scroll-snap puro mantém UX. */
+@media (max-width: 599px) {
+  .galeria {
+    display: flex; gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 0 22px; margin: 0 -22px;
+    scroll-padding: 0 22px;
+  }
+  .galeria::-webkit-scrollbar { display: none; }
+  .galeria img,
+  .galeria img:nth-child(4n+1) {
+    flex: 0 0 78%; aspect-ratio: 4/5; width: 78%;
+    scroll-snap-align: start;
+  }
+  @supports (selector(::scroll-marker)) {
+    .galeria { scroll-marker-group: after; }
+    .galeria::scroll-marker-group {
+      display: flex; gap: 6px; justify-content: center;
+      padding: 14px 0 0;
+    }
+    .galeria img::scroll-marker {
+      content: "";
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--line);
+      border: none; cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .galeria img::scroll-marker:target-current {
+      background: var(--accent);
+      transform: scale(1.3);
+    }
+  }
+}
+
+/* ----- Contato/Localização ----- */
+.contato { display: grid; gap: 14px; max-width: 480px; }
+.contato-row {
+  display: flex; gap: 14px; align-items: center;
+  padding: 16px 18px; background: var(--surface2); border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+.contato-row__icon {
+  flex: 0 0 38px; height: 38px; border-radius: 10px;
+  background: var(--accent); color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 16px;
+  font-family: var(--font-body);
+}
+.contato-row__label { font-size: 11.5px; color: var(--ink2); text-transform: uppercase; letter-spacing: 0.1em; }
+.contato-row__value { font-weight: 600; font-size: 15px; color: var(--ink); margin-top: 2px; }
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 22px; border-radius: 999px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  background: var(--accent); color: var(--accent-ink);
+  border: none; cursor: pointer; transition: transform .15s, box-shadow .15s;
+  text-decoration: none;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+.btn--ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+.btn--block { width: 100%; }
+
+/* ----- Sticky CTA bar ----- */
+.sticky-cta {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  padding: 12px 16px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  background: color-mix(in oklab, var(--bg) 92%, transparent);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+  display: grid; grid-template-columns: 1fr; gap: 8px;
+}
+@media (min-width: 720px) { .sticky-cta { display: none; } }
+.sticky-cta .btn { padding: 16px 22px; font-size: 16px; }
+body { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+@media (min-width: 720px) { body { padding-bottom: 0; } }
+
+/* ----- Footer ----- */
+.footer {
+  padding: 40px 0 32px; text-align: center;
+  background: var(--surface2); color: var(--ink2);
+  font-size: 13px; border-top: 1px solid var(--line);
+}
+.footer strong { color: var(--ink); font-weight: 600; }
+.previa-rodape {
+  font-size: 11px; color: var(--ink2); opacity: 0.85;
+  margin-top: 12px;
+}
+
+.handwritten { font-family: 'Caveat', cursive; }
+
+/* ----- Live Open Pill ----- */
+.open-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px 7px 12px;
+  border-radius: 999px;
+  font-size: 13px; font-weight: 600;
+  font-family: var(--font-body);
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.open-pill__dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #999;
+  display: inline-block;
+  position: relative;
+}
+.open-pill[data-state="open"] { color: #0a6e2c; border-color: #c8e6cf; background: #eaf7ee; }
+.open-pill[data-state="open"] .open-pill__dot { background: #1c9b3f; }
+.open-pill[data-state="open"] .open-pill__dot::after {
+  content: ""; position: absolute; inset: -3px; border-radius: 50%;
+  background: #1c9b3f; opacity: 0.4;
+  animation: open-pulse 1.6s ease-out infinite;
+}
+.open-pill[data-state="closing"] { color: #8a5a00; border-color: #f0d99c; background: #fef6e0; }
+.open-pill[data-state="closing"] .open-pill__dot { background: #d99800; }
+.open-pill[data-state="closed"] { color: #7a2e2e; border-color: #ecc8c8; background: #fbecec; }
+.open-pill[data-state="closed"] .open-pill__dot { background: #c14444; }
+@keyframes open-pulse {
+  0%   { transform: scale(0.8); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.open-pill__label { font-weight: 700; letter-spacing: 0.02em; }
+.open-pill__detail { color: inherit; opacity: 0.85; font-weight: 500; }
+
+/* ----- Footer actions (combo: Share / Cliente Fixo / Reivindicar) ----- */
+.footer-actions {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  margin-top: 22px;
+}
+.footer-actions__btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 13px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 500;
+  font-family: var(--font-body);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--ink2);
+  cursor: pointer;
+  transition: all .15s;
+}
+.footer-actions__btn:hover { color: var(--ink); border-color: var(--ink2); transform: translateY(-1px); }
+.footer-actions__btn[data-action="claim"] {
+  background: transparent; color: var(--ink2);
+  border-style: dashed; opacity: 0.85;
+}
+.footer-actions__icon { font-size: 14px; line-height: 1; }
+.footer-actions__copied {
+  position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%);
+  background: var(--ink); color: var(--bg);
+  padding: 10px 18px; border-radius: 999px;
+  font-size: 13px; font-weight: 500;
+  z-index: 100;
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s;
+}
+.footer-actions__copied.show { opacity: 1; }
+
+/* ----- Popover nativo + anchor-name (Chrome 133+) ----- */
+.howto-trigger {
+  background: transparent; border: none;
+  color: var(--ink2); opacity: 0.7;
+  font-family: var(--font-body); font-size: 12px;
+  cursor: pointer; padding: 4px 8px;
+  text-decoration: underline; text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  anchor-name: --howto-anchor;
+}
+.howto-trigger:hover { opacity: 1; }
+.howto-popover {
+  position: fixed;
+  background: var(--ink); color: var(--bg);
+  padding: 14px 16px; border-radius: 12px;
+  font-size: 13px; line-height: 1.5;
+  max-width: 280px;
+  border: none;
+  box-shadow: 0 12px 32px -8px rgba(0,0,0,0.45);
+  opacity: 0;
+  transition: opacity .18s, display .18s allow-discrete, overlay .18s allow-discrete;
+}
+.howto-popover:popover-open { opacity: 1; }
+@starting-style {
+  .howto-popover:popover-open { opacity: 0; transform: translateY(6px); }
+}
+.howto-popover strong { color: var(--accent); font-weight: 600; }
+@supports (anchor-name: --x) {
+  .howto-popover {
+    position: absolute;
+    position-anchor: --howto-anchor;
+    bottom: anchor(top);
+    left: anchor(center);
+    translate: -50% -8px;
+    position-try-fallbacks: flip-block, flip-inline;
+  }
+}
+
+/* Noise sutil global — quebra a sensação "vetorial perfeito" */
+body::before {
+  content: ""; position: fixed; inset: 0;
+  pointer-events: none; z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+}
+.hero, .sticky-cta, .quiz-modal { z-index: 2; }
+.reviews-section, .frase-dona, .frase-dono, .micro-cena { position: relative; z-index: 3; }
+.hero__inner { z-index: 3; }
+.hero__bg { z-index: 0; }
+.hero__veil { z-index: 1; }
+
+/* Reviews scroll-snap horizontal */
+.reviews-section {
+  padding: var(--space-section) 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.reviews-list {
+  display: flex; gap: 14px; overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0 22px;
+  margin: 0 -22px;
+  scroll-padding: 0 22px;
+}
+.reviews-list::-webkit-scrollbar { display: none; }
+.review-card {
+  flex: 0 0 86%;
+  scroll-snap-align: start;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 22px 20px;
+  display: flex; flex-direction: column;
+}
+@media (min-width: 640px) {
+  .review-card { flex: 0 0 calc(50% - 7px); }
+}
+.review-card__stars {
+  color: #f5b400; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 8px;
+}
+.review-card__texto {
+  font-size: 14.5px; line-height: 1.55; color: var(--ink); flex: 1;
+  display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-card__autor {
+  margin-top: 14px; display: flex; align-items: center; gap: 10px;
+  padding-top: 12px; border-top: 1px solid var(--line);
+}
+.review-card__avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 60%, var(--ink2));
+  color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 13px;
+}
+.review-card__autor-info { font-size: 12.5px; }
+.review-card__autor-nome { font-weight: 600; color: var(--ink); }
+.review-card__autor-data { color: var(--ink2); font-size: 11px; margin-top: 1px; }
+.review-card__google-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10.5px; color: var(--ink2);
+  margin-top: 2px;
+}
+.review-card__google-badge::before {
+  content: "G"; display: inline-flex; align-items: center; justify-content: center;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc04 75%, #ea4335 100%);
+  color: #fff; font-size: 9px; font-weight: 700;
+}
+.review-card__owner-resp {
+  margin-top: 10px; padding: 10px 12px;
+  background: var(--bg); border-radius: 8px;
+  font-size: 12.5px; color: var(--ink2); line-height: 1.4;
+}
+.review-card__owner-resp strong { color: var(--ink); font-weight: 600; }
+
+/* Heritage card — data específica + pivot do fundador */
+.heritage {
+  padding: 36px 22px;
+  background: var(--surface2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.heritage__card {
+  max-width: 540px; margin: 0 auto;
+  text-align: left;
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 18px 20px;
+  align-items: baseline;
+}
+.heritage__year {
+  font-family: var(--font-display);
+  font-weight: 700; letter-spacing: -0.02em;
+  font-size: clamp(38px, 9vw, 56px);
+  line-height: 0.95;
+  color: var(--accent);
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  grid-row: span 2;
+}
+.heritage__story {
+  font-size: 15.5px; line-height: 1.5;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+.heritage__pivot {
+  font-size: 14px; line-height: 1.5;
+  color: var(--ink2);
+  font-style: italic;
+  grid-column: 2;
+}
+
+/* Honest limits ("o que NÃO somos") */
+.honest {
+  padding: 28px 22px 32px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.honest__inner {
+  max-width: 520px; margin: 0 auto;
+}
+.honest summary {
+  font-family: var(--font-body);
+  font-size: 14px; font-weight: 600;
+  color: var(--ink2);
+  cursor: pointer;
+  list-style: none;
+  padding: 8px 0;
+  display: flex; align-items: center; gap: 8px;
+}
+.honest summary::-webkit-details-marker { display: none; }
+.honest summary::after {
+  content: "+";
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 20px; color: var(--accent);
+  transition: transform .2s;
+}
+.honest[open] summary::after { content: "−"; }
+.honest__caveat {
+  font-family: 'Caveat', cursive;
+  font-weight: 500; font-size: 17px;
+  color: var(--ink2);
+  transform: rotate(-1.2deg) translateY(1px);
+}
+.honest__list {
+  list-style: none; padding: 14px 0 6px; margin: 0;
+  display: grid; gap: 10px;
+}
+.honest__list li {
+  font-size: 14.5px; line-height: 1.45;
+  color: var(--ink);
+  padding-left: 18px; position: relative;
+}
+.honest__list li::before {
+  content: "—";
+  position: absolute; left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Micro-cena fundacional + anos assinatura */
+.micro-cena {
+  padding: 32px 22px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.micro-cena__texto {
+  font-size: 15px; line-height: 1.55; color: var(--ink);
+  max-width: 520px; margin: 0 auto;
+}
+.micro-cena__anos {
+  display: block; margin-top: 14px;
+  font-family: 'Caveat', cursive; font-size: 22px; color: var(--accent);
+  transform: rotate(-1.5deg) translateX(-4px);
+}
+
+/* Scroll-driven reveal nas seções (Chrome 115+, Safari 18+) */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+  @keyframes reveal-up {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.frase-dono {
+  padding: 36px 22px 40px;
+  background: var(--surface);
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.frase-dono__quote {
+  font-family: 'Caveat', cursive;
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(22px, 6vw, 30px);
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: var(--ink);
+  max-width: 560px;
+  transform: rotate(-0.7deg);
+  display: block;
+}
+.frase-dono__quote::before { content: "\201C"; font-size: 1em; color: var(--accent); margin-right: 4px; line-height: 0; vertical-align: -0.2em; }
+.frase-dono__assina {
+  margin-top: 16px;
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-body); font-size: 12.5px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink2);
+}
+.frase-dono__avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 15px;
+}
+
+.servicos { display: grid; gap: 12px; }
+.servico {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 14px; padding: 18px 20px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  transition: border-color .15s, transform .15s;
+  align-items: center;
+}
+.servico:hover { border-color: var(--accent); transform: translateY(-1px); }
+.servico--destaque {
+  padding: 24px 22px;
+  border-width: 2px; border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 5%, var(--surface));
+}
+.servico--destaque .servico__nome { font-size: 19px; }
+.servico__tag {
+  display: inline-block;
+  font-family: var(--font-body); font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent);
+  padding: 2px 8px;
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+.servico--linha {
+  padding: 12px 18px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--line);
+  border-radius: 0;
+}
+.servico--linha:hover { background: var(--surface); border-color: var(--line); transform: none; }
+.servico--linha .servico__nome { font-size: 16px; font-family: var(--font-body); font-weight: 600; }
+.servico__nome {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight); letter-spacing: var(--display-letter);
+  font-size: 17px; line-height: 1.2; margin-bottom: 4px;
+}
+.servico__desc { color: var(--ink2); font-size: 13.5px; line-height: 1.45; }
+.servico__preco {
+  font-family: var(--font-body); font-weight: 600; font-size: 14.5px;
+  color: var(--accent); white-space: nowrap;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  text-align: right;
+}
+.servico__preco small { display: block; font-size: 10.5px; font-weight: 500; color: var(--ink2); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 2px; }
+
+.diferenciais { display: grid; gap: 14px; grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; }
+@media (min-width: 600px) { .diferenciais { grid-template-columns: 1fr 1fr 1fr; } }
+.diferencial {
+  text-align: center; padding: 22px 18px;
+  background: var(--surface2); border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+}
+.diferencial__num {
+  font-family: var(--font-display); font-weight: var(--display-weight);
+  font-size: 28px; color: var(--accent); line-height: 1;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+.diferencial__text { font-size: 14px; line-height: 1.45; color: var(--ink); margin-top: 10px; }
+
+/* Equipe — avatares de iniciais coloridos */
+.equipe-section { padding: var(--space-section) 0; }
+.equipe-grid {
+  display: grid; gap: 16px;
+  grid-template-columns: 1fr;
+  max-width: 540px; margin: 0 auto;
+}
+@media (min-width: 600px) { .equipe-grid { grid-template-columns: repeat(3, 1fr); } }
+.equipe-card {
+  text-align: center;
+  padding: 22px 16px;
+  background: var(--surface2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+}
+.equipe-avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  margin: 0 auto 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 24px;
+  color: #fff;
+  background: var(--accent);
+}
+.equipe-card:nth-child(2) .equipe-avatar { background: color-mix(in oklab, var(--accent) 70%, var(--ink)); }
+.equipe-card:nth-child(3) .equipe-avatar { background: color-mix(in oklab, var(--accent) 50%, var(--ink2)); }
+.equipe-nome { font-weight: 600; font-size: 15px; color: var(--ink); }
+.equipe-funcao { color: var(--ink2); font-size: 13px; line-height: 1.4; margin-top: 6px; }
+
+/* Slot picker — agendamento direto */
+.slotpicker-trigger {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 18px 22px;
+  background: color-mix(in oklab, var(--accent) 8%, var(--surface));
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-card);
+  margin: 24px auto 0;
+  max-width: 540px;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+  font-family: var(--font-body);
+}
+.slotpicker-trigger:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.slotpicker-trigger__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: 17px; line-height: 1.2;
+  color: var(--ink);
+}
+.slotpicker-trigger__sub { font-size: 12.5px; color: var(--ink2); margin-top: 4px; }
+.slotpicker-trigger__arrow {
+  flex: 0 0 auto; font-size: 22px; color: var(--accent);
+  font-family: var(--font-display); font-weight: 600;
+}
+
+.slot-modal {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(10, 8, 6, 0.65);
+  backdrop-filter: blur(8px);
+  display: none; align-items: flex-end; justify-content: center;
+  animation: fadeIn .2s ease;
+}
+.slot-modal.is-open { display: flex; }
+@media (min-width: 720px) { .slot-modal { align-items: center; padding: 24px; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.slot-card {
+  background: var(--surface); border-radius: var(--radius-card) var(--radius-card) 0 0;
+  width: 100%; max-width: 520px;
+  padding: 28px 24px;
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+  max-height: 90vh; overflow-y: auto;
+  position: relative;
+  animation: slideUp .25s ease;
+}
+@media (min-width: 720px) { .slot-card { border-radius: var(--radius-card); } }
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.slot-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; cursor: pointer; color: var(--ink);
+  font-family: var(--font-display);
+}
+.slot-step__eyebrow {
+  font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600; margin-bottom: 8px;
+}
+.slot-step__pergunta {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight); letter-spacing: var(--display-letter);
+  font-size: clamp(22px, 5.5vw, 28px); line-height: 1.15;
+  color: var(--ink); margin-bottom: 22px;
+}
+.slot-options {
+  display: grid; gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.slot-options--day { grid-template-columns: 1fr 1fr 1fr; }
+.slot-options--hour { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; gap: 8px; }
+.slot-option {
+  padding: 14px 8px; border-radius: var(--radius);
+  background: var(--surface2); border: 1.5px solid var(--line);
+  font-family: var(--font-body); font-size: 14.5px; font-weight: 500;
+  color: var(--ink); cursor: pointer;
+  transition: all .15s;
+  text-align: center;
+}
+.slot-option:hover { border-color: var(--accent); }
+.slot-option.is-selected { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+
+.slot-confirm {
+  display: block; margin-top: 22px;
+  background: #25D366; color: #fff;
+  padding: 16px 22px; border-radius: 999px;
+  text-align: center; font-weight: 600; font-size: 15.5px;
+  text-decoration: none;
+  opacity: 0.55; pointer-events: none;
+  transition: opacity .15s;
+}
+.slot-confirm.is-ready { opacity: 1; pointer-events: auto; }
+.slot-ics {
+  display: block; margin-top: 10px;
+  background: var(--surface2); color: var(--ink);
+  border: 1px solid var(--line);
+  padding: 12px 18px; border-radius: 999px;
+  text-align: center; font-weight: 500; font-size: 13.5px;
+  text-decoration: none; cursor: pointer; width: 100%;
+  font-family: var(--font-body);
+  opacity: 0.55; pointer-events: none;
+  transition: opacity .15s, border-color .15s;
+}
+.slot-ics.is-ready { opacity: 1; pointer-events: auto; }
+.slot-ics:hover { border-color: var(--ink2); }
+.slot-ics::before { content: "📅"; margin-right: 6px; }
+.slot-summary {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--ink2);
+}
+.slot-summary strong { color: var(--ink); font-weight: 600; }
+
+/* Depoimento */
+.depoimento {
+  background: var(--bg);
+  padding: var(--space-section) 0;
+}
+.depoimento__card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 28px 24px;
+  max-width: 560px; margin: 0 auto;
+  position: relative;
+}
+.depoimento__quote-mark {
+  position: absolute; top: -14px; left: 24px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 22px; font-weight: 600;
+}
+.depoimento__texto {
+  font-size: 15.5px; line-height: 1.6; color: var(--ink);
+  margin-top: 8px;
+}
+.depoimento__autor {
+  margin-top: 18px; display: flex; align-items: center; gap: 12px;
+}
+.depoimento__avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 70%, var(--ink2));
+  color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 16px;
+}
+.depoimento__autor-info { font-size: 13.5px; }
+.depoimento__autor-nome { font-weight: 600; color: var(--ink); }
+.depoimento__autor-ctx { font-size: 12px; color: var(--ink2); margin-top: 2px; }
+
+</style>
+</head>
+<body class="lut-cool">
+
+<header class="hero">
+  <img class="hero__bg" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAF6-8WxlluBZ0Ju_sxzfEe2he41FXmi0WsrLMWP-nmxy_xljw5me-WUuNDPfe9RUymU6fwV08Dt7mV_oyQEMqb9y20FhJ5DXlsrCPAJ2Imeks4CBZT6mlxtnFnO_7wGn4ba492R=w1920-h1080-p-rj" alt="" fetchpriority="high">
+  <div class="hero__veil"></div>
+  <div class="hero__inner">
+    <h1 class="hero__title">D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas.</h1>
+    
+    <div class="hero__subtitle">D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas. - Av. Atlântica, 660 - Pres. Roosevelt, Uberlândia - MG, 38401-033</div>
+    
+  </div>
+</header>
+
+<div class="trust">
+  
+  <span class="open-pill" data-state="closed" id="openPill"
+        data-hours='{"0": null, "1": null, "2": ["09:00", "19:00"], "3": ["09:00", "19:00"], "4": ["09:00", "19:00"], "5": ["09:00", "19:00"], "6": ["09:00", "17:00"]}'>
+    <span class="open-pill__dot"></span>
+    <span class="open-pill__label">…</span>
+    <span class="open-pill__detail"></span>
+  </span>
+  <span class="trust__sep">·</span>
+  
+  
+  <span class="trust__item">
+    <span class="trust__stars">★★★★★</span>
+    <strong class="trust__strong">4,9</strong>
+    <span>· 1205 avaliações no Google</span>
+  </span>
+  <span class="trust__sep">·</span>
+  
+  <span class="trust__item">Uberlândia, MG</span>
+</div>
+
+
+
+
+<div class="container" style="padding: 0 22px;">
+  <button class="slotpicker-trigger" id="slot-trigger" aria-haspopup="dialog">
+    <div>
+      <div class="slotpicker-trigger__title">Marca um horário rapidinho</div>
+      <div class="slotpicker-trigger__sub">Escolhe o dia e a hora — a gente confirma pelo Zap</div>
+    </div>
+    <span class="slotpicker-trigger__arrow">→</span>
+  </button>
+</div>
+
+<div class="slot-modal" id="slot-modal" role="dialog" aria-modal="true" aria-label="Agendar horário">
+  <div class="slot-card">
+    <button class="slot-close" id="slot-close" aria-label="Fechar">×</button>
+    <div class="slot-step__eyebrow">Marcar horário</div>
+    <div class="slot-step__pergunta">Quando você quer vir?</div>
+
+    <div style="margin-bottom: 18px;">
+      <div style="font-size: 12px; color: var(--ink2); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">DIA</div>
+      <div class="slot-options slot-options--day" id="slot-days">
+        <button class="slot-option" data-day="hoje">Hoje</button>
+        <button class="slot-option" data-day="amanhã">Amanhã</button>
+        <button class="slot-option" data-day="sábado">Sábado</button>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size: 12px; color: var(--ink2); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px;">HORÁRIO</div>
+      <div class="slot-options slot-options--hour" id="slot-hours">
+        <button class="slot-option" data-hour="9h">9h</button>
+        <button class="slot-option" data-hour="11h">11h</button>
+        <button class="slot-option" data-hour="14h">14h</button>
+        <button class="slot-option" data-hour="16h">16h</button>
+        <button class="slot-option" data-hour="18h">18h</button>
+      </div>
+    </div>
+
+    <div class="slot-summary" id="slot-summary" style="display: none;">
+      Quero <strong id="slot-summary-text">...</strong>
+    </div>
+
+    <a class="slot-confirm" id="slot-confirm" target="_blank" rel="noopener">Confirmar pelo WhatsApp →</a>
+    <button class="slot-ics" id="slot-ics" type="button">Adicionar ao calendário</button>
+  </div>
+</div>
+
+
+
+<section class="frase-dono">
+  <div class="container" style="padding: 0;">
+    <p class="frase-dono__quote">Sou o Marcos, corto cabelo há 18 anos. A gente atende um de cada vez, no maior carinho.</p>
+    
+    <div class="frase-dono__assina">
+      <span class="frase-dono__avatar">M</span>
+      <span>Marcos · Barbearia</span>
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <div class="section__eyebrow">Atendimento</div>
+      <h2 class="section__title">O que oferecemos</h2>
+      <p class="section__lead">Terça a sábado, das 9h às 19h. Fecho domingo e segunda.</p>
+    </div>
+
+    
+    <div class="servicos">
+      
+      
+      <a class="servico servico--destaque" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Corte%20Degrad%C3%AA.%20Qual%20hor%C3%A1rio%20tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener">
+        <div>
+          <span class="servico__tag">mais procurado</span>
+          <div class="servico__nome">Corte Degradê</div>
+          <div class="servico__desc">Corte na máquina e tesoura, incluindo acabamento na nuca e orelhas.</div>
+        </div>
+        
+        <div class="servico__preco">
+          <small>a partir de</small>
+          R$ 35
+        </div>
+        
+      </a>
+      
+      
+      <a class="servico servico--destaque" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Barba%20Tradicional.%20Qual%20hor%C3%A1rio%20tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener">
+        <div>
+          
+          <div class="servico__nome">Barba Tradicional</div>
+          <div class="servico__desc">Barba feita com navalha, toalha quente e finalização.</div>
+        </div>
+        
+        <div class="servico__preco">
+          <small>a partir de</small>
+          R$ 25
+        </div>
+        
+      </a>
+      
+    </div>
+
+    
+    <div class="servicos" style="margin-top: 18px;">
+      
+      
+      <a class="servico servico--linha" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Corte%20%2B%20Barba.%20Qual%20hor%C3%A1rio%20tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener">
+        <div>
+          <div class="servico__nome">Corte + Barba</div>
+          
+        </div>
+        
+        <div class="servico__preco">
+          R$ 55
+        </div>
+        
+      </a>
+      
+      
+      <a class="servico servico--linha" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Sobrancelha.%20Qual%20hor%C3%A1rio%20tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener">
+        <div>
+          <div class="servico__nome">Sobrancelha</div>
+          <div class="servico__desc">Só pra deixar no ponto.</div>
+        </div>
+        
+        <div class="servico__preco">
+          R$ 15
+        </div>
+        
+      </a>
+      
+      
+      <a class="servico servico--linha" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Hidrata%C3%A7%C3%A3o%20Capilar.%20Qual%20hor%C3%A1rio%20tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener">
+        <div>
+          <div class="servico__nome">Hidratação Capilar</div>
+          <div class="servico__desc">Hidratação com queratina pra cabelo ressecado.</div>
+        </div>
+        
+        <div class="servico__preco">
+          R$ 40
+        </div>
+        
+      </a>
+      
+      
+      <a class="servico servico--linha" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Corte%20Infantil.%20Qual%20hor%C3%A1rio%20tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener">
+        <div>
+          <div class="servico__nome">Corte Infantil</div>
+          <div class="servico__desc">Corte pra menino de até 10 anos, com paciência e pirulito.</div>
+        </div>
+        
+        <div class="servico__preco">
+          R$ 30
+        </div>
+        
+      </a>
+      
+      
+      <a class="servico servico--linha" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20Pezinho%20e%20Apara%C3%A7%C3%A3o.%20Qual%20hor%C3%A1rio%20tem%20dispon%C3%ADvel%3F" target="_blank" rel="noopener">
+        <div>
+          <div class="servico__nome">Pezinho e Aparação</div>
+          <div class="servico__desc">Aparar laterais e nuca sem lavar.</div>
+        </div>
+        
+        <div class="servico__preco">
+          R$ 20
+        </div>
+        
+      </a>
+      
+    </div>
+    
+  </div>
+</section>
+
+
+<section class="depoimento">
+  <div class="container">
+    <div class="depoimento__card">
+      <div class="depoimento__quote-mark">"</div>
+      <p class="depoimento__texto">Antes de ir no D&#39;Buenas, tava com vergonha de sair de casa, o cabelo parecia uma juba. O Marcos pegou leve, explicou o que ia fazer e o corte ficou top. Saí de lá me sentindo outro, até a família notou. Foi rápido e sem frescura.</p>
+      <div class="depoimento__autor">
+        <div class="depoimento__avatar">C</div>
+        <div class="depoimento__autor-info">
+          <div class="depoimento__autor-nome">Carlos E.</div>
+          <div class="depoimento__autor-ctx">cliente desde 2019</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section section--surface reveal">
+  <div class="container">
+    <div class="section__head section__head--centered">
+      <div class="section__eyebrow">Por que aqui</div>
+      <h2 class="section__title">O que faz a diferença</h2>
+    </div>
+    <div class="diferenciais">
+      
+      <div class="diferencial">
+        <div class="diferencial__num">01</div>
+        <div class="diferencial__text">Atendo criança e medroso – já corto há 18 anos.</div>
+      </div>
+      
+      <div class="diferencial">
+        <div class="diferencial__num">02</div>
+        <div class="diferencial__text">Sábado até 17h, sem pressa.</div>
+      </div>
+      
+      <div class="diferencial">
+        <div class="diferencial__num">03</div>
+        <div class="diferencial__text">Aceito Pix, cartão e dinheiro.</div>
+      </div>
+      
+      <div class="diferencial">
+        <div class="diferencial__num">04</div>
+        <div class="diferencial__text">Tem café coado na espera, feito pela minha mãe.</div>
+      </div>
+      
+      <div class="diferencial">
+        <div class="diferencial__num">05</div>
+        <div class="diferencial__text">Marca pelo Zap, sem app chato.</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="equipe-section reveal">
+  <div class="container">
+    <div class="section__head section__head--centered">
+      <div class="section__eyebrow">Quem te atende</div>
+      <h2 class="section__title">A equipe</h2>
+    </div>
+    <div class="equipe-grid">
+      
+      <div class="equipe-card">
+        <div class="equipe-avatar">M</div>
+        <div class="equipe-nome">Marcos</div>
+        <div class="equipe-funcao">Corte masculino e barba há 18 anos</div>
+      </div>
+      
+      <div class="equipe-card">
+        <div class="equipe-avatar">J</div>
+        <div class="equipe-nome">Júlio</div>
+        <div class="equipe-funcao">Recepção e WhatsApp, além de ajudar na limpeza</div>
+      </div>
+      
+      <div class="equipe-card">
+        <div class="equipe-avatar">D</div>
+        <div class="equipe-nome">Dona Cida</div>
+        <div class="equipe-funcao">Café e acolhimento, mãe do Marcos</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="heritage reveal">
+  <article class="heritage__card">
+    <time class="heritage__year">2008</time>
+    <p class="heritage__story">Em 2008 o Marcos largou a fábrica de móveis e abriu a barbearia no Tibery.</p>
+    <p class="heritage__pivot">Hoje atende com o filho que fez curso de barbeiro em 2021.</p>
+  </article>
+</section>
+
+
+
+<section class="micro-cena reveal">
+  <p class="micro-cena__texto">Comecei em 2008 cortando cabelo na garagem da minha mãe, no bairro Tibery. Era só uma cadeira e um espelho. <span class="micro-cena__anos">Faz 12 anos que estou no mesmo ponto, mas já são 18 de tesoura na mão.</span></p>
+</section>
+
+
+
+<section class="honest reveal">
+  <details class="honest__inner">
+    <summary>O que a gente NÃO faz <span class="honest__caveat">(pra você não se frustrar)</span></summary>
+    <ul class="honest__list">
+      
+      <li>Não atendo sem hora marcada.</li>
+      
+      <li>Tolerância de 10 min de atraso, depois remarca.</li>
+      
+      <li>Cancelamento sem custo até 4h antes.</li>
+      
+    </ul>
+  </details>
+</section>
+
+
+
+
+
+
+<section class="section reveal">
+  <div class="container">
+    <div class="section__head section__head--centered">
+      <div class="section__eyebrow">Pra te encontrar</div>
+      <h2 class="section__title">Aqui é o endereço</h2>
+    </div>
+    <div class="contato" style="margin: 0 auto;">
+      
+      <a class="contato-row" href="https://www.google.com/maps/search/?api=1&query=D%27Buenas%20Barbearia%20-%20Ter%20estilo%20%C3%A9%20ficar%20D%27Buenas.%20-%20Av.%20Atl%C3%A2ntica%2C%20660%20-%20Pres.%20Roosevelt%2C%20Uberl%C3%A2ndia%20-%20MG%2C%2038401-033" target="_blank" rel="noopener">
+        <div class="contato-row__icon">→</div>
+        <div>
+          <div class="contato-row__label">Endereço</div>
+          <div class="contato-row__value">D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas. - Av. Atlântica, 660 - Pres. Roosevelt, Uberlândia - MG, 38401-033</div>
+        </div>
+      </a>
+      
+      
+      <a class="contato-row" href="tel:+5534991949789">
+        <div class="contato-row__icon">☎</div>
+        <div>
+          <div class="contato-row__label">Telefone</div>
+          <div class="contato-row__value">(34) 99194-9789</div>
+        </div>
+      </a>
+      
+      
+      <a class="contato-row" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20de%20D%27Buenas%20Barbearia%20-%20Ter%20estilo%20%C3%A9%20ficar%20D%27Buenas.%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">
+        <div class="contato-row__icon">w</div>
+        <div>
+          <div class="contato-row__label">WhatsApp</div>
+          <div class="contato-row__value">Manda o caso pelo Zap</div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <strong>D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas.</strong><br>
+    Uberlândia · Barbearia
+    
+    <div style="margin-top: 14px; font-size: 12.5px; color: var(--ink2);">
+      Conhecemos bem: Centro · Tibery · Santa Mônica · Morada da Colina · Tabajaras · Saraiva
+    </div>
+    
+
+    <div class="footer-actions">
+      <button class="footer-actions__btn" data-action="share" type="button"
+              data-share-title="D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas."
+              data-share-text="Olha esse barbearia aqui em Uberlândia — D&#39;Buenas Barbearia - Ter estilo é ficar D&#39;Buenas.">
+        <span class="footer-actions__icon">↗</span> Compartilhar
+      </button>
+      
+      <a class="footer-actions__btn" data-action="regular" target="_blank" rel="noopener"
+         href="https://wa.me/5534991949789?text=Oi%21%20Sou%20cliente%20fixo%20aqui.%20%5BD%27Buenas%20Barbearia%20-%20Ter%20estilo%20%C3%A9%20ficar%20D%27Buenas.%5D%20">
+        <span class="footer-actions__icon">★</span> Sou cliente fixo
+      </a>
+      
+      <a class="footer-actions__btn" data-action="claim" target="_blank" rel="noopener"
+         href="https://wa.me/5534998352234?text=Sou%20dono%28a%29%20do%20D%27Buenas%20Barbearia%20-%20Ter%20estilo%20%C3%A9%20ficar%20D%27Buenas.%20em%20Uberl%C3%A2ndia.%20Quero%20reivindicar%20essa%20p%C3%A1gina.">
+        <span class="footer-actions__icon">⚑</span> É o dono? Reivindique
+      </a>
+    </div>
+    <div style="margin-top: 8px; text-align: center;">
+      <button class="howto-trigger" type="button" popovertarget="howto-pop" aria-label="Como funciona?">como funciona?</button>
+    </div>
+    <div class="howto-popover" id="howto-pop" popover>
+      Você é o dono(a)? Mande Zap pra <strong>Fachada</strong> com seus dados — em até <strong>24h</strong> a página vira sua e a gente ajusta com o que precisar.
+    </div>
+    <div class="footer-actions__copied" id="copiedToast">Link copiado</div>
+
+    <div class="previa-rodape">Esta é uma prévia. Serviços e preços são uma sugestão pra esta categoria — ao fechar com a Fachada, ajustamos com seus dados reais.</div>
+  </div>
+</footer>
+
+
+<div class="sticky-cta">
+  <a class="btn btn--block" href="https://wa.me/5534991949789?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20de%20D%27Buenas%20Barbearia%20-%20Ter%20estilo%20%C3%A9%20ficar%20D%27Buenas.%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">
+    Manda o caso pelo Zap
+  </a>
+</div>
+
+
+<script>
+// ----- WhatsApp PROTOCOLO + mensagem rica -----
+// Intercepta todo a[href^="https://wa.me/"] e injeta texto pré-preenchido
+// contendo PROTOCOLO determinístico (slug + deviceId em base36).
+// Preserva mensagens já específicas (slot picker, favoritos) — só adiciona
+// PROTOCOLO antes da assinatura.
+(function () {
+  var SLUG = "d-buenas-barbearia-ter-estilo-e-ficar-d-buenas-uberlandia";
+  var NEGOCIO = "D\u0027Buenas Barbearia - Ter estilo \u00e9 ficar D\u0027Buenas.";
+
+  function deviceId() {
+    var k = "fa-did";
+    var v = "";
+    try {
+      v = localStorage.getItem(k) || "";
+      if (!v) {
+        v = (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36)).slice(0, 8);
+        localStorage.setItem(k, v);
+      }
+    } catch (e) {
+      v = Math.random().toString(36).slice(2, 10);
+    }
+    return v;
+  }
+
+  function protocolo() {
+    var s = SLUG + "|" + deviceId();
+    var sum = 0;
+    for (var i = 0; i < s.length; i++) sum = (sum * 31 + s.charCodeAt(i)) >>> 0;
+    return "FA" + sum.toString(36).toUpperCase().slice(-4).padStart(4, "0");
+  }
+
+  function defaultMsg(p) {
+    return "Oi! Vi o site do " + NEGOCIO + ".\n\nProtocolo: " + p + "\n(vindo do site)";
+  }
+
+  function injectProtocol(href) {
+    if (!href) return href;
+    var i = href.indexOf("wa.me/");
+    if (i < 0) return href;
+    var p = protocolo();
+    var qIdx = href.indexOf("?text=");
+    if (qIdx < 0) {
+      // sem texto: adiciona default
+      return href + "?text=" + encodeURIComponent(defaultMsg(p));
+    }
+    // já tem texto: anexa o PROTOCOLO antes do fim
+    var prefix = href.slice(0, qIdx + 6);
+    var existing = decodeURIComponent(href.slice(qIdx + 6));
+    if (existing.indexOf("Protocolo:") >= 0) return href; // já tem
+    var sep = existing.endsWith("\n") ? "" : "\n\n";
+    return prefix + encodeURIComponent(existing + sep + "Protocolo: " + p);
+  }
+
+  function applyAll() {
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (a) {
+      a.href = injectProtocol(a.href);
+    });
+  }
+
+  applyAll();
+  // Re-aplica quando JS gera novos hrefs (quiz resultado, slot picker)
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest('a[href^="https://wa.me/"]');
+    if (t) t.href = injectProtocol(t.href);
+  }, true);
+})();
+
+// ----- Live Open Pill -----
+(function () {
+  var pill = document.getElementById("openPill");
+  if (!pill) return;
+  var hours;
+  try { hours = JSON.parse(pill.dataset.hours || "{}"); } catch (e) { hours = {}; }
+
+  function parseHM(s) { var p = (s || "").split(":"); return [parseInt(p[0], 10) || 0, parseInt(p[1], 10) || 0]; }
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function nameDay(d) {
+    return ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"][d];
+  }
+
+  function nextOpening(now) {
+    // varre próximas 7 dias procurando primeira janela
+    for (var i = 1; i <= 7; i++) {
+      var d = (now.getDay() + i) % 7;
+      var w = hours[String(d)];
+      if (w && w.length === 2) {
+        var h = parseHM(w[0]);
+        return { day: d, hh: h[0], mm: h[1], days_ahead: i };
+      }
+    }
+    return null;
+  }
+
+  function compute() {
+    var now = new Date();
+    var today = now.getDay();
+    var w = hours[String(today)];
+
+    if (w && w.length === 2) {
+      var nowMin = now.getHours() * 60 + now.getMinutes();
+      var op = parseHM(w[0]);
+      var cl = parseHM(w[1]);
+      var openMin = op[0] * 60 + op[1];
+      var closeMin = cl[0] * 60 + cl[1];
+      // close past midnight (00:30, 01:00) significa dia seguinte
+      if (closeMin <= openMin) closeMin += 24 * 60;
+
+      if (nowMin >= openMin && nowMin < closeMin) {
+        var rem = closeMin - nowMin;
+        var rh = Math.floor(rem / 60);
+        var rm = rem % 60;
+        if (rem <= 60) {
+          return { state: rem <= 30 ? "closing" : "open",
+                   label: rem <= 30 ? "Fecha em " + rem + "min" : "Aberto agora",
+                   detail: rem <= 30 ? "" : "· fecha em " + rh + "h" + pad(rm) };
+        }
+        return { state: "open",
+                 label: "Aberto agora",
+                 detail: "· fecha em " + rh + "h" + pad(rm) };
+      }
+      // Antes de abrir, ainda hoje
+      if (nowMin < openMin) {
+        return { state: "closed",
+                 label: "Fechado agora",
+                 detail: "· abre hoje às " + w[0] };
+      }
+    }
+    // Fechado o dia ou já passou; busca próxima abertura
+    var nx = nextOpening(now);
+    if (!nx) return { state: "closed", label: "Fechado", detail: "" };
+    var quando = nx.days_ahead === 1 ? "amanhã" : nameDay(nx.day);
+    return { state: "closed",
+             label: "Fechado agora",
+             detail: "· abre " + quando + " às " + pad(nx.hh) + ":" + pad(nx.mm) };
+  }
+
+  function render() {
+    var s = compute();
+    pill.dataset.state = s.state;
+    pill.querySelector(".open-pill__label").textContent = s.label;
+    pill.querySelector(".open-pill__detail").textContent = s.detail;
+  }
+
+  render();
+  setInterval(render, 60 * 1000);
+})();
+
+// ----- Footer actions: Share / copy fallback -----
+(function () {
+  var shareBtn = document.querySelector('[data-action="share"]');
+  if (!shareBtn) return;
+  var toast = document.getElementById("copiedToast");
+
+  shareBtn.addEventListener("click", function () {
+    var data = {
+      title: shareBtn.dataset.shareTitle || document.title,
+      text: shareBtn.dataset.shareText || "",
+      url: window.location.href
+    };
+    if (navigator.share) {
+      navigator.share(data).catch(function () { /* user canceled */ });
+      return;
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(window.location.href).then(function () {
+        if (toast) {
+          toast.classList.add("show");
+          setTimeout(function () { toast.classList.remove("show"); }, 1800);
+        }
+      });
+    } else {
+      window.prompt("Copia o link:", window.location.href);
+    }
+  });
+})();
+</script>
+
+
+<script>
+(function() {
+  var trigger = document.getElementById('slot-trigger');
+  var modal = document.getElementById('slot-modal');
+  var closeBtn = document.getElementById('slot-close');
+  if (!trigger || !modal) return;
+
+  var dayBtns = document.querySelectorAll('#slot-days .slot-option');
+  var hourBtns = document.querySelectorAll('#slot-hours .slot-option');
+  var summary = document.getElementById('slot-summary');
+  var summaryText = document.getElementById('slot-summary-text');
+  var confirm = document.getElementById('slot-confirm');
+  var icsBtn = document.getElementById('slot-ics');
+  var tel = "5534991949789";
+  var day = null, hour = null;
+
+  // ----- ICS helpers -----
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+  function toIcsTime(d) {
+    return d.getUTCFullYear() + pad(d.getUTCMonth() + 1) + pad(d.getUTCDate()) + "T" +
+           pad(d.getUTCHours()) + pad(d.getUTCMinutes()) + "00Z";
+  }
+  function nextWeekday(today, target) {
+    // target: 0=dom, 6=sáb
+    var diff = (target - today.getDay() + 7) % 7;
+    if (diff === 0) diff = 7;
+    var d = new Date(today);
+    d.setDate(d.getDate() + diff);
+    return d;
+  }
+  function dateForDay(label) {
+    var now = new Date();
+    if (label === "hoje") return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    if (label === "amanhã") {
+      var t = new Date(now); t.setDate(t.getDate() + 1);
+      return new Date(t.getFullYear(), t.getMonth(), t.getDate());
+    }
+    if (label === "sábado") return nextWeekday(now, 6);
+    return null;
+  }
+  function buildIcs() {
+    if (!day || !hour) return null;
+    var base = dateForDay(day);
+    if (!base) return null;
+    var hh = parseInt(hour.replace(/[^\d]/g, ""), 10);
+    if (isNaN(hh)) return null;
+    var start = new Date(base);
+    start.setHours(hh, 0, 0, 0);
+    var end = new Date(start);
+    end.setHours(end.getHours() + 1);
+    var nome = "D\u0027Buenas Barbearia - Ter estilo \u00e9 ficar D\u0027Buenas.";
+    var endereco = "D\u0027Buenas Barbearia - Ter estilo \u00e9 ficar D\u0027Buenas. - Av. Atl\u00e2ntica, 660 - Pres. Roosevelt, Uberl\u00e2ndia - MG, 38401-033";
+    var lines = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Fachada//Mockup//PT-BR",
+      "CALSCALE:GREGORIAN",
+      "METHOD:PUBLISH",
+      "BEGIN:VEVENT",
+      "UID:" + Date.now() + "@fachada.local",
+      "DTSTAMP:" + toIcsTime(new Date()),
+      "DTSTART:" + toIcsTime(start),
+      "DTEND:" + toIcsTime(end),
+      "SUMMARY:Horário em " + nome,
+      "DESCRIPTION:Agendamento confirmado por WhatsApp.",
+      endereco ? "LOCATION:" + endereco.replace(/[,;\\]/g, function (c) { return "\\" + c; }) : "",
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ].filter(Boolean);
+    return lines.join("\r\n");
+  }
+  function downloadIcs() {
+    var ics = buildIcs();
+    if (!ics) return;
+    var blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url;
+    a.download = "agendamento.ics";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  }
+  if (icsBtn) icsBtn.addEventListener("click", downloadIcs);
+
+  function update() {
+    if (day && hour) {
+      summary.style.display = 'block';
+      summaryText.textContent = 'agendar para ' + day + ' às ' + hour;
+      var msg = 'Olá! Gostaria de agendar para ' + day + ' às ' + hour + '. Está disponível?';
+      confirm.href = 'https://wa.me/' + tel + '?text=' + encodeURIComponent(msg);
+      confirm.classList.add('is-ready');
+      if (icsBtn) icsBtn.classList.add('is-ready');
+    } else {
+      confirm.classList.remove('is-ready');
+      confirm.removeAttribute('href');
+      if (icsBtn) icsBtn.classList.remove('is-ready');
+    }
+  }
+
+  dayBtns.forEach(function(b) {
+    b.addEventListener('click', function() {
+      dayBtns.forEach(function(x) { x.classList.remove('is-selected'); });
+      b.classList.add('is-selected');
+      day = b.getAttribute('data-day');
+      update();
+    });
+  });
+  hourBtns.forEach(function(b) {
+    b.addEventListener('click', function() {
+      hourBtns.forEach(function(x) { x.classList.remove('is-selected'); });
+      b.classList.add('is-selected');
+      hour = b.getAttribute('data-hour');
+      update();
+    });
+  });
+
+  trigger.addEventListener('click', function() {
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  });
+  function close() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', function(e) { if (e.target === modal) close(); });
+})();
+</script>
+
+
+</body>
+</html>

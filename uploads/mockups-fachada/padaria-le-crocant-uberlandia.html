@@ -1,0 +1,1893 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Padaria Le Crocant — Uberlândia</title>
+<meta name="description" content="Aqui é tudo feito no capricho, com receita de família e ingrediente mineiro de verdade.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Fachada">
+<meta property="og:title" content="Padaria Le Crocant — Uberlândia, MG">
+<meta property="og:description" content="Aqui é tudo feito no capricho, com receita de família e ingrediente mineiro de verdade.">
+<meta property="og:image" content="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFw26_gbH1h9o2yUcWgxgqEGod1E953jXgwp3UWvCO-FklswkjAcfZHknPFwnKTJjecM_oDg376SBH9cB-ZMGyrXAVY9CZLNAVih3_Rxm1xhqwOvyA61JhlqjYSh1VJoCzVXqrRSg=w1200-h630-c-rj">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Padaria Le Crocant">
+<meta property="og:url" content="https://mockup.afachada.com.br/m/padaria-le-crocant-uberlandia/">
+<meta property="og:locale" content="pt_BR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Padaria Le Crocant — Uberlândia, MG">
+<meta name="twitter:description" content="Aqui é tudo feito no capricho, com receita de família e ingrediente mineiro de verdade.">
+<meta name="twitter:image" content="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFw26_gbH1h9o2yUcWgxgqEGod1E953jXgwp3UWvCO-FklswkjAcfZHknPFwnKTJjecM_oDg376SBH9cB-ZMGyrXAVY9CZLNAVih3_Rxm1xhqwOvyA61JhlqjYSh1VJoCzVXqrRSg=w1200-h630-c-rj">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F5EFE6;
+  --surface: #FBF7F0;
+  --surface2: #FFFFFF;
+  --ink: #1F1812;
+  --ink2: #5B4A3E;
+  --line: #E5DCCE;
+  --accent: #B8553A;
+  --accent-ink: #FFFFFF;
+  --trust: #5B4A3E;
+  --font-display: &#39;Instrument Serif&#39;, Georgia, serif;
+  --font-body: &#39;DM Sans&#39;, system-ui, sans-serif;
+  --display-weight: 400;
+  --display-letter: -0.0050em;
+  --radius: 16px;
+  --radius-card: 20px;
+  --space-section: clamp(56px, 10vw, 112px);
+  --container-max: 640px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  font-size: 16px; line-height: 1.55;
+  color: var(--ink); background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+.container { max-width: var(--container-max); margin: 0 auto; padding: 0 22px; }
+
+/* ----- Hero ----- */
+.hero {
+  position: relative; height: 72svh; min-height: 460px; max-height: 640px;
+  overflow: clip; background: var(--accent);
+}
+.hero::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  /* vinheta interior — esconde bordas amadoras e dá profundidade visual */
+  box-shadow: inset 0 0 80px 0 rgba(0,0,0,0.35);
+  z-index: 2;
+}
+.hero__bg {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  /* Filtros sutis pra unificar fotos amadoras — saturate+contraste leve,
+     ligeira queda de brilho. Não destrói detalhe, dá uniformidade. */
+  filter: saturate(1.08) contrast(1.06) brightness(0.97);
+}
+.hero__veil {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 25%, transparent 42%),
+    linear-gradient(180deg, transparent 25%, rgba(0,0,0,0.55) 65%, rgba(0,0,0,0.92) 100%);
+}
+.hero__inner {
+  position: absolute; left: 22px; right: 22px; bottom: 32px; z-index: 1;
+  color: #fff;
+}
+.hero__kicker {
+  display: inline-block; font-family: var(--font-body);
+  font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase;
+  background: rgba(255,255,255,0.14); backdrop-filter: blur(8px);
+  padding: 6px 12px; border-radius: 999px; margin-bottom: 18px;
+  font-weight: 500;
+}
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-letter);
+  font-size: clamp(40px, 11vw, 64px);
+  line-height: 0.98;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.55), 0 4px 24px rgba(0,0,0,0.5);
+}
+.hero__subtitle {
+  text-shadow: 0 1px 3px rgba(0,0,0,0.55);
+}
+.hero__kicker {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+}
+.hero__subtitle {
+  margin-top: 14px; font-size: 15px; opacity: 0.92; max-width: 480px;
+  font-weight: 400;
+}
+
+/* ----- Trust strip ----- */
+.trust {
+  background: var(--surface); border-bottom: 1px solid var(--line);
+  padding: 16px 22px; color: var(--trust);
+  font-size: 13.5px;
+  display: flex; flex-wrap: wrap; align-items: center;
+  gap: 6px 18px; justify-content: center;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+.trust__item { display: inline-flex; align-items: center; gap: 6px; }
+.trust__stars { color: #f5b400; font-size: 13px; letter-spacing: 1px; }
+.trust__strong { color: var(--ink); font-weight: 600; }
+.trust__sep { opacity: 0.4; }
+
+/* ----- Section primitives ----- */
+.section { padding: var(--space-section) 0; background: var(--bg); }
+.section--surface { background: var(--surface); }
+.section__head { margin-bottom: 32px; max-width: 540px; }
+.section__head--centered { text-align: center; margin-left: auto; margin-right: auto; }
+.section__eyebrow {
+  font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600;
+  font-family: var(--font-body);
+}
+.section__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-letter);
+  font-size: clamp(28px, 7vw, 40px);
+  line-height: 1.05; margin-top: 10px;
+}
+.section__lead { color: var(--ink2); margin-top: 12px; font-size: 15px; line-height: 1.55; }
+
+/* ----- Galeria ----- */
+.galeria {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+.galeria img {
+  width: 100%; aspect-ratio: 1; object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--line);
+  filter: saturate(1.10) contrast(1.06) brightness(1.02);
+  image-rendering: -webkit-optimize-contrast;
+}
+/* LUT editorial unificador — calor pra food, frio pra service.
+   Faz fotos heterogêneas parecerem da mesma "câmera". */
+body.lut-warm .galeria { position: relative; }
+body.lut-warm .galeria::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: linear-gradient(180deg, rgba(255,188,120,0.08) 0%, rgba(255,140,90,0.04) 50%, rgba(120,60,30,0.10) 100%);
+  mix-blend-mode: soft-light;
+  border-radius: var(--radius);
+}
+body.lut-cool .galeria { position: relative; }
+body.lut-cool .galeria::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: linear-gradient(180deg, rgba(180,200,220,0.08) 0%, rgba(70,100,130,0.06) 100%);
+  mix-blend-mode: soft-light;
+  border-radius: var(--radius);
+}
+body.lut-warm .hero__bg { filter: saturate(1.12) contrast(1.08) brightness(1.00) hue-rotate(-2deg); }
+body.lut-cool .hero__bg { filter: saturate(1.04) contrast(1.06) brightness(0.98) hue-rotate(2deg); }
+.galeria img:nth-child(4n+1) { aspect-ratio: 4/5; }
+@media (min-width: 600px) {
+  .galeria { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+}
+
+/* Mobile: galeria vira carrossel scroll-snap horizontal.
+   Dots nativos via ::scroll-marker quando suportado (Chrome 135+);
+   fallback gracioso: scroll-snap puro mantém UX. */
+@media (max-width: 599px) {
+  .galeria {
+    display: flex; gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding: 0 22px; margin: 0 -22px;
+    scroll-padding: 0 22px;
+  }
+  .galeria::-webkit-scrollbar { display: none; }
+  .galeria img,
+  .galeria img:nth-child(4n+1) {
+    flex: 0 0 78%; aspect-ratio: 4/5; width: 78%;
+    scroll-snap-align: start;
+  }
+  @supports (selector(::scroll-marker)) {
+    .galeria { scroll-marker-group: after; }
+    .galeria::scroll-marker-group {
+      display: flex; gap: 6px; justify-content: center;
+      padding: 14px 0 0;
+    }
+    .galeria img::scroll-marker {
+      content: "";
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--line);
+      border: none; cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+    .galeria img::scroll-marker:target-current {
+      background: var(--accent);
+      transform: scale(1.3);
+    }
+  }
+}
+
+/* ----- Contato/Localização ----- */
+.contato { display: grid; gap: 14px; max-width: 480px; }
+.contato-row {
+  display: flex; gap: 14px; align-items: center;
+  padding: 16px 18px; background: var(--surface2); border-radius: var(--radius);
+  border: 1px solid var(--line);
+}
+.contato-row__icon {
+  flex: 0 0 38px; height: 38px; border-radius: 10px;
+  background: var(--accent); color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 16px;
+  font-family: var(--font-body);
+}
+.contato-row__label { font-size: 11.5px; color: var(--ink2); text-transform: uppercase; letter-spacing: 0.1em; }
+.contato-row__value { font-weight: 600; font-size: 15px; color: var(--ink); margin-top: 2px; }
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 22px; border-radius: 999px;
+  font-family: var(--font-body); font-weight: 600; font-size: 15px;
+  background: var(--accent); color: var(--accent-ink);
+  border: none; cursor: pointer; transition: transform .15s, box-shadow .15s;
+  text-decoration: none;
+}
+.btn:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.10); }
+.btn--ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+.btn--block { width: 100%; }
+
+/* ----- Sticky CTA bar ----- */
+.sticky-cta {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  padding: 12px 16px;
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+  background: color-mix(in oklab, var(--bg) 92%, transparent);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+  display: grid; grid-template-columns: 1fr; gap: 8px;
+}
+@media (min-width: 720px) { .sticky-cta { display: none; } }
+.sticky-cta .btn { padding: 16px 22px; font-size: 16px; }
+body { padding-bottom: calc(80px + env(safe-area-inset-bottom)); }
+@media (min-width: 720px) { body { padding-bottom: 0; } }
+
+/* ----- Footer ----- */
+.footer {
+  padding: 40px 0 32px; text-align: center;
+  background: var(--surface2); color: var(--ink2);
+  font-size: 13px; border-top: 1px solid var(--line);
+}
+.footer strong { color: var(--ink); font-weight: 600; }
+.previa-rodape {
+  font-size: 11px; color: var(--ink2); opacity: 0.85;
+  margin-top: 12px;
+}
+
+.handwritten { font-family: 'Caveat', cursive; }
+
+/* ----- Live Open Pill ----- */
+.open-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 7px 14px 7px 12px;
+  border-radius: 999px;
+  font-size: 13px; font-weight: 600;
+  font-family: var(--font-body);
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  white-space: nowrap;
+}
+.open-pill__dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #999;
+  display: inline-block;
+  position: relative;
+}
+.open-pill[data-state="open"] { color: #0a6e2c; border-color: #c8e6cf; background: #eaf7ee; }
+.open-pill[data-state="open"] .open-pill__dot { background: #1c9b3f; }
+.open-pill[data-state="open"] .open-pill__dot::after {
+  content: ""; position: absolute; inset: -3px; border-radius: 50%;
+  background: #1c9b3f; opacity: 0.4;
+  animation: open-pulse 1.6s ease-out infinite;
+}
+.open-pill[data-state="closing"] { color: #8a5a00; border-color: #f0d99c; background: #fef6e0; }
+.open-pill[data-state="closing"] .open-pill__dot { background: #d99800; }
+.open-pill[data-state="closed"] { color: #7a2e2e; border-color: #ecc8c8; background: #fbecec; }
+.open-pill[data-state="closed"] .open-pill__dot { background: #c14444; }
+@keyframes open-pulse {
+  0%   { transform: scale(0.8); opacity: 0.6; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.open-pill__label { font-weight: 700; letter-spacing: 0.02em; }
+.open-pill__detail { color: inherit; opacity: 0.85; font-weight: 500; }
+
+/* ----- Footer actions (combo: Share / Cliente Fixo / Reivindicar) ----- */
+.footer-actions {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  margin-top: 22px;
+}
+.footer-actions__btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 13px; border-radius: 999px;
+  font-size: 12.5px; font-weight: 500;
+  font-family: var(--font-body);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  color: var(--ink2);
+  cursor: pointer;
+  transition: all .15s;
+}
+.footer-actions__btn:hover { color: var(--ink); border-color: var(--ink2); transform: translateY(-1px); }
+.footer-actions__btn[data-action="claim"] {
+  background: transparent; color: var(--ink2);
+  border-style: dashed; opacity: 0.85;
+}
+.footer-actions__icon { font-size: 14px; line-height: 1; }
+.footer-actions__copied {
+  position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%);
+  background: var(--ink); color: var(--bg);
+  padding: 10px 18px; border-radius: 999px;
+  font-size: 13px; font-weight: 500;
+  z-index: 100;
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s;
+}
+.footer-actions__copied.show { opacity: 1; }
+
+/* ----- Popover nativo + anchor-name (Chrome 133+) ----- */
+.howto-trigger {
+  background: transparent; border: none;
+  color: var(--ink2); opacity: 0.7;
+  font-family: var(--font-body); font-size: 12px;
+  cursor: pointer; padding: 4px 8px;
+  text-decoration: underline; text-decoration-style: dotted;
+  text-underline-offset: 3px;
+  anchor-name: --howto-anchor;
+}
+.howto-trigger:hover { opacity: 1; }
+.howto-popover {
+  position: fixed;
+  background: var(--ink); color: var(--bg);
+  padding: 14px 16px; border-radius: 12px;
+  font-size: 13px; line-height: 1.5;
+  max-width: 280px;
+  border: none;
+  box-shadow: 0 12px 32px -8px rgba(0,0,0,0.45);
+  opacity: 0;
+  transition: opacity .18s, display .18s allow-discrete, overlay .18s allow-discrete;
+}
+.howto-popover:popover-open { opacity: 1; }
+@starting-style {
+  .howto-popover:popover-open { opacity: 0; transform: translateY(6px); }
+}
+.howto-popover strong { color: var(--accent); font-weight: 600; }
+@supports (anchor-name: --x) {
+  .howto-popover {
+    position: absolute;
+    position-anchor: --howto-anchor;
+    bottom: anchor(top);
+    left: anchor(center);
+    translate: -50% -8px;
+    position-try-fallbacks: flip-block, flip-inline;
+  }
+}
+
+/* Noise sutil global — quebra a sensação "vetorial perfeito" */
+body::before {
+  content: ""; position: fixed; inset: 0;
+  pointer-events: none; z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.4 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
+  mix-blend-mode: multiply;
+}
+.hero, .sticky-cta, .quiz-modal { z-index: 2; }
+.reviews-section, .frase-dona, .frase-dono, .micro-cena { position: relative; z-index: 3; }
+.hero__inner { z-index: 3; }
+.hero__bg { z-index: 0; }
+.hero__veil { z-index: 1; }
+
+/* Reviews scroll-snap horizontal */
+.reviews-section {
+  padding: var(--space-section) 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.reviews-list {
+  display: flex; gap: 14px; overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding: 0 22px;
+  margin: 0 -22px;
+  scroll-padding: 0 22px;
+}
+.reviews-list::-webkit-scrollbar { display: none; }
+.review-card {
+  flex: 0 0 86%;
+  scroll-snap-align: start;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  padding: 22px 20px;
+  display: flex; flex-direction: column;
+}
+@media (min-width: 640px) {
+  .review-card { flex: 0 0 calc(50% - 7px); }
+}
+.review-card__stars {
+  color: #f5b400; font-size: 13px; letter-spacing: 1.5px; margin-bottom: 8px;
+}
+.review-card__texto {
+  font-size: 14.5px; line-height: 1.55; color: var(--ink); flex: 1;
+  display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.review-card__autor {
+  margin-top: 14px; display: flex; align-items: center; gap: 10px;
+  padding-top: 12px; border-top: 1px solid var(--line);
+}
+.review-card__avatar {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: color-mix(in oklab, var(--accent) 60%, var(--ink2));
+  color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 13px;
+}
+.review-card__autor-info { font-size: 12.5px; }
+.review-card__autor-nome { font-weight: 600; color: var(--ink); }
+.review-card__autor-data { color: var(--ink2); font-size: 11px; margin-top: 1px; }
+.review-card__google-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 10.5px; color: var(--ink2);
+  margin-top: 2px;
+}
+.review-card__google-badge::before {
+  content: "G"; display: inline-flex; align-items: center; justify-content: center;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: linear-gradient(135deg, #4285f4 0%, #34a853 50%, #fbbc04 75%, #ea4335 100%);
+  color: #fff; font-size: 9px; font-weight: 700;
+}
+.review-card__owner-resp {
+  margin-top: 10px; padding: 10px 12px;
+  background: var(--bg); border-radius: 8px;
+  font-size: 12.5px; color: var(--ink2); line-height: 1.4;
+}
+.review-card__owner-resp strong { color: var(--ink); font-weight: 600; }
+
+/* Heritage card — data específica + pivot do fundador */
+.heritage {
+  padding: 36px 22px;
+  background: var(--surface2);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.heritage__card {
+  max-width: 540px; margin: 0 auto;
+  text-align: left;
+  display: grid; grid-template-columns: auto 1fr;
+  gap: 18px 20px;
+  align-items: baseline;
+}
+.heritage__year {
+  font-family: var(--font-display);
+  font-weight: 700; letter-spacing: -0.02em;
+  font-size: clamp(38px, 9vw, 56px);
+  line-height: 0.95;
+  color: var(--accent);
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  grid-row: span 2;
+}
+.heritage__story {
+  font-size: 15.5px; line-height: 1.5;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+.heritage__pivot {
+  font-size: 14px; line-height: 1.5;
+  color: var(--ink2);
+  font-style: italic;
+  grid-column: 2;
+}
+
+/* Honest limits ("o que NÃO somos") */
+.honest {
+  padding: 28px 22px 32px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.honest__inner {
+  max-width: 520px; margin: 0 auto;
+}
+.honest summary {
+  font-family: var(--font-body);
+  font-size: 14px; font-weight: 600;
+  color: var(--ink2);
+  cursor: pointer;
+  list-style: none;
+  padding: 8px 0;
+  display: flex; align-items: center; gap: 8px;
+}
+.honest summary::-webkit-details-marker { display: none; }
+.honest summary::after {
+  content: "+";
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 20px; color: var(--accent);
+  transition: transform .2s;
+}
+.honest[open] summary::after { content: "−"; }
+.honest__caveat {
+  font-family: 'Caveat', cursive;
+  font-weight: 500; font-size: 17px;
+  color: var(--ink2);
+  transform: rotate(-1.2deg) translateY(1px);
+}
+.honest__list {
+  list-style: none; padding: 14px 0 6px; margin: 0;
+  display: grid; gap: 10px;
+}
+.honest__list li {
+  font-size: 14.5px; line-height: 1.45;
+  color: var(--ink);
+  padding-left: 18px; position: relative;
+}
+.honest__list li::before {
+  content: "—";
+  position: absolute; left: 0;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Micro-cena fundacional + anos assinatura */
+.micro-cena {
+  padding: 32px 22px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.micro-cena__texto {
+  font-size: 15px; line-height: 1.55; color: var(--ink);
+  max-width: 520px; margin: 0 auto;
+}
+.micro-cena__anos {
+  display: block; margin-top: 14px;
+  font-family: 'Caveat', cursive; font-size: 22px; color: var(--accent);
+  transform: rotate(-1.5deg) translateX(-4px);
+}
+
+/* Scroll-driven reveal nas seções (Chrome 115+, Safari 18+) */
+@supports (animation-timeline: view()) {
+  .reveal {
+    animation: reveal-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+  @keyframes reveal-up {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+.catnav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; gap: 6px; overflow-x: auto;
+  padding: 14px 22px;
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  scrollbar-width: none;
+}
+.catnav::-webkit-scrollbar { display: none; }
+.catnav__item {
+  flex: 0 0 auto;
+  padding: 8px 16px; border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 13.5px; font-weight: 500;
+  color: var(--ink2); white-space: nowrap;
+  transition: background .15s, color .15s;
+  border: 1px solid var(--line);
+}
+.catnav__item.is-active {
+  background: var(--ink); color: var(--bg); border-color: var(--ink);
+}
+
+/* Frase da dona escrita à mão */
+.frase-dona {
+  padding: 28px 22px 32px;
+  background: var(--surface);
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.frase-dona__quote {
+  font-family: 'Caveat', cursive;
+  font-weight: 600;
+  font-size: clamp(20px, 5.5vw, 28px);
+  line-height: 1.25;
+  color: var(--ink);
+  max-width: 560px;
+  transform: rotate(-0.5deg);
+}
+.frase-dona__quote::before { content: "\201C"; font-size: 1em; color: var(--accent); margin-right: 4px; line-height: 0; vertical-align: -0.2em; }
+.frase-dona__assina {
+  margin-top: 14px;
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-body); font-size: 12.5px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink2);
+}
+.frase-dona__avatar {
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--accent); color: var(--accent-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 600; font-size: 15px;
+}
+
+.cardapio-cat { padding-block: 36px; scroll-margin-top: 70px; border-bottom: 1px solid var(--line); }
+.cardapio-cat:last-child { border-bottom: none; }
+.cardapio-cat__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 22px; gap: 16px; }
+.cardapio-cat__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight); letter-spacing: var(--display-letter);
+  font-size: clamp(24px, 5.5vw, 32px); line-height: 1.05;
+}
+.cardapio-cat__count {
+  font-family: var(--font-body); font-size: 12px; color: var(--ink2);
+  letter-spacing: 0.08em; text-transform: uppercase;
+}
+.pratos { display: grid; gap: 14px; }
+.prato {
+  display: grid; grid-template-columns: 1fr;
+  gap: 6px; padding: 16px;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+  transition: border-color .15s, transform .15s;
+  position: relative;
+}
+.prato:hover { border-color: var(--accent); transform: translateY(-1px); }
+.prato {
+  box-shadow:
+    -1px 1px 0 0 var(--line),
+    3px 6px 14px -8px color-mix(in oklab, var(--accent) 24%, transparent);
+}
+.prato--ancora {
+  border-color: var(--accent);
+  border-width: 2px;
+  background: color-mix(in oklab, var(--accent) 4%, var(--surface));
+}
+.prato__head { display: flex; gap: 12px; align-items: baseline; justify-content: space-between; }
+.prato__nome {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight); letter-spacing: var(--display-letter);
+  font-size: 18px; line-height: 1.2;
+}
+.prato--ancora .prato__nome { font-size: 19px; }
+.prato__preco {
+  font-family: var(--font-body); font-weight: 600; font-size: 16px;
+  color: var(--accent); white-space: nowrap;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+.prato__desc {
+  color: var(--ink2); font-size: 13.5px; line-height: 1.45;
+}
+.prato__ancora-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 10.5px; font-weight: 600;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent);
+  padding: 2px 8px;
+  background: color-mix(in oklab, var(--accent) 14%, transparent);
+  border-radius: 999px;
+  margin-bottom: 4px;
+  align-self: flex-start;
+}
+.prato__ancora-motivo {
+  font-style: italic;
+  color: var(--ink2);
+  font-size: 13px;
+  margin-top: 4px;
+  padding-left: 10px;
+  border-left: 2px solid var(--accent);
+}
+
+/* Mini-quiz "tá com fome de quê?" */
+.quiz-trigger {
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 18px 22px;
+  background: color-mix(in oklab, var(--accent) 8%, var(--surface));
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-card);
+  margin: 24px auto 0;
+  max-width: 540px;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+  font-family: var(--font-body);
+}
+.quiz-trigger:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+.quiz-trigger__title {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: 17px; line-height: 1.2;
+  color: var(--ink);
+}
+.quiz-trigger__sub { font-size: 12.5px; color: var(--ink2); margin-top: 4px; }
+.quiz-trigger__arrow {
+  flex: 0 0 auto; font-size: 22px; color: var(--accent);
+  font-family: var(--font-display); font-weight: 600;
+}
+
+.quiz-modal {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(10, 8, 6, 0.65);
+  backdrop-filter: blur(8px);
+  display: none; align-items: flex-end; justify-content: center;
+  padding: 0;
+  animation: fadeIn .2s ease;
+}
+.quiz-modal.is-open { display: flex; }
+@media (min-width: 720px) { .quiz-modal { align-items: center; padding: 24px; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.quiz-card {
+  background: var(--surface); border-radius: var(--radius-card) var(--radius-card) 0 0;
+  width: 100%; max-width: 520px;
+  padding: 28px 24px;
+  padding-bottom: max(28px, env(safe-area-inset-bottom));
+  max-height: 90vh; overflow-y: auto;
+  position: relative;
+  animation: slideUp .25s ease;
+}
+@media (min-width: 720px) { .quiz-card { border-radius: var(--radius-card); } }
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+.quiz-close {
+  position: absolute; top: 16px; right: 16px;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; cursor: pointer; color: var(--ink);
+  font-family: var(--font-display);
+}
+.quiz-step__eyebrow {
+  font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--accent); font-weight: 600; margin-bottom: 8px;
+}
+.quiz-step__pergunta {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight); letter-spacing: var(--display-letter);
+  font-size: clamp(22px, 5.5vw, 28px); line-height: 1.15;
+  color: var(--ink); margin-bottom: 22px;
+}
+.quiz-options { display: grid; gap: 10px; }
+.quiz-option {
+  display: block; width: 100%; text-align: left;
+  padding: 16px 18px; border-radius: var(--radius);
+  background: var(--surface2); border: 1.5px solid var(--line);
+  font-family: var(--font-body); font-size: 15.5px; font-weight: 500;
+  color: var(--ink); cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.quiz-option:hover { border-color: var(--accent); }
+
+.quiz-resultado__nome {
+  font-family: var(--font-display);
+  font-weight: var(--display-weight); letter-spacing: var(--display-letter);
+  font-size: clamp(24px, 6vw, 30px); line-height: 1.15;
+  color: var(--ink); margin-top: 14px;
+}
+.quiz-resultado__desc { color: var(--ink2); font-size: 14.5px; line-height: 1.5; margin-top: 10px; }
+.quiz-resultado__preco {
+  display: inline-block; margin-top: 14px;
+  background: var(--accent); color: var(--accent-ink);
+  padding: 6px 14px; border-radius: 999px;
+  font-family: var(--font-body); font-weight: 700; font-size: 16px;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+.quiz-resultado__cta {
+  display: block; margin-top: 22px;
+  background: #25D366; color: #fff;
+  padding: 16px 22px; border-radius: 999px;
+  text-align: center; font-weight: 600; font-size: 15.5px;
+}
+.quiz-resultado__retry {
+  display: block; margin-top: 12px; padding: 10px;
+  text-align: center; font-size: 13px; color: var(--ink2);
+  cursor: pointer; background: none; border: none; width: 100%;
+}
+
+/* ----- Favoritos: coração no prato + barra flutuante ----- */
+.prato { padding-right: 44px; }
+.fav-btn {
+  position: absolute; top: 12px; right: 12px;
+  width: 32px; height: 32px; border-radius: 50%;
+  background: transparent; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 18px; line-height: 1;
+  color: var(--ink2);
+  opacity: 0.55;
+  transition: opacity .15s, transform .12s, color .15s;
+  -webkit-tap-highlight-color: transparent;
+}
+.fav-btn:hover { opacity: 1; }
+.fav-btn[aria-pressed="true"] { color: #e23a3a; opacity: 1; }
+.fav-btn[aria-pressed="true"]:active { transform: scale(1.25); }
+.fav-btn::before { content: "♡"; font-size: 22px; }
+.fav-btn[aria-pressed="true"]::before { content: "♥"; }
+
+.fav-bar {
+  position: fixed; left: 16px; right: 16px;
+  bottom: calc(80px + env(safe-area-inset-bottom));
+  z-index: 60;
+  background: var(--ink); color: var(--bg);
+  border-radius: 999px;
+  padding: 12px 16px 12px 18px;
+  display: none; align-items: center; gap: 12px;
+  font-family: var(--font-body); font-size: 14px;
+  box-shadow: 0 12px 28px -8px rgba(0,0,0,0.35);
+  transform: translateY(20px); opacity: 0;
+  transition: transform .25s, opacity .25s;
+}
+.fav-bar.show { display: flex; transform: translateY(0); opacity: 1; }
+.fav-bar__count {
+  font-weight: 700;
+  background: var(--accent); color: var(--accent-ink);
+  padding: 3px 9px; border-radius: 999px;
+  font-size: 13px;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+.fav-bar__txt { flex: 1; line-height: 1.3; }
+.fav-bar__send {
+  background: #25D366; color: #fff;
+  padding: 9px 14px; border-radius: 999px;
+  font-weight: 600; text-decoration: none;
+  white-space: nowrap; font-size: 13.5px;
+}
+.fav-bar__clear {
+  background: transparent; border: none; color: var(--bg);
+  opacity: 0.6; font-size: 18px; cursor: pointer;
+  padding: 4px 8px; line-height: 1;
+}
+@media (min-width: 720px) {
+  .fav-bar { left: auto; right: 24px; bottom: 24px; max-width: 420px; }
+}
+
+</style>
+</head>
+<body class="lut-warm">
+
+<header class="hero">
+  <img class="hero__bg" src="https://lh3.googleusercontent.com/gps-cs-s/APNQkAFw26_gbH1h9o2yUcWgxgqEGod1E953jXgwp3UWvCO-FklswkjAcfZHknPFwnKTJjecM_oDg376SBH9cB-ZMGyrXAVY9CZLNAVih3_Rxm1xhqwOvyA61JhlqjYSh1VJoCzVXqrRSg=w1920-h1080-p-rj" alt="" fetchpriority="high">
+  <div class="hero__veil"></div>
+  <div class="hero__inner">
+    <h1 class="hero__title">Padaria Le Crocant</h1>
+    
+    <div class="hero__subtitle">Padaria Le Crocant - Av. João Pinheiro, 3088 - Brasil, Uberlândia - MG, 38400-714</div>
+    
+  </div>
+</header>
+
+<div class="trust">
+  
+  <span class="open-pill" data-state="closed" id="openPill"
+        data-hours='{"0": null, "1": ["06:00", "19:00"], "2": ["06:00", "19:00"], "3": ["06:00", "19:00"], "4": ["06:00", "19:00"], "5": ["06:00", "20:00"], "6": ["06:00", "18:00"]}'>
+    <span class="open-pill__dot"></span>
+    <span class="open-pill__label">…</span>
+    <span class="open-pill__detail"></span>
+  </span>
+  <span class="trust__sep">·</span>
+  
+  
+  <span class="trust__item">
+    <span class="trust__stars">★★★★☆</span>
+    <strong class="trust__strong">4,5</strong>
+    <span>· 3142 avaliações no Google</span>
+  </span>
+  <span class="trust__sep">·</span>
+  
+  <span class="trust__item">Uberlândia, MG</span>
+</div>
+
+
+
+
+<section class="frase-dona">
+  <div class="container" style="padding: 0;">
+    <p class="frase-dona__quote">Aqui é tudo feito no capricho, com receita de família e ingrediente mineiro de verdade.</p>
+    
+    <div class="frase-dona__assina">
+      <span class="frase-dona__avatar">L</span>
+      <span>Lourdes · Padaria</span>
+    </div>
+    
+  </div>
+</section>
+
+
+<div class="container" style="padding: 0 22px;">
+  <button class="quiz-trigger" id="quiz-trigger" aria-haspopup="dialog">
+    <div>
+      <div class="quiz-trigger__title">Não sabe o que pedir?</div>
+      <div class="quiz-trigger__sub">Responde 2 perguntas que a gente sugere</div>
+    </div>
+    <span class="quiz-trigger__arrow">→</span>
+  </button>
+</div>
+
+<div class="quiz-modal" id="quiz-modal" role="dialog" aria-modal="true" aria-label="Sugestão de pedido">
+  <div class="quiz-card">
+    <button class="quiz-close" id="quiz-close" aria-label="Fechar">×</button>
+    <div id="quiz-content"></div>
+  </div>
+</div>
+
+<div class="fav-bar" id="favBar" role="status" aria-live="polite">
+  <span class="fav-bar__count" id="favCount">0</span>
+  <span class="fav-bar__txt">na sua lista</span>
+  <a class="fav-bar__send" id="favSend" href="#" target="_blank" rel="noopener">Enviar pelo Zap</a>
+  <button class="fav-bar__clear" id="favClear" aria-label="Limpar lista" type="button">×</button>
+</div>
+
+
+<nav class="catnav" id="catnav">
+  
+  <a class="catnav__item is-active" href="#cat-1">Pães do Dia</a>
+  
+  <a class="catnav__item" href="#cat-2">Doces Caseiros</a>
+  
+  <a class="catnav__item" href="#cat-3">Salgados</a>
+  
+  <a class="catnav__item" href="#cat-4">Bebidas</a>
+  
+  <a class="catnav__item" href="#cat-5">Especiais da Casa</a>
+  
+</nav>
+
+
+<section class="section">
+  <div class="container">
+    <div class="section__head">
+      <div class="section__eyebrow">Cardápio</div>
+      <h2 class="section__title">O que tem na casa</h2>
+    </div>
+
+    
+    <div class="cardapio-cat" id="cat-1">
+      <div class="cardapio-cat__head">
+        <h3 class="cardapio-cat__title">Pães do Dia</h3>
+        <span class="cardapio-cat__count">6 itens</span>
+      </div>
+      <div class="pratos">
+        
+        
+        <div class="prato prato--ancora"
+             data-prato-nome="Pão de Queijo da Lourdes"
+             data-prato-preco="8.5">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          <span class="prato__ancora-tag">o mais pedido</span>
+          <div class="prato__head">
+            <div class="prato__nome">Pão de Queijo da Lourdes</div>
+            <div class="prato__preco">R$ 8,50</div>
+          </div>
+          <div class="prato__desc">Queijo do Serro, polvilho azedo, manteiga da fazenda.</div>
+          <div class="prato__ancora-motivo">Receita que minha mãe me ensinou, com queijo do Serro.</div>
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Pão Francês"
+             data-prato-preco="0.9">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Pão Francês</div>
+            <div class="prato__preco">R$ 0,90</div>
+          </div>
+          <div class="prato__desc">Crocante por fora, macio por dentro.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Baguete Integral"
+             data-prato-preco="11.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Baguete Integral</div>
+            <div class="prato__preco">R$ 11</div>
+          </div>
+          <div class="prato__desc">Farinha de trigo integral, semente de girassol, linhaça.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Pão de Milho"
+             data-prato-preco="9.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Pão de Milho</div>
+            <div class="prato__preco">R$ 9</div>
+          </div>
+          <div class="prato__desc">Fubá mimoso, coalhada fresca, fermento natural.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Pão de Batata"
+             data-prato-preco="7.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Pão de Batata</div>
+            <div class="prato__preco">R$ 7</div>
+          </div>
+          
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Rosca de Canela"
+             data-prato-preco="12.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Rosca de Canela</div>
+            <div class="prato__preco">R$ 12</div>
+          </div>
+          <div class="prato__desc">Cobertura de açúcar e canela, massa fofa.</div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="cardapio-cat" id="cat-2">
+      <div class="cardapio-cat__head">
+        <h3 class="cardapio-cat__title">Doces Caseiros</h3>
+        <span class="cardapio-cat__count">5 itens</span>
+      </div>
+      <div class="pratos">
+        
+        
+        <div class="prato"
+             data-prato-nome="Doce de Leite Viçosa"
+             data-prato-preco="18.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Doce de Leite Viçosa</div>
+            <div class="prato__preco">R$ 18</div>
+          </div>
+          <div class="prato__desc">Leite de vaca da região, cozido em tacho de cobre.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Bolo de Fubá com Goiabada"
+             data-prato-preco="22.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Bolo de Fubá com Goiabada</div>
+            <div class="prato__preco">R$ 22</div>
+          </div>
+          
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Pudim de Leite Condensado"
+             data-prato-preco="15.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Pudim de Leite Condensado</div>
+            <div class="prato__preco">R$ 15</div>
+          </div>
+          <div class="prato__desc">Receita da minha sogra, sem furinhos.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Quindim"
+             data-prato-preco="6.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Quindim</div>
+            <div class="prato__preco">R$ 6</div>
+          </div>
+          <div class="prato__desc">Coco ralado, gema, açúcar cristal.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Romeu e Julieta"
+             data-prato-preco="14.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Romeu e Julieta</div>
+            <div class="prato__preco">R$ 14</div>
+          </div>
+          <div class="prato__desc">Goiabada cascão e queijo minas curado.</div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="cardapio-cat" id="cat-3">
+      <div class="cardapio-cat__head">
+        <h3 class="cardapio-cat__title">Salgados</h3>
+        <span class="cardapio-cat__count">4 itens</span>
+      </div>
+      <div class="pratos">
+        
+        
+        <div class="prato"
+             data-prato-nome="Pastel de Angu"
+             data-prato-preco="8.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Pastel de Angu</div>
+            <div class="prato__preco">R$ 8</div>
+          </div>
+          <div class="prato__desc">Milho verde, caldo de costela.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Coxinha de Frango"
+             data-prato-preco="7.5">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Coxinha de Frango</div>
+            <div class="prato__preco">R$ 7,50</div>
+          </div>
+          <div class="prato__desc">Frango desfiado, catupiry, massa crocante.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Empada de Palmito"
+             data-prato-preco="9.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Empada de Palmito</div>
+            <div class="prato__preco">R$ 9</div>
+          </div>
+          <div class="prato__desc">Palmito da serra, azeitona.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Esfirra de Carne"
+             data-prato-preco="8.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Esfirra de Carne</div>
+            <div class="prato__preco">R$ 8</div>
+          </div>
+          <div class="prato__desc">Carne moída temperada, cebola, tomate.</div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="cardapio-cat" id="cat-4">
+      <div class="cardapio-cat__head">
+        <h3 class="cardapio-cat__title">Bebidas</h3>
+        <span class="cardapio-cat__count">3 itens</span>
+      </div>
+      <div class="pratos">
+        
+        
+        <div class="prato"
+             data-prato-nome="Café Coado"
+             data-prato-preco="4.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Café Coado</div>
+            <div class="prato__preco">R$ 4</div>
+          </div>
+          
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Suco de Laranja"
+             data-prato-preco="8.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Suco de Laranja</div>
+            <div class="prato__preco">R$ 8</div>
+          </div>
+          <div class="prato__desc">Laranja pera, gelo, açúcar a gosto.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Chocolate Quente"
+             data-prato-preco="10.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Chocolate Quente</div>
+            <div class="prato__preco">R$ 10</div>
+          </div>
+          <div class="prato__desc">Feito com leite integral e chocolate Belga.</div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+    <div class="cardapio-cat" id="cat-5">
+      <div class="cardapio-cat__head">
+        <h3 class="cardapio-cat__title">Especiais da Casa</h3>
+        <span class="cardapio-cat__count">2 itens</span>
+      </div>
+      <div class="pratos">
+        
+        
+        <div class="prato"
+             data-prato-nome="Pão de Queijo Recheado"
+             data-prato-preco="10.5">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Pão de Queijo Recheado</div>
+            <div class="prato__preco">R$ 10,50</div>
+          </div>
+          <div class="prato__desc">Recheio de goiabada ou doce de leite.</div>
+          
+        </div>
+        
+        
+        <div class="prato"
+             data-prato-nome="Cuca Alemã"
+             data-prato-preco="16.0">
+          <button class="fav-btn" type="button" aria-pressed="false" aria-label="Salvar nos favoritos"></button>
+          
+          <div class="prato__head">
+            <div class="prato__nome">Cuca Alemã</div>
+            <div class="prato__preco">R$ 16</div>
+          </div>
+          <div class="prato__desc">Farinha branca, creme de baunilha, farofa doce.</div>
+          
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+
+
+<section class="heritage reveal">
+  <article class="heritage__card">
+    <time class="heritage__year">1996</time>
+    <p class="heritage__story">Sua Lourdes largou o serviço de costura e começou a fazer pão de queijo pra vender em casa.</p>
+    <p class="heritage__pivot">Hoje, a filha Carla toca a padaria com o mesmo zelo.</p>
+  </article>
+</section>
+
+
+
+<section class="micro-cena reveal">
+  <p class="micro-cena__texto">Comecei em 1996 assando pão de queijo no forno a lenha lá em casa. Em 2001, abri a padaria aqui no Centro. <span class="micro-cena__anos">Já são 28 anos de forno acesso.</span></p>
+</section>
+
+
+
+<section class="honest reveal">
+  <details class="honest__inner">
+    <summary>O que a gente NÃO faz <span class="honest__caveat">(pra você não se frustrar)</span></summary>
+    <ul class="honest__list">
+      
+      <li>Fechamos segunda, dia de descanso.</li>
+      
+      <li>Não vendemos por atacado.</li>
+      
+      <li>Café é coado na hora, sem pressa.</li>
+      
+    </ul>
+  </details>
+</section>
+
+
+
+
+
+
+<section class="section reveal">
+  <div class="container">
+    <div class="section__head section__head--centered">
+      <div class="section__eyebrow">Como chegar</div>
+      <h2 class="section__title">Aqui é o endereço</h2>
+    </div>
+    <div class="contato" style="margin: 0 auto;">
+      
+      <a class="contato-row" href="https://www.google.com/maps/search/?api=1&query=Padaria%20Le%20Crocant%20-%20Av.%20Jo%C3%A3o%20Pinheiro%2C%203088%20-%20Brasil%2C%20Uberl%C3%A2ndia%20-%20MG%2C%2038400-714" target="_blank" rel="noopener">
+        <div class="contato-row__icon">→</div>
+        <div>
+          <div class="contato-row__label">Endereço</div>
+          <div class="contato-row__value">Padaria Le Crocant - Av. João Pinheiro, 3088 - Brasil, Uberlândia - MG, 38400-714</div>
+        </div>
+      </a>
+      
+      
+      <a class="contato-row" href="tel:+5534999900094">
+        <div class="contato-row__icon">☎</div>
+        <div>
+          <div class="contato-row__label">Telefone</div>
+          <div class="contato-row__value">(34) 99990-0094</div>
+        </div>
+      </a>
+      
+      
+      <a class="contato-row" href="https://wa.me/5534999900094?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20de%20Padaria%20Le%20Crocant%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">
+        <div class="contato-row__icon">w</div>
+        <div>
+          <div class="contato-row__label">WhatsApp</div>
+          <div class="contato-row__value">Chama no Zap</div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <strong>Padaria Le Crocant</strong><br>
+    Uberlândia · Padaria
+    
+    <div style="margin-top: 14px; font-size: 12.5px; color: var(--ink2);">
+      Conhecemos bem: Centro · Tibery · Santa Mônica · Morada da Colina · Tabajaras · Saraiva
+    </div>
+    
+
+    <div class="footer-actions">
+      <button class="footer-actions__btn" data-action="share" type="button"
+              data-share-title="Padaria Le Crocant"
+              data-share-text="Olha esse padaria aqui em Uberlândia — Padaria Le Crocant">
+        <span class="footer-actions__icon">↗</span> Compartilhar
+      </button>
+      
+      <a class="footer-actions__btn" data-action="regular" target="_blank" rel="noopener"
+         href="https://wa.me/5534999900094?text=Oi%21%20Sou%20cliente%20fixo%20aqui.%20%5BPadaria%20Le%20Crocant%5D%20">
+        <span class="footer-actions__icon">★</span> Sou cliente fixo
+      </a>
+      
+      <a class="footer-actions__btn" data-action="claim" target="_blank" rel="noopener"
+         href="https://wa.me/5534998352234?text=Sou%20dono%28a%29%20do%20Padaria%20Le%20Crocant%20em%20Uberl%C3%A2ndia.%20Quero%20reivindicar%20essa%20p%C3%A1gina.">
+        <span class="footer-actions__icon">⚑</span> É o dono? Reivindique
+      </a>
+    </div>
+    <div style="margin-top: 8px; text-align: center;">
+      <button class="howto-trigger" type="button" popovertarget="howto-pop" aria-label="Como funciona?">como funciona?</button>
+    </div>
+    <div class="howto-popover" id="howto-pop" popover>
+      Você é o dono(a)? Mande Zap pra <strong>Fachada</strong> com seus dados — em até <strong>24h</strong> a página vira sua e a gente ajusta com o que precisar.
+    </div>
+    <div class="footer-actions__copied" id="copiedToast">Link copiado</div>
+
+    <div class="previa-rodape">Esta é uma prévia. Pratos e preços são uma sugestão pra esta categoria — ao fechar com a Fachada, ajustamos com seus dados reais.</div>
+  </div>
+</footer>
+
+
+<div class="sticky-cta">
+  <a class="btn btn--block" href="https://wa.me/5534999900094?text=Ol%C3%A1%21%20Vi%20a%20p%C3%A1gina%20de%20Padaria%20Le%20Crocant%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener">
+    Chama no Zap
+  </a>
+</div>
+
+
+<script>
+// ----- WhatsApp PROTOCOLO + mensagem rica -----
+// Intercepta todo a[href^="https://wa.me/"] e injeta texto pré-preenchido
+// contendo PROTOCOLO determinístico (slug + deviceId em base36).
+// Preserva mensagens já específicas (slot picker, favoritos) — só adiciona
+// PROTOCOLO antes da assinatura.
+(function () {
+  var SLUG = "padaria-le-crocant-uberlandia";
+  var NEGOCIO = "Padaria Le Crocant";
+
+  function deviceId() {
+    var k = "fa-did";
+    var v = "";
+    try {
+      v = localStorage.getItem(k) || "";
+      if (!v) {
+        v = (crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36)).slice(0, 8);
+        localStorage.setItem(k, v);
+      }
+    } catch (e) {
+      v = Math.random().toString(36).slice(2, 10);
+    }
+    return v;
+  }
+
+  function protocolo() {
+    var s = SLUG + "|" + deviceId();
+    var sum = 0;
+    for (var i = 0; i < s.length; i++) sum = (sum * 31 + s.charCodeAt(i)) >>> 0;
+    return "FA" + sum.toString(36).toUpperCase().slice(-4).padStart(4, "0");
+  }
+
+  function defaultMsg(p) {
+    return "Oi! Vi o site do " + NEGOCIO + ".\n\nProtocolo: " + p + "\n(vindo do site)";
+  }
+
+  function injectProtocol(href) {
+    if (!href) return href;
+    var i = href.indexOf("wa.me/");
+    if (i < 0) return href;
+    var p = protocolo();
+    var qIdx = href.indexOf("?text=");
+    if (qIdx < 0) {
+      // sem texto: adiciona default
+      return href + "?text=" + encodeURIComponent(defaultMsg(p));
+    }
+    // já tem texto: anexa o PROTOCOLO antes do fim
+    var prefix = href.slice(0, qIdx + 6);
+    var existing = decodeURIComponent(href.slice(qIdx + 6));
+    if (existing.indexOf("Protocolo:") >= 0) return href; // já tem
+    var sep = existing.endsWith("\n") ? "" : "\n\n";
+    return prefix + encodeURIComponent(existing + sep + "Protocolo: " + p);
+  }
+
+  function applyAll() {
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function (a) {
+      a.href = injectProtocol(a.href);
+    });
+  }
+
+  applyAll();
+  // Re-aplica quando JS gera novos hrefs (quiz resultado, slot picker)
+  document.addEventListener("click", function (e) {
+    var t = e.target.closest('a[href^="https://wa.me/"]');
+    if (t) t.href = injectProtocol(t.href);
+  }, true);
+})();
+
+// ----- Live Open Pill -----
+(function () {
+  var pill = document.getElementById("openPill");
+  if (!pill) return;
+  var hours;
+  try { hours = JSON.parse(pill.dataset.hours || "{}"); } catch (e) { hours = {}; }
+
+  function parseHM(s) { var p = (s || "").split(":"); return [parseInt(p[0], 10) || 0, parseInt(p[1], 10) || 0]; }
+  function pad(n) { return n < 10 ? "0" + n : "" + n; }
+
+  function nameDay(d) {
+    return ["domingo", "segunda", "terça", "quarta", "quinta", "sexta", "sábado"][d];
+  }
+
+  function nextOpening(now) {
+    // varre próximas 7 dias procurando primeira janela
+    for (var i = 1; i <= 7; i++) {
+      var d = (now.getDay() + i) % 7;
+      var w = hours[String(d)];
+      if (w && w.length === 2) {
+        var h = parseHM(w[0]);
+        return { day: d, hh: h[0], mm: h[1], days_ahead: i };
+      }
+    }
+    return null;
+  }
+
+  function compute() {
+    var now = new Date();
+    var today = now.getDay();
+    var w = hours[String(today)];
+
+    if (w && w.length === 2) {
+      var nowMin = now.getHours() * 60 + now.getMinutes();
+      var op = parseHM(w[0]);
+      var cl = parseHM(w[1]);
+      var openMin = op[0] * 60 + op[1];
+      var closeMin = cl[0] * 60 + cl[1];
+      // close past midnight (00:30, 01:00) significa dia seguinte
+      if (closeMin <= openMin) closeMin += 24 * 60;
+
+      if (nowMin >= openMin && nowMin < closeMin) {
+        var rem = closeMin - nowMin;
+        var rh = Math.floor(rem / 60);
+        var rm = rem % 60;
+        if (rem <= 60) {
+          return { state: rem <= 30 ? "closing" : "open",
+                   label: rem <= 30 ? "Fecha em " + rem + "min" : "Aberto agora",
+                   detail: rem <= 30 ? "" : "· fecha em " + rh + "h" + pad(rm) };
+        }
+        return { state: "open",
+                 label: "Aberto agora",
+                 detail: "· fecha em " + rh + "h" + pad(rm) };
+      }
+      // Antes de abrir, ainda hoje
+      if (nowMin < openMin) {
+        return { state: "closed",
+                 label: "Fechado agora",
+                 detail: "· abre hoje às " + w[0] };
+      }
+    }
+    // Fechado o dia ou já passou; busca próxima abertura
+    var nx = nextOpening(now);
+    if (!nx) return { state: "closed", label: "Fechado", detail: "" };
+    var quando = nx.days_ahead === 1 ? "amanhã" : nameDay(nx.day);
+    return { state: "closed",
+             label: "Fechado agora",
+             detail: "· abre " + quando + " às " + pad(nx.hh) + ":" + pad(nx.mm) };
+  }
+
+  function render() {
+    var s = compute();
+    pill.dataset.state = s.state;
+    pill.querySelector(".open-pill__label").textContent = s.label;
+    pill.querySelector(".open-pill__detail").textContent = s.detail;
+  }
+
+  render();
+  setInterval(render, 60 * 1000);
+})();
+
+// ----- Footer actions: Share / copy fallback -----
+(function () {
+  var shareBtn = document.querySelector('[data-action="share"]');
+  if (!shareBtn) return;
+  var toast = document.getElementById("copiedToast");
+
+  shareBtn.addEventListener("click", function () {
+    var data = {
+      title: shareBtn.dataset.shareTitle || document.title,
+      text: shareBtn.dataset.shareText || "",
+      url: window.location.href
+    };
+    if (navigator.share) {
+      navigator.share(data).catch(function () { /* user canceled */ });
+      return;
+    }
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(window.location.href).then(function () {
+        if (toast) {
+          toast.classList.add("show");
+          setTimeout(function () { toast.classList.remove("show"); }, 1800);
+        }
+      });
+    } else {
+      window.prompt("Copia o link:", window.location.href);
+    }
+  });
+})();
+</script>
+
+
+<script>
+// ----- Scroll-spy nav cardápio -----
+(function() {
+  var nav = document.getElementById('catnav');
+  if (!nav) return;
+  var items = nav.querySelectorAll('.catnav__item');
+  var idToItem = {};
+  items.forEach(function(a) {
+    var id = a.getAttribute('href').slice(1);
+    idToItem[id] = a;
+    a.addEventListener('click', function() {
+      items.forEach(function(x) { x.classList.remove('is-active'); });
+      a.classList.add('is-active');
+    });
+  });
+  var sections = document.querySelectorAll('.cardapio-cat');
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting && idToItem[e.target.id]) {
+        items.forEach(function(x) { x.classList.remove('is-active'); });
+        idToItem[e.target.id].classList.add('is-active');
+        idToItem[e.target.id].scrollIntoView({behavior: 'smooth', inline: 'center', block: 'nearest'});
+      }
+    });
+  }, {rootMargin: '-40% 0px -55% 0px', threshold: 0});
+  sections.forEach(function(s) { io.observe(s); });
+})();
+
+// ----- Mini-quiz "tá com fome de quê?" -----
+(function() {
+  var ITENS = [
+  
+    
+    {nome: "P\u00e3o de Queijo da Lourdes", desc: "Queijo do Serro, polvilho azedo, manteiga da fazenda.", preco: 8.5, cat: "P\u00e3es do Dia"},
+    
+    {nome: "P\u00e3o Franc\u00eas", desc: "Crocante por fora, macio por dentro.", preco: 0.9, cat: "P\u00e3es do Dia"},
+    
+    {nome: "Baguete Integral", desc: "Farinha de trigo integral, semente de girassol, linha\u00e7a.", preco: 11.0, cat: "P\u00e3es do Dia"},
+    
+    {nome: "P\u00e3o de Milho", desc: "Fub\u00e1 mimoso, coalhada fresca, fermento natural.", preco: 9.0, cat: "P\u00e3es do Dia"},
+    
+    {nome: "P\u00e3o de Batata", desc: "", preco: 7.0, cat: "P\u00e3es do Dia"},
+    
+    {nome: "Rosca de Canela", desc: "Cobertura de a\u00e7\u00facar e canela, massa fofa.", preco: 12.0, cat: "P\u00e3es do Dia"},
+    
+  
+    
+    {nome: "Doce de Leite Vi\u00e7osa", desc: "Leite de vaca da regi\u00e3o, cozido em tacho de cobre.", preco: 18.0, cat: "Doces Caseiros"},
+    
+    {nome: "Bolo de Fub\u00e1 com Goiabada", desc: "", preco: 22.0, cat: "Doces Caseiros"},
+    
+    {nome: "Pudim de Leite Condensado", desc: "Receita da minha sogra, sem furinhos.", preco: 15.0, cat: "Doces Caseiros"},
+    
+    {nome: "Quindim", desc: "Coco ralado, gema, a\u00e7\u00facar cristal.", preco: 6.0, cat: "Doces Caseiros"},
+    
+    {nome: "Romeu e Julieta", desc: "Goiabada casc\u00e3o e queijo minas curado.", preco: 14.0, cat: "Doces Caseiros"},
+    
+  
+    
+    {nome: "Pastel de Angu", desc: "Milho verde, caldo de costela.", preco: 8.0, cat: "Salgados"},
+    
+    {nome: "Coxinha de Frango", desc: "Frango desfiado, catupiry, massa crocante.", preco: 7.5, cat: "Salgados"},
+    
+    {nome: "Empada de Palmito", desc: "Palmito da serra, azeitona.", preco: 9.0, cat: "Salgados"},
+    
+    {nome: "Esfirra de Carne", desc: "Carne mo\u00edda temperada, cebola, tomate.", preco: 8.0, cat: "Salgados"},
+    
+  
+    
+    {nome: "Caf\u00e9 Coado", desc: "", preco: 4.0, cat: "Bebidas"},
+    
+    {nome: "Suco de Laranja", desc: "Laranja pera, gelo, a\u00e7\u00facar a gosto.", preco: 8.0, cat: "Bebidas"},
+    
+    {nome: "Chocolate Quente", desc: "Feito com leite integral e chocolate Belga.", preco: 10.0, cat: "Bebidas"},
+    
+  
+    
+    {nome: "P\u00e3o de Queijo Recheado", desc: "Recheio de goiabada ou doce de leite.", preco: 10.5, cat: "Especiais da Casa"},
+    
+    {nome: "Cuca Alem\u00e3", desc: "Farinha branca, creme de baunilha, farofa doce.", preco: 16.0, cat: "Especiais da Casa"},
+    
+  
+  ];
+
+  function getTags(item) {
+    var t = (item.nome + ' ' + item.desc).toLowerCase();
+    var tags = [];
+    if (/doce|açúcar|chocolate|brigadeiro|sorvete|açaí|sobremesa|brownie|torta|pud|cocada|paçoca|leite condensado|banana|morango|mel/.test(t)) tags.push('doce');
+    if (/refri|suco|água|cerveja|vinho|caipirinha|drink|capuccino|cafe|café|chocolate quente|chá|cha quente/.test(t)) tags.push('bebida');
+    if (tags.length === 0) tags.push('salgado');
+    if (/familia|família|porção|dividir|grande|combo|2 pessoas|para 2|p\/ 2|broto|brotinho|\bpra dois\b|baru|rodízio|rodizio/.test(t)) tags.push('compartilhar');
+    else tags.push('individual');
+    if (item.preco > 0 && item.preco < 25) tags.push('popular');
+    else if (item.preco >= 50) tags.push('caprichado');
+    else tags.push('medio');
+    if (/leve|salada|wrap|frango grelhado|grelhad|integral|natural/.test(t)) tags.push('leve');
+    else if (/calabres|carne|costela|porco|bacon|cheddar|bbq|frita/.test(t)) tags.push('substancial');
+    return tags;
+  }
+
+  ITENS.forEach(function(i) { i.tags = getTags(i); });
+
+  var STEPS = [
+    {
+      pergunta: "Tá com fome de quê?",
+      eyebrow: "1 de 2",
+      opcoes: [
+        {label: "Algo salgado e gostoso", tag: "salgado"},
+        {label: "Algo doce de finalizar", tag: "doce"},
+        {label: "Só uma bebida agora", tag: "bebida"},
+      ]
+    },
+    {
+      pergunta: "Pra dividir ou só pra você?",
+      eyebrow: "2 de 2",
+      opcoes: [
+        {label: "Só pra mim", tag: "individual"},
+        {label: "Pra dividir com alguém", tag: "compartilhar"},
+      ]
+    }
+  ];
+
+  var trigger = document.getElementById('quiz-trigger');
+  var modal = document.getElementById('quiz-modal');
+  var closeBtn = document.getElementById('quiz-close');
+  var content = document.getElementById('quiz-content');
+  if (!trigger || !modal) return;
+
+  var respostas = [];
+  var step = 0;
+
+  function open() {
+    respostas = []; step = 0;
+    renderStep();
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+  trigger.addEventListener('click', open);
+  closeBtn.addEventListener('click', close);
+  modal.addEventListener('click', function(e) { if (e.target === modal) close(); });
+
+  function renderStep() {
+    if (step >= STEPS.length) { renderResultado(); return; }
+    var s = STEPS[step];
+    var html = '<div class="quiz-step__eyebrow">' + s.eyebrow + '</div>';
+    html += '<div class="quiz-step__pergunta">' + s.pergunta + '</div>';
+    html += '<div class="quiz-options">';
+    s.opcoes.forEach(function(op, i) {
+      html += '<button class="quiz-option" data-tag="' + op.tag + '">' + op.label + '</button>';
+    });
+    html += '</div>';
+    content.innerHTML = html;
+    content.querySelectorAll('.quiz-option').forEach(function(b) {
+      b.addEventListener('click', function() {
+        respostas.push(b.getAttribute('data-tag'));
+        step++;
+        renderStep();
+      });
+    });
+  }
+
+  function renderResultado() {
+    // Pontua: cada item ganha pontos por tag que bate com respostas
+    var pontuados = ITENS.map(function(i) {
+      var p = 0;
+      respostas.forEach(function(r) { if (i.tags.indexOf(r) >= 0) p++; });
+      // bonus aleatório pra desempate
+      p += Math.random() * 0.3;
+      return {item: i, pontos: p};
+    });
+    pontuados.sort(function(a, b) { return b.pontos - a.pontos; });
+    var escolhido = pontuados[0].item;
+
+    var preco = escolhido.preco;
+    var precoStr = preco > 0 ? (preco === Math.floor(preco) ? 'R$ ' + preco : 'R$ ' + preco.toFixed(2).replace('.', ',')) : '';
+    var msg = encodeURIComponent('Olá! Vi a sugestão e quero pedir: ' + escolhido.nome + '.');
+    var tel = "5534999900094";
+    var waUrl = tel ? 'https://wa.me/' + tel + '?text=' + msg : '#';
+
+    var html = '<div class="quiz-step__eyebrow">Sugestão pra você</div>';
+    html += '<div class="quiz-resultado__nome">' + escolhido.nome + '</div>';
+    if (escolhido.desc) html += '<div class="quiz-resultado__desc">' + escolhido.desc + '</div>';
+    html += '<div class="quiz-resultado__desc" style="margin-top:6px; font-size:12px; opacity:0.7;">Da categoria: ' + escolhido.cat + '</div>';
+    if (precoStr) html += '<div class="quiz-resultado__preco">' + precoStr + '</div>';
+    if (tel) html += '<a class="quiz-resultado__cta" href="' + waUrl + '" target="_blank" rel="noopener">Quero esse pelo WhatsApp →</a>';
+    html += '<button class="quiz-resultado__retry" id="quiz-retry">Tentar de novo</button>';
+    content.innerHTML = html;
+    var retry = document.getElementById('quiz-retry');
+    if (retry) retry.addEventListener('click', open);
+  }
+})();
+
+// ----- Favoritos com localStorage + envio pelo WhatsApp -----
+(function() {
+  var KEY = "fachada-favs-padaria-le-crocant-uberlandia";
+  var bar = document.getElementById('favBar');
+  var countEl = document.getElementById('favCount');
+  var sendEl = document.getElementById('favSend');
+  var clearBtn = document.getElementById('favClear');
+  var tel = "5534999900094";
+  var nome = "Padaria Le Crocant";
+
+  function load() {
+    try { return JSON.parse(localStorage.getItem(KEY) || "[]"); }
+    catch (e) { return []; }
+  }
+  function save(arr) {
+    try { localStorage.setItem(KEY, JSON.stringify(arr)); } catch (e) {}
+  }
+
+  function buildMsg(items) {
+    var linhas = items.map(function (i) {
+      if (i.preco > 0) {
+        var preco = i.preco === Math.floor(i.preco)
+          ? "R$ " + i.preco
+          : "R$ " + i.preco.toFixed(2).replace(".", ",");
+        return "• " + i.nome + " — " + preco;
+      }
+      return "• " + i.nome;
+    }).join("\n");
+    var head = "Olá! Vi pelo cardápio do " + nome + " e queria pedir:\n\n";
+    return head + linhas + "\n\nMe avisa o total, por favor.";
+  }
+
+  function render() {
+    var favs = load();
+    countEl.textContent = favs.length;
+    if (favs.length === 0) {
+      bar.classList.remove('show');
+    } else {
+      bar.classList.add('show');
+      if (tel) {
+        sendEl.href = "https://wa.me/" + tel + "?text=" + encodeURIComponent(buildMsg(favs));
+      }
+    }
+    // sincroniza estado dos botões
+    var nomes = favs.map(function (i) { return i.nome; });
+    document.querySelectorAll('.prato').forEach(function (p) {
+      var btn = p.querySelector('.fav-btn');
+      if (!btn) return;
+      var on = nomes.indexOf(p.dataset.pratoNome) >= 0;
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    });
+  }
+
+  function toggle(prato) {
+    var nomeItem = prato.dataset.pratoNome;
+    var preco = parseFloat(prato.dataset.pratoPreco) || 0;
+    var favs = load();
+    var idx = favs.findIndex(function (i) { return i.nome === nomeItem; });
+    if (idx >= 0) {
+      favs.splice(idx, 1);
+    } else {
+      favs.push({ nome: nomeItem, preco: preco });
+    }
+    save(favs);
+    render();
+  }
+
+  document.querySelectorAll('.prato .fav-btn').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault(); e.stopPropagation();
+      toggle(btn.closest('.prato'));
+    });
+  });
+
+  if (clearBtn) {
+    clearBtn.addEventListener('click', function () {
+      save([]); render();
+    });
+  }
+
+  render();
+})();
+</script>
+
+
+</body>
+</html>
